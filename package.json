@@ -2,6 +2,8 @@
   "name": "kokua-labs-web",
   "type": "module",
   "version": "0.0.1",
+  "author": "Bruno Martínez González",
+  "license": "",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
