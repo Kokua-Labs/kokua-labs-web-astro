@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "bioticextralight";
+  src: url("../../assets/fonts/biotic-extralight-webfont.woff2") format("woff2"),
+    url("../../assets/fonts/biotic-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "rykerbold";
+  src: url("../../assets/fonts/fontspring-ryker-bold-webfont.woff2")
+      format("woff2"),
+    url("../../assets/fonts/fontspring-ryker-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

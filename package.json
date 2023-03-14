@@ -5,6 +5,7 @@
   "author": "Bruno Martínez González",
   "license": "",
   "scripts": {
+    "format": "npx prettier --write .",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -13,5 +14,11 @@
   },
   "dependencies": {
     "astro": "^2.0.18"
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.15",
+    "postcss-nested": "^6.0.1",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0"
   }
 }
