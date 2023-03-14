@@ -28,6 +28,20 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## Prettier VSCode configuration
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To setup prettier to format the files on save, go to VSCode config.json file and add the following lines. [npm repo](https://www.npmjs.com/package/prettier-plugin-astro)
+
+````json
+    "prettier.documentSelectors": ["**/*.astro"],
+    "[astro]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+````
+
+---
+ ## Styles
+
+To extend CSS functionality, relay on __PostCSS__ Addons [](https://www.postcss.parts/)
+
+> Please note that PostCSS it's installed by default in Vite
