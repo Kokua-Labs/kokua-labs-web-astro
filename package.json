@@ -10,10 +10,12 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "i18n": "npx astro-i18next generate"
   },
   "dependencies": {
-    "astro": "^2.0.18"
+    "astro": "^2.0.18",
+    "astro-i18next": "1.0.0-beta.20"
   },
   "devDependencies": {
     "cssnano": "^5.1.15",
