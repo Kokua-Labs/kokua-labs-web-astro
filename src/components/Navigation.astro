@@ -1,1 +1,8 @@
-<nav></nav>
+---
+import { LanguageSelector } from "astro-i18next/components";
+---
+
+<header>
+  <nav></nav>
+  <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" />
+</header>
