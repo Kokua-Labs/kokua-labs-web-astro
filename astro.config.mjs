@@ -3,7 +3,6 @@ import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'http://www.kokualabs.com',
-    base: '/',
+    site: 'https://www.kokualabs.com',
     integrations: [astroI18next()],
 });
