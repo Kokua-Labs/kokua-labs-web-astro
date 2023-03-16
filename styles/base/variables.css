@@ -1,4 +1,5 @@
 :root {
-    --color-white: '#294b65',
-    --color-main: '#ffffff'
+  --color-main: #294b65;
+  --color-white: #ffffff;
+  --max-screen-content: 1320px;
 }

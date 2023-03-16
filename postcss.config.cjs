@@ -1,3 +1,8 @@
 module.exports = {
-  plugins: [require("cssnano"), require("postcss-nested")],
+  plugins: [
+    require('postcss-mixins'),
+    require("cssnano"),
+    require("postcss-nested"),
+    require("autoprefixer"),
+  ],
 };
