@@ -3,8 +3,9 @@ export interface LayoutProps {
   title: string;
 }
 
-import Navigation from "../components/Navigation.astro";
+import NavigationBar from "../components/navigation/NavigationBar.astro";
 import i18next from "i18next";
+
 const { title } = Astro.props as LayoutProps;
 ---
 
@@ -17,7 +18,7 @@ const { title } = Astro.props as LayoutProps;
     <title>{title}</title>
   </head>
   <body>
-    <Navigation />
+    <NavigationBar />
     <slot />
   </body>
 </html>

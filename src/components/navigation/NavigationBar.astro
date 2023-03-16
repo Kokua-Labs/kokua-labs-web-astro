@@ -1,0 +1,25 @@
+---
+import { LanguageSelector } from "astro-i18next/components";
+import i18next from "i18next";
+
+const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
+---
+
+<header>
+  <nav class="nav-bar">
+    <a href={homePath}>
+      <figure class="nav-bar__logo-wrapper">
+        <img class="navbar__logo" src="./logo.svg" alt="" />
+      </figure>
+    </a>
+  </nav>
+  <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" />
+</header>
+
+<style>
+  .nav-bar {
+    &__logo {
+      width: 20px;
+    }
+  }
+</style>
