@@ -1,11 +1,16 @@
 ---
 type ParkingLayoutProps = {
   title: string;
+  contentTitle: string;
+  contentDescription: string;
 };
 
-const { title } = Astro.props as ParkingLayoutProps;
+import KokuaLabsLogo from "../components/shared/KokuaLabsLogo.astro";
+
+const { title, contentTitle, contentDescription } = Astro.props as ParkingLayoutProps;
 
 import i18next from "i18next";
+import SocialLinks from "../components/shared/SocialLinks.astro";
 ---
 
 <!DOCTYPE html>
@@ -18,7 +23,12 @@ import i18next from "i18next";
   </head>
   <body>
     <main class="parking-layout-content-container">
-      <slot />
+      <KokuaLabsLogo dark />
+      <section>
+        <h1 class="parking-layout-content-container__title">{contentTitle}</h1>
+        <p>{contentDescription}</p>
+      </section>
+      <SocialLinks />
     </main>
   </body>
 </html>
@@ -27,12 +37,20 @@ import i18next from "i18next";
   @import "../../styles/main.css";
 
   .parking-layout-content-container {
+    padding: 96px 32px;
     background-color: var(--color-main);
-    height: 100vh;
-    width: 100wh;
+    height: calc(100vh - 96px * 2);
+    width: calc(100vw - 32px * 2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
   }
 </style>

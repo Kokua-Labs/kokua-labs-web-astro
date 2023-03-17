@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section class="social-links-container">
+  <a href="" target="_blank">
+    <Icon class="social-links-container__icon" pack="mdi" name="linkedin" />
+  </a>
+  <a href="https://www.instagram.com/kokualabs/" target="_blank">
+    <Icon class="social-links-container__icon" pack="mdi" name="instagram" />
+  </a>
+  <a href="" target="_blank">
+    <Icon class="social-links-container__icon" pack="mdi" name="facebook" />
+  </a>
+  <a target="_blank" href="mailto:hello@kokualabs.com">
+    <Icon class="social-links-container__icon" pack="mdi" name="mail" />
+  </a>
+</section>
+
+<style>
+  .social-links-container {
+    display: flex;
+    height: 32px;
+    gap: 32px;
+
+    &__icon {
+      height: 32px;
+      color: var(--color-white);
+    }
+  }
+</style>

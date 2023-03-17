@@ -9,9 +9,16 @@ const isParkingMode = import.meta.env.PUBLIC_PARKING_MODE;
 setDefaultNamespace(isParkingMode ? "parking" : "home");
 ---
 
-{isParkingMode ? <ParkingLayout title={t('title')} /> : <MainLayout />}
-
-
-<!-- <MainLayout title={t("title")} /> -->
+{
+  isParkingMode ? (
+    <ParkingLayout
+      title={t("title")}
+      contentTitle={t("content.mainTitle")}
+      contentDescription={t("content.description")}
+    />
+  ) : (
+    <MainLayout title={t("title")} />
+  )
+}
 
 <style></style>
