@@ -1,14 +1,12 @@
----
-const gaUID = import.meta.env.PUBLIC_GA_UID;
----
+<div>
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_UID}`}></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-<script async src={`https://www.googletagmanager.com/gtag/js?id=${gaUID}`}></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", gaUID);
-</script>
+    gtag("config", import.meta.env.PUBLIC_GA_UID);
+  </script>
+</div>
