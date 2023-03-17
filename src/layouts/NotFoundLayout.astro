@@ -3,7 +3,6 @@ export interface LayoutProps {
   title: string;
 }
 
-import NavigationBar from "../components/navigation/NavigationBar.astro";
 import i18next from "i18next";
 import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
 
@@ -20,13 +19,12 @@ const { title } = Astro.props as LayoutProps;
   </head>
   <body>
     <GoogleAnalytics />
-    <NavigationBar />
     <main>
       <slot />
     </main>
   </body>
 </html>
 
-<style is:global>
+<style>
   @import "../../styles/main.css";
 </style>

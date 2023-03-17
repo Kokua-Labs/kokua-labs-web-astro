@@ -11,6 +11,7 @@ const { title, contentTitle, contentDescription } = Astro.props as ParkingLayout
 
 import i18next from "i18next";
 import SocialLinks from "../components/shared/SocialLinks.astro";
+import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
 ---
 
 <!DOCTYPE html>
@@ -22,6 +23,7 @@ import SocialLinks from "../components/shared/SocialLinks.astro";
     <title>{title}</title>
   </head>
   <body>
+    <GoogleAnalytics />
     <main class="parking-layout-content-container">
       <KokuaLabsLogo dark />
       <section>
