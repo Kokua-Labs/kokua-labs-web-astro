@@ -1,0 +1,27 @@
+Merge branch 'main' into feat/parking
+
+# Conflicts:
+#	astro-i18next.config.mjs
+#	package.json
+#	postcss.config.cjs
+#	src/components/navigation/NavigationBar.astro
+#	src/pages/en/index.astro
+#	src/pages/index.astro
+#	yarn.lock
+#
+# Parece que estás realizando una fusión.
+# Si esto no es correcto, ejecuta
+#	git update-ref -d MERGE_HEAD
+# e intenta de nuevo.
+
+
+# Por favor ingresa el mensaje del commit para tus cambios. Las
+#  líneas que comiencen con '#' serán ignoradas, y un mensaje
+#  vacío aborta el commit.
+#
+# En la rama feat/parking
+# Todos los conflictos resueltos pero sigues fusionando.
+#
+# Cambios a ser confirmados:
+#	modificados:     styles/base/global.css
+#
