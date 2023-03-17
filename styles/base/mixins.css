@@ -1,0 +1,10 @@
+.h-content-wrapper {
+  max-width: var(--max-screen-content);
+  margin: 0 auto;
+}
+
+.neu {
+  border-radius: 14px;
+  background: var(--color-bg);
+  box-shadow: 6px 6px 12px #e1dbd8, -6px -6px 12px #ffffff;
+}

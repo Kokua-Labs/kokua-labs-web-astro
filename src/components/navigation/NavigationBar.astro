@@ -6,21 +6,42 @@ import KokuaLabsLogo from "../shared/KokuaLabsLogo.astro";
 const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 ---
 
-<header class="nav-bar-container h-content-wrapper">
+<header class="nav-bar-container h-content-wrapper neu">
   <nav>
     <a href={homePath}>
-      <KokuaLabsLogo />
+      <KokuaLabsLogo width="120px" />
     </a>
   </nav>
-  <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" />
+  <di class="animate__fadeOut">lang selection</di>
+  <!-- <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" /> -->
 </header>
 
 <style>
-  svg {
-    fill: red;
-  }
   .nav-bar-container {
+    position: sticky;
+    top: var(--space-medium);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-medium) !important;
+    padding: var(--space-medium) var(--space-large);
+    &--hola {
+      position: relative;
+    }
   }
 </style>
+
+<script>
+  let lastScrollTop: number = 0;
+  const navbar = document.querySelector(".nav-bar-container") as HTMLElement;
+
+  window.onscroll = () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      navbar.classList.add("nav-bar-container--hola");
+    } else {
+      navbar.classList.remove("nav-bar-container--hola");
+    }
+    lastScrollTop = scrollTop;
+  };
+</script>

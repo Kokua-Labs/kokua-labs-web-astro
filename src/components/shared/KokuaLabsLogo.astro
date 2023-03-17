@@ -1,8 +1,9 @@
 ---
 type KokuaLabsLogo = {
   dark: boolean;
+  width: string;
 };
-const { dark } = Astro.props as KokuaLabsLogo;
+const { dark, width = "200px" } = Astro.props as KokuaLabsLogo;
 ---
 
 <figure class:list={["kokua-labs-logo-container", { "kokua-labs-logo-container--dark": dark }]}>
@@ -52,10 +53,10 @@ const { dark } = Astro.props as KokuaLabsLogo;
   </svg>
 </figure>
 
-<style>
+<style define:vars={{ width }}>
   .kokua-labs-logo-container {
     height: auto;
-    width: 200px;
+    width: var(--width);
     svg {
       fill: var(--color-main);
     }

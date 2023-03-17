@@ -24,10 +24,10 @@ import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
   </head>
   <body>
     <GoogleAnalytics />
-    <main class="parking-layout-content-container">
+    <main class="parking-layout-container">
       <KokuaLabsLogo dark />
       <section>
-        <h1 class="parking-layout-content-container__title">{contentTitle}</h1>
+        <h1 class="parking-layout-container__title">{contentTitle}</h1>
         <p>{contentDescription}</p>
       </section>
       <SocialLinks />
@@ -38,7 +38,7 @@ import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
 <style>
   @import "../../styles/main.css";
 
-  .parking-layout-content-container {
+  .parking-layout-container {
     padding: 96px 32px;
     background-color: var(--color-main);
     height: calc(100vh - 96px * 2);
