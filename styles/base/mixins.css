@@ -1,0 +1,4 @@
+@define-mixin contentwrapper {
+  max-width: var(--max-screen-content);
+  margin: 0 auto;
+}

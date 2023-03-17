@@ -5,11 +5,11 @@ import i18next from "i18next";
 const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 ---
 
-<header>
-  <nav class="nav-bar">
+<header class="nav-bar h-content-wrapper">
+  <nav>
     <a href={homePath}>
-      <figure class="nav-bar__logo-wrapper">
-        <img class="navbar__logo" src="./logo.svg" alt="" />
+      <figure class="nav-bar__brand-wrapper">
+        <img class="navbar__brand-logo" src="./logo.svg" alt="company logo" />
       </figure>
     </a>
   </nav>
@@ -18,8 +18,15 @@ const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedL
 
 <style>
   .nav-bar {
-    &__logo {
-      width: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__brand-wrapper {
+      width: 200px;
+    }
+    &__brand-logo {
+      width: 100%;
+      height: auto;
     }
   }
 </style>

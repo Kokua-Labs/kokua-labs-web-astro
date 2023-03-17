@@ -6,3 +6,11 @@ h5,
 h6 {
   font-family: "rykerbold";
 }
+
+body {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
