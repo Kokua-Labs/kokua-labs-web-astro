@@ -3,3 +3,7 @@
   --color-white: #ffffff;
   --max-screen-content: 1320px;
 }
+
+@custom-media --vp-media-phone (min-width: 600px);
+@custom-media --vp-media-tablet (min-width: 768px);
+@custom-media --vp-media-desktop (min-width: 992px);

@@ -1,0 +1,56 @@
+---
+type ParkingLayoutProps = {
+  title: string;
+  contentTitle: string;
+  contentDescription: string;
+};
+
+import KokuaLabsLogo from "../components/shared/KokuaLabsLogo.astro";
+
+const { title, contentTitle, contentDescription } = Astro.props as ParkingLayoutProps;
+
+import i18next from "i18next";
+import SocialLinks from "../components/shared/SocialLinks.astro";
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="parking-layout-content-container">
+      <KokuaLabsLogo dark />
+      <section>
+        <h1 class="parking-layout-content-container__title">{contentTitle}</h1>
+        <p>{contentDescription}</p>
+      </section>
+      <SocialLinks />
+    </main>
+  </body>
+</html>
+
+<style>
+  @import "../../styles/main.css";
+
+  .parking-layout-content-container {
+    padding: 96px 32px;
+    background-color: var(--color-main);
+    height: calc(100vh - 96px * 2);
+    width: calc(100vw - 32px * 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+  }
+</style>

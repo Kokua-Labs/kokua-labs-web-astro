@@ -5,6 +5,23 @@ h4,
 h5,
 h6 {
   font-family: "rykerbold";
+  margin: 0;
+  padding: 0;
+}
+
+span,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "biotic";
+  font-size: 28px;
+
+  @media (--vp-media-tablet) {
+    font-size: 32px;
+  }
+  @media (--vp-media-desktop) {
+    font-size: 36px;
+  }
 }
 
 body {
@@ -13,4 +30,14 @@ body {
 
 figure {
   margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+  @media (--vp-media-tablet) {
+    font-size: 42px;
+  }
+  @media (--vp-media-desktop) {
+    font-size: 48px;
+  }
 }

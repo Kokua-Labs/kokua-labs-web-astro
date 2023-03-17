@@ -1,32 +1,26 @@
 ---
 import { LanguageSelector } from "astro-i18next/components";
 import i18next from "i18next";
+import KokuaLabsLogo from "../shared/KokuaLabsLogo.astro";
 
 const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 ---
 
-<header class="nav-bar h-content-wrapper">
+<header class="nav-bar-container h-content-wrapper">
   <nav>
     <a href={homePath}>
-      <figure class="nav-bar__brand-wrapper">
-        <img class="navbar__brand-logo" src="./logo.svg" alt="company logo" />
-      </figure>
+      <KokuaLabsLogo />
     </a>
   </nav>
   <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" />
 </header>
 
 <style>
-  .nav-bar {
+  svg {
+    fill: red;
+  }
+  .nav-bar-container {
     display: flex;
     justify-content: space-between;
-
-    &__brand-wrapper {
-      width: 200px;
-    }
-    &__brand-logo {
-      width: 100%;
-      height: auto;
-    }
   }
 </style>
