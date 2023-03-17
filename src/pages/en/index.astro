@@ -1,12 +1,17 @@
 ---
-import Layout from "../../layouts/Layout.astro";
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
+import MainLayout from "../../layouts/MainLayout.astro";
+import ParkingLayout from "../../layouts/ParkingLayout.astro";
 
 changeLanguage("en");
 
-setDefaultNamespace("home");
+const isParkingMode = import.meta.env.PUBLIC_PARKING_MODE;
+setDefaultNamespace(isParkingMode ? "parking" : "home");
 ---
 
-<Layout title={t("title")} />
+{isParkingMode ? <ParkingLayout title={t('title')} /> : <MainLayout />}
+
+
+<!-- <MainLayout title={t("title")} /> -->
 
 <style></style>

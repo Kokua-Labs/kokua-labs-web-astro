@@ -1,0 +1,28 @@
+---
+type ParkingLayoutProps = {
+  title: string;
+};
+
+const { title } = Astro.props as ParkingLayoutProps;
+
+import i18next from "i18next";
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  @import "../../styles/main.css";
+</style>

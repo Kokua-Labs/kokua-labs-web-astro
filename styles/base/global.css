@@ -7,6 +7,9 @@ h6 {
   font-family: "rykerbold";
 }
 
+span, p {
+  font-family: "biotic";
+}
 body {
   margin: 0;
 }
