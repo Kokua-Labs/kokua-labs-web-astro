@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "astro": "^2.0.18",
-    "astro-i18next": "1.0.0-beta.20"
+    "astro-i18next": "1.0.0-beta.20",
+    "i18next": "^22.4.12"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
