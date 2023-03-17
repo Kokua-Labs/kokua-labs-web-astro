@@ -5,7 +5,7 @@ import ParkingLayout from "../../layouts/ParkingLayout.astro";
 
 changeLanguage("en");
 
-const isParkingMode = import.meta.env.PUBLIC_PARKING_MODE;
+const isParkingMode = true;
 setDefaultNamespace(isParkingMode ? "parking" : "home");
 ---
 

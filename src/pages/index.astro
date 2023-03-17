@@ -3,9 +3,9 @@ import { t, changeLanguage, setDefaultNamespace } from "i18next";
 import MainLayout from "../layouts/MainLayout.astro";
 import ParkingLayout from "../layouts/ParkingLayout.astro";
 
-const isParkingMode = true;
-
 changeLanguage("es");
+
+const isParkingMode = true;
 setDefaultNamespace(isParkingMode ? "parking" : "home");
 ---
 
