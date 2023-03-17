@@ -1,16 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import i18next, { t, changeLanguage, setDefaultNamespace } from "i18next";
+import { t, changeLanguage, setDefaultNamespace } from "i18next";
 
 changeLanguage("en");
 
 setDefaultNamespace("home");
 ---
 
-<Layout title={t("home.title")}>
-  <p>
-    <h1>{i18next.t("title")}</h1>
-  </p>
-</Layout>
+<Layout title={t("title")} />
 
 <style></style>
