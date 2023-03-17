@@ -1,11 +1,11 @@
 ---
 type KokuaLabsLogo = {
-  isDarkMode: boolean;
+  dark: boolean;
 };
-const { isDarkMode } = Astro.props as KokuaLabsLogo;
+const { dark } = Astro.props as KokuaLabsLogo;
 ---
 
-<figure class:list={["kokua-labs-logo-container", { "kokua-labs-logo-container--dark": isDarkMode }]}>
+<figure class:list={["kokua-labs-logo-container", { "kokua-labs-logo-container--dark": dark }]}>
   <svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.99 44.29">
     <g id="Capa_1-2" data-name="Capa 1">
       <g>

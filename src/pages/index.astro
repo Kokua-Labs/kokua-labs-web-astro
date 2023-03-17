@@ -1,5 +1,6 @@
 ---
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
+import KokuaLabsLogo from "../components/shared/KokuaLabsLogo.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import ParkingLayout from "../layouts/ParkingLayout.astro";
 
@@ -9,6 +10,14 @@ const isParkingMode = import.meta.env.PUBLIC_PARKING_MODE;
 setDefaultNamespace(isParkingMode ? "parking" : "home");
 ---
 
-{!isParkingMode ? <ParkingLayout title={t("title")} /> : <MainLayout title={t("title")} />}
+{
+  isParkingMode ? (
+    <ParkingLayout title={t("title")}>
+      <KokuaLabsLogo dark />
+    </ParkingLayout>
+  ) : (
+    <MainLayout title={t("title")} />
+  )
+}
 
 <style></style>
