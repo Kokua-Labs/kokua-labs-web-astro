@@ -11,6 +11,10 @@ export const navigationItems: NavigationItem = {
       label: "Contacto",
       to: "/contact",
     },
+    {
+      label: "Contacto",
+      to: "/contact",
+    },
   ],
   en: [
     {

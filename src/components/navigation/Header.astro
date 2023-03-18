@@ -1,10 +1,12 @@
 ---
-import { LanguageSelector } from "astro-i18next/components";
 import i18next from "i18next";
 import KokuaLabsLogo from "../shared/KokuaLabsLogo.astro";
 import { navigationItems } from "../../config/navigation";
+import LanguageSelector from "../../components/shared/LanguageSelector.astro";
+
 const lang = i18next.language;
 const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
+const currentPagePath = Astro.url.pathname;
 ---
 
 <header class="h-content-wrapper nav-bar-container neu-up">
@@ -13,14 +15,17 @@ const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedL
       <KokuaLabsLogo width="120px" />
     </a>
 
-    <ul>
+    <ul class="nav-bar-container__nav-items">
       {
         navigationItems[lang].map(({ label, to }) => (
-          <li class="neu-down nav-bar-container__nav-item">
-            <a href="">{label}</a>
+          <li class="nav-bar-container__nav-item" class:list={{ "neu-down": currentPagePath === to }}>
+            <a class="nav-bar-container__nav-link" href={to}>
+              {label}
+            </a>
           </li>
         ))
       }
+      <LanguageSelector />
     </ul>
     <!-- <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" /> -->
   </nav>
@@ -30,14 +35,25 @@ const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedL
       position: sticky;
       top: var(--space-medium);
       margin-top: var(--space-medium) !important;
-      padding: var(--space-medium) var(--space-large);
-      &__nav  {
+      padding: var(--space-small) var(--space-large);
+      &__nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
-      &__nav-item  {
+      &__nav-items {
+        display: flex;
+        align-items: center;
+        gap: var(--space-small);
+      }
+      &__nav-item {
+        font-family: "bioticbold";
         padding: var(--space-small) var(--space-small-2);
+        color: var(--color-main);
+      }
+
+      &__nav-link {
+        color: var(--color-main);
       }
       &--visible {
         position: relative;
