@@ -10,14 +10,14 @@ setDefaultNamespace(isParkingMode ? "parking" : "home");
 ---
 
 {
-  isParkingMode ? (
+  !!!isParkingMode ? (
     <ParkingLayout
       title={t("title")}
       contentTitle={t("content.mainTitle")}
       contentDescription={t("content.description")}
     />
   ) : (
-    <MainLayout title={t("title")}></MainLayout>
+    <MainLayout title={t("title")} />
   )
 }
 
