@@ -9,9 +9,9 @@ const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedL
 const currentPagePath = Astro.url.pathname;
 ---
 
-<header class="h-content-wrapper nav-bar-container neu-up">
+<header class="h-content-wrapper nav-bar-container">
   <nav class="nav-bar-container__nav">
-    <a href={homePath}>
+    <a href={homePath} class="nav-bar-container__logo neu-up">
       <KokuaLabsLogo width="120px" />
     </a>
 
@@ -29,51 +29,53 @@ const currentPagePath = Astro.url.pathname;
     </ul>
     <!-- <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" /> -->
   </nav>
-
-  <style>
-    .nav-bar-container {
-      position: sticky;
-      top: var(--space-medium);
-      margin-top: var(--space-medium) !important;
-      padding: var(--space-small-2) var(--space-large);
-      &__nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      &__nav-items {
-        display: flex;
-        align-items: center;
-        gap: var(--space-small-2);
-      }
-      &__nav-item {
-        font-family: "bioticbold";
-        padding: var(--space-small) var(--space-small-2);
-        color: var(--color-main);
-      }
-
-      &__nav-link {
-        color: var(--color-main);
-      }
-      &--visible {
-        position: relative;
-      }
-    }
-  </style>
-
-  <script>
-    let lastScrollTop: number = 0;
-    const navbar = document.querySelector(".nav-bar-container") as HTMLElement;
-    if (navbar) {
-      window.onscroll = () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-          navbar.classList.add("nav-bar-container--visible");
-        } else {
-          navbar.classList.remove("nav-bar-container--visible");
-        }
-        lastScrollTop = scrollTop;
-      };
-    }
-  </script>
 </header>
+
+<style>
+  .nav-bar-container {
+    margin-top: var(--space-medium) !important;
+    padding: var(--space-small-2) var(--space-large);
+    &__logo {
+      padding: var(--space-small) var(--space-small-2);
+    }
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__nav-items {
+      display: flex;
+      align-items: center;
+      gap: var(--space-small-2);
+      &--hide {
+        display: none;
+      }
+    }
+    &__nav-item {
+      font-family: "bioticbold";
+      padding: var(--space-small) var(--space-small-2);
+      color: var(--color-main);
+    }
+
+    &__nav-link {
+      color: var(--color-main);
+    }
+  }
+</style>
+
+<script>
+  const navBar = document.querySelector(".nav-bar-container__nav-items") as HTMLUListElement;
+  const toggleMenuNavBar = (screenWidth: number): void => {
+    if (screenWidth < 600) {
+      navBar.classList.add("nav-bar-container__nav-items--hide");
+    } else {
+      navBar.classList.remove("nav-bar-container__nav-items--hide");
+    }
+  };
+
+  toggleMenuNavBar(window.innerWidth);
+
+  window.onresize = () => {
+    toggleMenuNavBar(window.innerWidth);
+  };
+</script>

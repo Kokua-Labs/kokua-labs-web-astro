@@ -12,5 +12,5 @@
 .neu-down {
   border-radius: 14px;
   background: var(--color-bg);
-  box-shadow: inset -5px -5px 16px #e2e2e2, inset 5px 5px 16px #fefefe;
+  box-shadow: inset 5px 5px 7px #d5d5d5, inset -5px -5px 7px #ebebeb;
 }
