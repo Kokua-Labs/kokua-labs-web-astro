@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "bioticregular";
+}
+
 h1,
 h2,
 h3,
@@ -5,15 +11,21 @@ h4,
 h5,
 h6 {
   font-family: "rykerbold";
-  margin: 0;
-  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
 span,
 p {
-  margin: 0;
-  padding: 0;
-  font-family: "biotic";
   font-size: 28px;
 
   @media (--vp-media-tablet) {
@@ -25,12 +37,7 @@ p {
 }
 
 body {
-  margin: 0;
   background-color: var(--color-bg);
-}
-
-figure {
-  margin: 0;
 }
 
 h1 {

@@ -1,0 +1,64 @@
+---
+import { LanguageSelector } from "astro-i18next/components";
+import i18next from "i18next";
+import KokuaLabsLogo from "../shared/KokuaLabsLogo.astro";
+import { navigationItems } from "../../config/navigation";
+const lang = i18next.language;
+const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
+---
+
+<header class="h-content-wrapper nav-bar-container neu-up">
+  <nav class="nav-bar-container__nav">
+    <a href={homePath}>
+      <KokuaLabsLogo width="120px" />
+    </a>
+
+    <ul>
+      {
+        navigationItems[lang].map(({ label, to }) => (
+          <li class="neu-down nav-bar-container__nav-item">
+            <a href="">{label}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" /> -->
+  </nav>
+
+  <style>
+    .nav-bar-container {
+      position: sticky;
+      top: var(--space-medium);
+      margin-top: var(--space-medium) !important;
+      padding: var(--space-medium) var(--space-large);
+      &__nav  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__nav-item  {
+        padding: var(--space-small) var(--space-small-2);
+      }
+      &--visible {
+        position: relative;
+      }
+    }
+  </style>
+
+  <script>
+    let lastScrollTop: number = 0;
+    const navbar = document.querySelector(".nav-bar-container") as HTMLElement;
+
+    if (navbar) {
+      window.onscroll = () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+          navbar.classList.add("nav-bar-container--visible");
+        } else {
+          navbar.classList.remove("nav-bar-container--visible");
+        }
+        lastScrollTop = scrollTop;
+      };
+    }
+  </script>
+</header>
