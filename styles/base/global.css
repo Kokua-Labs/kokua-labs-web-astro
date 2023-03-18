@@ -59,6 +59,7 @@ a:active {
 span,
 p {
   font-size: 28px;
+  font-family: "bioticregular";
 
   @media (--vp-media-tablet) {
     font-size: 32px;
