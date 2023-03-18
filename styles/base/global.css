@@ -1,3 +1,40 @@
+/* BMG Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-bg);
+  font-family: "bioticregular";
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
 h1,
 h2,
 h3,
@@ -5,16 +42,24 @@ h4,
 h5,
 h6 {
   font-family: "rykerbold";
-  margin: 0;
-  padding: 0;
+  overflow-wrap: break-word;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
 span,
 p {
-  margin: 0;
-  padding: 0;
-  font-family: "biotic";
   font-size: 28px;
+  font-family: "bioticregular";
 
   @media (--vp-media-tablet) {
     font-size: 32px;
@@ -22,14 +67,6 @@ p {
   @media (--vp-media-desktop) {
     font-size: 36px;
   }
-}
-
-body {
-  margin: 0;
-}
-
-figure {
-  margin: 0;
 }
 
 h1 {

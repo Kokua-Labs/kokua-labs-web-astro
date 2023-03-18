@@ -1,7 +1,12 @@
 :root {
   --color-main: #294b65;
   --color-white: #ffffff;
+  --color-bg: #f0f0f0;
   --max-screen-content: 1320px;
+  --space-small: 4px;
+  --space-small-2: 8px;
+  --space-medium: 16px;
+  --space-large: 32px;
 }
 
 @custom-media --vp-media-phone (min-width: 600px);
