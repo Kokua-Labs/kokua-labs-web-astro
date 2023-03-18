@@ -35,7 +35,7 @@ const currentPagePath = Astro.url.pathname;
       position: sticky;
       top: var(--space-medium);
       margin-top: var(--space-medium) !important;
-      padding: var(--space-small) var(--space-large);
+      padding: var(--space-small-2) var(--space-large);
       &__nav {
         display: flex;
         justify-content: space-between;
@@ -44,7 +44,7 @@ const currentPagePath = Astro.url.pathname;
       &__nav-items {
         display: flex;
         align-items: center;
-        gap: var(--space-small);
+        gap: var(--space-small-2);
       }
       &__nav-item {
         font-family: "bioticbold";
@@ -64,7 +64,6 @@ const currentPagePath = Astro.url.pathname;
   <script>
     let lastScrollTop: number = 0;
     const navbar = document.querySelector(".nav-bar-container") as HTMLElement;
-
     if (navbar) {
       window.onscroll = () => {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
