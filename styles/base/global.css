@@ -16,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-bg);
   font-family: "bioticregular";
+  color: var(--color-text);
 }
 
 img,

@@ -2,7 +2,7 @@
 import i18next from "i18next";
 import KokuaLabsLogo from "../shared/KokuaLabsLogo.astro";
 import { navigationItems } from "../../config/navigation";
-import LanguageSelector from "../../components/shared/LanguageSelector.astro";
+import LanguageSelector from "./LanguageSelector.astro";
 
 const lang = i18next.language;
 const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
