@@ -1,6 +1,7 @@
 .h-content-wrapper {
   max-width: var(--max-screen-content);
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .h-box-shadow {
