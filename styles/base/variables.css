@@ -13,7 +13,3 @@
   --space-xl-large: 72px;
   --border-radius: 18px;
 }
-
-@custom-media --vp-media-phone (min-width: 600px);
-@custom-media --vp-media-tablet (min-width: 768px);
-@custom-media --vp-media-desktop (min-width: 992px);
