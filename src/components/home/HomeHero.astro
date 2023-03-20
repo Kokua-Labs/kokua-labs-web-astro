@@ -1,9 +1,22 @@
-<section class="h-content-wrapper home-hero-container">
-  <article>
+---
+import UserLaptopImage from "../../assets/png/user-laptop.png";
+import SpaceshipImage from "../../assets/png/spaceship.png";
+---
+
+<section class="h-content-wrapper h-box-shadow home-hero-container">
+  <article class="home-hero-container__left">
     <h1 class="home-hero-container__title">
       Si tienes una idea, necesitas <span class="home-hero-container__company-name">kokua</span>
     </h1>
     <p class="home-hero-container__description">Tu partner y asesor para la tranformación digital de tu negocio</p>
+  </article>
+  <article class="home-hero-container__right">
+    <figure class="home-hero-container__user-image">
+      <img loading="lazy" alt="user with laptop image" src={UserLaptopImage} />
+    </figure>
+    <figure class="home-hero-container__spaceship-image h-drop-shadow">
+      <img loading="lazy" alt="spaceship image" src={SpaceshipImage} />
+    </figure>
   </article>
 </section>
 
@@ -15,13 +28,16 @@
     margin-top: var(--space-medium) !important;
     height: 549px;
     border-radius: var(--border-radius);
-    background: linear-gradient(-45deg, #2400ff, #00f0ff, #38a3a5, #0096c7, #00b4d8, #48cae4);
+    background: linear-gradient(-45deg, #2400ff, #0062ff, #00f0ff, #38a3a5, #0096c7, #00b4d8, #48cae4);
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
     color: var(--color-white);
+    /* Left */
+    &__left {
+      width: 60%;
+    }
     &__title {
       margin-bottom: var(--space-medium);
-      width: 60%;
       font-family: "bioticbold";
       font-size: 84px;
     }
@@ -34,6 +50,23 @@
       font-size: 18px;
       width: 35%;
       line-height: 1.3;
+    }
+    /* Right */
+    &__right {
+      position: relative;
+      width: 40%;
+      height: 100%;
+    }
+    &__user-image  {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &__spaceship-image {
+      position: absolute;
+      top: -70px;
+      left: -120px;
+      transform: scale(0.8);
     }
   }
 </style>

@@ -2,3 +2,11 @@
   max-width: var(--max-screen-content);
   margin: 0 auto;
 }
+
+.h-box-shadow {
+  box-shadow: 11px 17px 27px -5px rgba(0, 0, 0, 0.25);
+}
+
+.h-drop-shadow {
+  filter: drop-shadow(14px 14px 14px rgba(0, 0, 0, 0.3));
+}
