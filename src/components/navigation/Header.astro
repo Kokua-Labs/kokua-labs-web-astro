@@ -11,14 +11,17 @@ const currentPagePath = Astro.url.pathname;
 
 <header class="h-content-wrapper nav-bar-container">
   <nav class="nav-bar-container__nav">
-    <a href={homePath} class="nav-bar-container__logo neu-up">
-      <KokuaLabsLogo width="120px" />
+    <a href={homePath}>
+      <KokuaLabsLogo width="140px" />
     </a>
 
     <ul class="nav-bar-container__nav-items">
       {
         navigationItems[lang].map(({ label, to }) => (
-          <li class="nav-bar-container__nav-item" class:list={{ "neu-down": currentPagePath === to }}>
+          <li
+            class="nav-bar-container__nav-item"
+            class:list={{ "nav-bar-container__nav-item--selected": currentPagePath === to }}
+          >
             <a class="nav-bar-container__nav-link" href={to}>
               {label}
             </a>
@@ -27,17 +30,12 @@ const currentPagePath = Astro.url.pathname;
       }
       <LanguageSelector />
     </ul>
-    <!-- <LanguageSelector showFlag={true} languageMapping={{ en: "Anglais" }} class="my-select-class" /> -->
   </nav>
 </header>
 
 <style>
   .nav-bar-container {
     margin-top: var(--space-medium) !important;
-    padding: var(--space-small-2) var(--space-large);
-    &__logo {
-      padding: var(--space-small) var(--space-small-2);
-    }
     &__nav {
       display: flex;
       justify-content: space-between;
@@ -46,25 +44,25 @@ const currentPagePath = Astro.url.pathname;
     &__nav-items {
       display: flex;
       align-items: center;
-      gap: var(--space-small-2);
-      &--hide {
-        display: none;
-      }
+      gap: var(--space-medium);
     }
     &__nav-item {
       font-family: "bioticbold";
       padding: var(--space-small) var(--space-small-2);
-      color: var(--color-main);
+      &--selected {
+        /* TODO */
+      }
     }
-
     &__nav-link {
-      color: var(--color-main);
+      color: var(--color-text);
     }
   }
 </style>
 
 <script>
+  /* Detects when user use a mobile device */
   const navBar = document.querySelector(".nav-bar-container__nav-items") as HTMLUListElement;
+
   const toggleMenuNavBar = (screenWidth: number): void => {
     if (screenWidth < 600) {
       navBar.classList.add("nav-bar-container__nav-items--hide");

@@ -1,11 +1,39 @@
-<section class="home-hero-container h-content-wrapper">
-  <h1>Necesitas kokua</h1>
+<section class="h-content-wrapper home-hero-container">
+  <article>
+    <h1 class="home-hero-container__title">
+      Si tienes una idea, necesitas <span class="home-hero-container__company-name">kokua</span>
+    </h1>
+    <p class="home-hero-container__description">Tu partner y asesor para la tranformación digital de tu negocio</p>
+  </article>
 </section>
 
 <style>
   .home-hero-container {
-    height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-xl-large);
+    margin-top: var(--space-medium) !important;
+    height: 549px;
+    border-radius: var(--border-radius);
+    background: linear-gradient(-45deg, #2400ff, #00f0ff, #38a3a5, #0096c7, #00b4d8, #48cae4);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    color: var(--color-white);
+    &__title {
+      margin-bottom: var(--space-medium);
+      width: 60%;
+      font-family: "bioticbold";
+      font-size: 84px;
+    }
+    &__company-name {
+      font-family: "rykerbold";
+      font-size: 84px;
+    }
+    &__description {
+      font-family: "bioticregular";
+      font-size: 18px;
+      width: 35%;
+      line-height: 1.3;
+    }
   }
 </style>
-
-<script></script>

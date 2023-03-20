@@ -2,15 +2,3 @@
   max-width: var(--max-screen-content);
   margin: 0 auto;
 }
-
-.neu-up {
-  border-radius: 14px;
-  background: var(--color-bg);
-  box-shadow: 6px 6px 12px #e1dbd8, -6px -6px 12px #ffffff;
-}
-
-.neu-down {
-  border-radius: 14px;
-  background: var(--color-bg);
-  box-shadow: inset 5px 5px 7px #d5d5d5, inset -5px -5px 7px #ebebeb;
-}

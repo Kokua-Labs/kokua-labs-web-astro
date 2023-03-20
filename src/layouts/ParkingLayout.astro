@@ -51,8 +51,16 @@ import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
     text-align: center;
 
     &__title {
+      font-family: "rykerbold";
       text-transform: uppercase;
       margin-bottom: 32px;
+      font-size: 32px;
+      @media (--vp-media-tablet) {
+        font-size: 42px;
+      }
+      @media (--vp-media-desktop) {
+        font-size: 48px;
+      }
     }
   }
 </style>
