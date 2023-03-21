@@ -1,0 +1,26 @@
+---
+import i18next from "i18next";
+
+type LinkButtonProps = {
+  label: string;
+  to: string;
+};
+
+const { label, to } = Astro.props as LinkButtonProps;
+
+const toUrl = i18next.language === "es" ? to : `${i18next.language}/${to}`;
+---
+
+<a href={toUrl} class="custom-button">{label}</a>
+
+<style>
+  .custom-button {
+    font-family: "rykerbold";
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--space-medium) var(--space-medium-2);
+    color: var(--color-main);
+    width: fit-content;
+    text-align: center;
+  }
+</style>

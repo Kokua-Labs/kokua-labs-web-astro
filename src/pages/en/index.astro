@@ -1,6 +1,5 @@
 ---
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
-import CTA from "../../components/home/CTA.astro";
 import HomeHero from "../../components/home/HomeHero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ParkingLayout from "../../layouts/ParkingLayout.astro";
@@ -21,9 +20,10 @@ setDefaultNamespace(isParkingMode ? "parking" : "home");
   ) : (
     <MainLayout title={t("title")}>
       <HomeHero />
-      <CTA />
     </MainLayout>
   )
 }
 
-<style></style>
+<style is:global>
+  @import "../../../styles/main.css";
+</style>

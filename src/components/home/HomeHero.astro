@@ -5,6 +5,7 @@ import SwitchImage from "../../assets/png/switch.png";
 import NotepadImage from "../../assets/png/notepad.png";
 import WindowImage from "../../assets/png/window.png";
 import HandImage from "../../assets/png/hand.png";
+import LinkButton from "../shared/LinkButton.astro";
 ---
 
 <section class="h-box-shadow home-hero-container">
@@ -13,6 +14,9 @@ import HandImage from "../../assets/png/hand.png";
       Si tienes una idea, necesitas <span class="home-hero-container__company-name">kokua</span>
     </h1>
     <p class="home-hero-container__description">Tu partner y asesor para la tranformación digital de tu negocio</p>
+    <div class="h-drop-shadow">
+      <LinkButton to="/contact" label="Hablemos 🙂" />
+    </div>
     <figure class="home-hero-container__user-image">
       <img loading="lazy" alt="user with 3d laptop image" src={UserLaptopImage} />
     </figure>
@@ -69,8 +73,8 @@ import HandImage from "../../assets/png/hand.png";
       font-size: 18px;
       width: 60%;
       line-height: 1.3;
+      margin-bottom: var(--space-medium);
     }
-    /* Right */
 
     &__user-image  {
       position: absolute;

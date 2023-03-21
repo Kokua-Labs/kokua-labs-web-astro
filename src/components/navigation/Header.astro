@@ -5,8 +5,7 @@ import { navigationItems } from "../../config/navigation";
 import LanguageSelector from "./LanguageSelector.astro";
 
 const lang = i18next.language;
-const homePath =
-  i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
+const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 const currentPagePath = Astro.url.pathname;
 ---
 
@@ -22,7 +21,7 @@ const currentPagePath = Astro.url.pathname;
           <li
             class="nav-bar-container__nav-item"
             class:list={{
-              "nav-bar-container__nav-item--selected": currentPagePath === to,
+              "h-neu-up": currentPagePath === to,
             }}
           >
             <a class="nav-bar-container__nav-link" href={to}>
@@ -55,9 +54,6 @@ const currentPagePath = Astro.url.pathname;
     &__nav-item {
       font-family: "bioticbold";
       padding: var(--space-small) var(--space-small-2);
-      &--selected {
-        /* TODO */
-      }
     }
     &__nav-link {
       color: var(--color-text);
@@ -67,9 +63,7 @@ const currentPagePath = Astro.url.pathname;
 
 <script>
   /* Detects when user use a mobile device */
-  const navBar = document.querySelector(
-    ".nav-bar-container__nav-items"
-  ) as HTMLUListElement;
+  const navBar = document.querySelector(".nav-bar-container__nav-items") as HTMLUListElement;
 
   const toggleMenuNavBar = (screenWidth: number): void => {
     if (screenWidth < 600) {
