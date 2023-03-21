@@ -45,7 +45,7 @@ import LinkButton from "../shared/LinkButton.astro";
     display: flex;
     padding: var(--space-xl-large) var(--space-medium-2) 0;
     height: 456px;
-    margin-top: var(--space-medium) !important;
+    margin-top: var(--space-medium);
     border-radius: var(--border-radius);
     background: linear-gradient(-45deg, #2400ff, #0062ff, #00f0ff, #38a3a5, #0096c7, #00b4d8, #004cff);
     background-size: 400% 400%;
@@ -58,13 +58,12 @@ import LinkButton from "../shared/LinkButton.astro";
     }
     @media (--vp-media-desktop) {
       padding: 0 var(--space-xl-large);
-      align-items: center;
       height: 549px;
     }
 
     &__content {
       z-index: 1;
-      width: 280px;
+      width: 100%;
       @media (--vp-media-tablet) {
         width: 480px;
       }
@@ -73,11 +72,11 @@ import LinkButton from "../shared/LinkButton.astro";
       }
     }
     &__title {
-      margin-bottom: var(--space-medium-2);
+      position: relative;
+      margin-bottom: var(--space-medium);
       font-family: "bioticbold";
       font-size: 36px;
       z-index: 1;
-      position: relative;
       @media (--vp-media-tablet) {
         font-size: 42px;
       }
@@ -112,31 +111,33 @@ import LinkButton from "../shared/LinkButton.astro";
     }
     &__user-image {
       position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 55%;
+      bottom: -62px;
+      right: -62px;
+      transform: scale(0.6);
       @media (--vp-media-tablet) {
-        width: 30%;
-        right: 20px;
+        bottom: -32px;
+        right: -22px;
+        transform: scale(0.8);
       }
       @media (--vp-media-desktop) {
-        width: auto;
+        bottom: 0;
+        right: 0;
+        transform: scale(1);
       }
     }
     &__spaceship-image {
-      display: block;
       position: absolute;
-      top: -25px;
-      left: -75px;
-      width: 40%;
+      transform: scale(0.5) !important;
+      top: -80px;
+      left: -125px;
       @media (--vp-media-tablet) {
-        width: 25%;
-        left: -75px;
+        left: -135px;
+        transform: scale(0.6) !important;
       }
       @media (--vp-media-desktop) {
-        width: 250px;
         top: -70px;
         left: 588px;
+        transform: scale(0.8) !important;
       }
     }
     &__switch-image {
@@ -145,8 +146,8 @@ import LinkButton from "../shared/LinkButton.astro";
       top: 140px;
       right: 0;
       @media (--vp-media-tablet) {
-        top: 40px;
-        right: 240px;
+        top: 60px;
+        right: 180px;
       }
       @media (--vp-media-desktop) {
         top: 44px;
@@ -154,19 +155,18 @@ import LinkButton from "../shared/LinkButton.astro";
       }
     }
     &__notepad-image {
-      display: block;
       position: absolute;
-      top: 368px;
-      right: 260px;
-      width: 20%;
+      right: 290px;
+      bottom: 0px;
+      transform: scale(0.7);
       @media (--vp-media-tablet) {
-        width: 10%;
-        top: 198px;
+        right: 310px;
+        bottom: 30px;
       }
       @media (--vp-media-desktop) {
         top: 228px;
         right: 356px;
-        width: auto;
+        transform: scale(1);
       }
     }
     &__window-image {
@@ -176,6 +176,7 @@ import LinkButton from "../shared/LinkButton.astro";
       bottom: 60px;
       right: 580px;
       @media (--vp-media-tablet) {
+        display: none;
       }
       @media (--vp-media-desktop) {
         display: block;
@@ -183,16 +184,19 @@ import LinkButton from "../shared/LinkButton.astro";
     }
     &__hand-image {
       display: block;
-      width: 25%;
       position: absolute;
-      right: 0;
-      top: 50px;
+      right: -105px;
+      top: -50px;
+      transform: scale(0.3) !important;
       @media (--vp-media-tablet) {
-        top: 0px;
+        top: -40px;
+        right: -60px;
+        transform: scale(0.6) !important;
       }
       @media (--vp-media-desktop) {
-        width: auto;
         top: 0;
+        right: 0px;
+        transform: scale(1) !important;
       }
     }
   }
