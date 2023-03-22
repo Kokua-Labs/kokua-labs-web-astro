@@ -1,0 +1,32 @@
+{
+    "title": "Cookie Policy",
+    "content": {
+        "title": "Cookie Policy",
+        "texts": [
+            {
+                "sectionTitle": "What are Cookies?",
+                "description": "Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide information to the website owners."
+              },
+              {
+                "sectionTitle": "How We Use Cookies",
+                "description": "We use cookies to collect information about your use of our website through Google Analytics. This helps us analyze data about web page traffic and improve our website in order to tailor it to customer needs."
+              },
+              {
+                "sectionTitle": "Types of Cookies We Use",
+                "description": "We only use one type of cookie, which is Google Analytics. This cookie allows us to collect information about how visitors use our website, including details of the website where the visitor has come from and the total number of times a visitor has been to our website. We use this information to improve our website and tailor it to customer needs."
+              },
+              {
+                "sectionTitle": "Managing Cookies",
+                "description": "Most web browsers allow you to control cookies through their settings preferences. However, if you limit the ability of websites to set cookies, you may worsen your overall user experience, since it will no longer be personalized to you. To learn how to manage cookies in your browser, you can refer to the help section of your browser or device."
+              },
+              {
+                "sectionTitle": "Changes to Our Cookie Policy",
+                "description": "We may update this cookie policy from time to time to reflect changes in our practices and service offerings. We recommend that you review this policy periodically to stay informed about our use of cookies."
+              },
+              {
+                "sectionTitle": "Contact Information",
+                "description": "If you have any questions or concerns about our cookie policy, please contact us at info@kokualabs.com."
+              }
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { t, changeLanguage, setDefaultNamespace } from "i18next";
+
+changeLanguage("en");
+
+type TextItem = {
+    sectionTitle: string;
+    description: string;
+};
+setDefaultNamespace("cookies");
+const texts: TextItem[] = t("content.texts");
+console.log(texts);
+---
+
+<MainLayout title={t("title")}>
+  <section class="cookies-page">
+    <h1 class="cookies-page__title">{t("content.title")}</h1>
+  </section>
+
+  <style>
+    .cookies-page {
+      margin-top: var(--space-large);
+      &__title {
+        font-family: "bioticbold";
+        font-size: 46px;
+      }
+    }
+  </style>
+</MainLayout>

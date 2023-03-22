@@ -1,0 +1,51 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { t, changeLanguage, setDefaultNamespace } from "i18next";
+
+changeLanguage("es");
+
+type TextItem = {
+  sectionTitle: string;
+  description: string;
+};
+
+setDefaultNamespace("cookies");
+const texts: TextItem[] = t("content.texts") as any;
+---
+
+<MainLayout title={t("title")}>
+  <section class="cookies-page">
+    <h1 class="cookies-page__title">{t("content.title")}</h1>
+    {
+      texts.map((el) => {
+        return (
+          <article class="cookies-page__text">
+            <h3>{el.sectionTitle}</h3>
+            <p>{el.description}</p>
+          </article>
+        );
+      })
+    }
+  </section>
+
+  <style>
+    @import "../../styles/media-queries.css";
+    .cookies-page {
+      &__title {
+        margin: var(--space-medium) 0;
+        font-family: "bioticbold";
+        font-size: 34px;
+        @media (--vp-media-desktop) {
+          font-size: 46px;
+        }
+      }
+      &__text {
+        margin-bottom: var(--space-large);
+        h3 {
+          font-family: "bioticbold";
+          margin-bottom: var(--space-small-2);
+        }
+      }
+    }
+  </style>
+</MainLayout>

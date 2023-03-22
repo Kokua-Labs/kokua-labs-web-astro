@@ -7,7 +7,7 @@ import ParkingLayout from "../../layouts/ParkingLayout.astro";
 changeLanguage("en");
 
 const isParkingMode: boolean = import.meta.env.PUBLIC_PARKING_MODE;
-setDefaultNamespace(isParkingMode ? "home" : "home");
+setDefaultNamespace(!!!isParkingMode ? "parking" : "home");
 ---
 
 {
