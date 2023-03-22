@@ -1,16 +1,19 @@
 .h-content-wrapper {
   max-width: var(--max-screen-content);
   margin: 0 auto;
+  padding: 0 16px;
 }
 
-.neu-up {
-  border-radius: 14px;
-  background: var(--color-bg);
-  box-shadow: 6px 6px 12px #e1dbd8, -6px -6px 12px #ffffff;
+.h-box-shadow {
+  box-shadow: 11px 17px 27px -5px rgba(0, 0, 0, 0.25);
 }
 
-.neu-down {
-  border-radius: 14px;
-  background: var(--color-bg);
-  box-shadow: inset -5px -5px 16px #e2e2e2, inset 5px 5px 16px #fefefe;
+.h-drop-shadow {
+  filter: drop-shadow(14px 14px 14px rgba(0, 0, 0, 0.3));
+}
+
+.h-neu-up {
+  border-radius: 9px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 5px 5px 9px #c5c5c5, -5px -5px 9px #fbfbfb;
 }

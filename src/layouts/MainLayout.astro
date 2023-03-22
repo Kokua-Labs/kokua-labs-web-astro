@@ -4,8 +4,10 @@ export interface LayoutProps {
 }
 
 import Header from "../components/navigation/Header.astro";
+import Footer from "../components/footer/Footer.astro";
 import i18next from "i18next";
 import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 const { title } = Astro.props as LayoutProps;
 ---
@@ -16,17 +18,19 @@ const { title } = Astro.props as LayoutProps;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <HeadHrefLangs />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
     <GoogleAnalytics />
     <Header />
-    <main>
+    <main class="h-content-wrapper">
       <slot />
     </main>
-  </body>
+    <Footer />
+  </body><style is:global>
+    @import "../../styles/main.css";
+  </style>
 </html>
-
-<style is:global>
-  @import "../../styles/main.css";
-</style>

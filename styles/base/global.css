@@ -3,19 +3,20 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-* {
   margin: 0;
+  padding: 0;
 }
+
 html,
 body {
   height: 100%;
 }
 body {
-  line-height: 1.5;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-bg);
   font-family: "bioticregular";
+  color: var(--color-text);
 }
 
 img,
@@ -41,7 +42,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "rykerbold";
   overflow-wrap: break-word;
 }
 
@@ -54,27 +54,4 @@ a:focus,
 a:visited,
 a:active {
   text-decoration: none;
-}
-
-span,
-p {
-  font-size: 28px;
-  font-family: "bioticregular";
-
-  @media (--vp-media-tablet) {
-    font-size: 32px;
-  }
-  @media (--vp-media-desktop) {
-    font-size: 36px;
-  }
-}
-
-h1 {
-  font-size: 32px;
-  @media (--vp-media-tablet) {
-    font-size: 42px;
-  }
-  @media (--vp-media-desktop) {
-    font-size: 48px;
-  }
 }

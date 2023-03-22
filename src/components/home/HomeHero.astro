@@ -1,0 +1,213 @@
+---
+type HomeHeroProps = {
+  title: string;
+  description: string;
+  ctaLabel: string;
+  companyName: string;
+};
+
+import UserLaptopImage from "../../assets/png/user-laptop.png";
+import SpaceshipImage from "../../assets/png/spaceship.png";
+import SwitchImage from "../../assets/png/switch.png";
+import NotepadImage from "../../assets/png/notepad.png";
+import WindowImage from "../../assets/png/window.png";
+import HandImage from "../../assets/png/hand.png";
+import LinkButton from "../shared/LinkButton.astro";
+
+const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroProps;
+---
+
+<section class="h-box-shadow home-hero-container">
+  <article class="home-hero-container__content">
+    <h1 class="home-hero-container__title animate__animated animate__fadeIn">
+      {title}
+      <span class="home-hero-container__company-name">{companyName}</span>
+    </h1>
+    <p class="home-hero-container__description">{description}</p>
+    <div class="h-drop-shadow">
+      <LinkButton to="/contact" label={ctaLabel} />
+    </div>
+    <figure class="home-hero-container__user-image">
+      <img loading="lazy" alt="user with 3d laptop image" src={UserLaptopImage} />
+    </figure>
+    <figure class="home-hero-container__spaceship-image animate__animated animate__fadeInBottomLeft h-drop-shadow">
+      <img loading="lazy" alt="spaceship 3d image" src={SpaceshipImage} />
+    </figure>
+    <figure class="home-hero-container__switch-image h-drop-shadow animate__animated animate__bounce">
+      <img loading="lazy" alt="switch 3d image" src={SwitchImage} />
+    </figure>
+    <figure class="home-hero-container__notepad-image h-drop-shadow">
+      <img loading="lazy" alt="notepad 3d image" src={NotepadImage} />
+    </figure>
+    <figure class="home-hero-container__window-image h-drop-shadow">
+      <img loading="lazy" alt="window 3d image" src={WindowImage} />
+    </figure>
+    <figure class="home-hero-container__hand-image animate__animated animate__fadeInRight">
+      <img loading="lazy" alt="hand 3d image" src={HandImage} />
+    </figure>
+  </article>
+</section>
+
+<style>
+  @import "../../../styles/media-queries.css";
+  .home-hero-container {
+    position: relative;
+    display: flex;
+    padding: var(--space-xl-large) var(--space-medium-2) 0;
+    height: 456px;
+    margin-top: var(--space-medium);
+    border-radius: var(--border-radius);
+    background: linear-gradient(-45deg, #2400ff, #0062ff, #00f0ff, #38a3a5, #0096c7, #00b4d8, #004cff);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    color: var(--color-white);
+    @media (--vp-media-tablet) {
+      height: 384px;
+      padding: 0 var(--space-large-3);
+      align-items: center;
+    }
+    @media (--vp-media-desktop) {
+      padding: 0 var(--space-xl-large);
+      height: 549px;
+    }
+
+    &__content {
+      z-index: 1;
+      width: 100%;
+      @media (--vp-media-tablet) {
+        width: 480px;
+      }
+      @media (--vp-media-desktop) {
+        width: 650px;
+      }
+    }
+    &__title {
+      position: relative;
+      margin-bottom: var(--space-medium);
+      font-family: "bioticbold";
+      font-size: 36px;
+      z-index: 1;
+      @media (--vp-media-tablet) {
+        font-size: 42px;
+      }
+      @media (--vp-media-desktop) {
+        font-size: 84px;
+      }
+    }
+    &__company-name {
+      font-family: "rykerbold";
+      font-size: 36px;
+      @media (--vp-media-tablet) {
+        font-size: 42px;
+      }
+      @media (--vp-media-desktop) {
+        font-size: 84px;
+      }
+    }
+    &__description {
+      font-family: "bioticregular";
+      margin-bottom: var(--space-medium-2);
+      line-height: 1.3;
+      width: 80%;
+      font-size: 16px;
+      @media (--vp-media-tablet) {
+        width: 70%;
+        font-size: 18px;
+      }
+      @media (--vp-media-desktop) {
+        width: 60%;
+        font-size: 21px;
+      }
+    }
+    &__user-image {
+      position: absolute;
+      bottom: -62px;
+      right: -62px;
+      transform: scale(0.6);
+      @media (--vp-media-tablet) {
+        bottom: -32px;
+        right: -22px;
+        transform: scale(0.8);
+      }
+      @media (--vp-media-desktop) {
+        bottom: 0;
+        right: 0;
+        transform: scale(1);
+      }
+    }
+    &__spaceship-image {
+      position: absolute;
+      transform: scale(0.5) !important;
+      top: -80px;
+      left: -125px;
+      @media (--vp-media-tablet) {
+        left: -135px;
+        transform: scale(0.6) !important;
+      }
+      @media (--vp-media-desktop) {
+        top: -70px;
+        left: 588px;
+        transform: scale(0.8) !important;
+      }
+    }
+    &__switch-image {
+      display: block;
+      position: absolute;
+      top: 140px;
+      right: 0;
+      @media (--vp-media-tablet) {
+        top: 60px;
+        right: 180px;
+      }
+      @media (--vp-media-desktop) {
+        top: 44px;
+        right: 354px;
+      }
+    }
+    &__notepad-image {
+      position: absolute;
+      right: 290px;
+      bottom: 0px;
+      transform: scale(0.7);
+      @media (--vp-media-tablet) {
+        right: 310px;
+        bottom: 30px;
+      }
+      @media (--vp-media-desktop) {
+        top: 228px;
+        right: 356px;
+        transform: scale(1);
+      }
+    }
+    &__window-image {
+      display: none;
+      transform: scale(0.9);
+      position: absolute;
+      bottom: 60px;
+      right: 580px;
+      @media (--vp-media-tablet) {
+        display: none;
+      }
+      @media (--vp-media-desktop) {
+        display: block;
+      }
+    }
+    &__hand-image {
+      display: block;
+      position: absolute;
+      right: -105px;
+      top: -50px;
+      transform: scale(0.3) !important;
+      @media (--vp-media-tablet) {
+        top: -40px;
+        right: -60px;
+        transform: scale(0.6) !important;
+      }
+      @media (--vp-media-desktop) {
+        top: 0;
+        right: 0px;
+        transform: scale(1) !important;
+      }
+    }
+  }
+</style>

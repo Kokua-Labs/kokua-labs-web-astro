@@ -1,16 +1,17 @@
 ---
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
+import HomeHero from "../../components/home/HomeHero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ParkingLayout from "../../layouts/ParkingLayout.astro";
 
 changeLanguage("en");
 
 const isParkingMode: boolean = import.meta.env.PUBLIC_PARKING_MODE;
-setDefaultNamespace(isParkingMode ? "parking" : "home");
+setDefaultNamespace(isParkingMode ? "home" : "home");
 ---
 
 {
-  isParkingMode ? (
+  !!!isParkingMode ? (
     <ParkingLayout
       title={t("title")}
       contentTitle={t("content.mainTitle")}
@@ -18,191 +19,12 @@ setDefaultNamespace(isParkingMode ? "parking" : "home");
     />
   ) : (
     <MainLayout title={t("title")}>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus?
-      Nisi laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima. Lorem
-      ipsum, dolor sit amet consectetur adipisicing elit. Nam molestiae, doloremque et deserunt quis accusamus? Nisi
-      laudantium repudiandae eius, delectus fuga eos beatae saepe architecto, veritatis libero illo id minima.
+      <HomeHero
+        title={t("components.hero.title")}
+        companyName={t("components.hero.companyName")}
+        description={t("components.hero.description")}
+        ctaLabel={t("components.hero.ctaLabel")}
+      />
     </MainLayout>
   )
 }
-
-<style></style>

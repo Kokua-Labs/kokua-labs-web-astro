@@ -1,0 +1,3 @@
+@custom-media --vp-media-phone (max-width: 600px);
+@custom-media --vp-media-tablet (min-width: 600px);
+@custom-media --vp-media-desktop (min-width: 992px);

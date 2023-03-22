@@ -2,13 +2,15 @@
   --color-main: #294b65;
   --color-white: #ffffff;
   --color-bg: #f0f0f0;
+  --color-text: #0a2540;
   --max-screen-content: 1320px;
   --space-small: 4px;
   --space-small-2: 8px;
   --space-medium: 16px;
+  --space-medium-2: 24px;
   --space-large: 32px;
+  --space-large-2: 36px;
+  --space-large-3: 42px;
+  --space-xl-large: 72px;
+  --border-radius: 18px;
 }
-
-@custom-media --vp-media-phone (min-width: 600px);
-@custom-media --vp-media-tablet (min-width: 768px);
-@custom-media --vp-media-desktop (min-width: 992px);
