@@ -7,7 +7,7 @@ import ParkingLayout from "../../layouts/ParkingLayout.astro";
 changeLanguage("en");
 
 const isParkingMode: boolean = import.meta.env.PUBLIC_PARKING_MODE;
-setDefaultNamespace(isParkingMode ? "parking" : "home");
+setDefaultNamespace(isParkingMode ? "home" : "home");
 ---
 
 {
@@ -19,11 +19,12 @@ setDefaultNamespace(isParkingMode ? "parking" : "home");
     />
   ) : (
     <MainLayout title={t("title")}>
-      <HomeHero />
+      <HomeHero
+        title={t("components.hero.title")}
+        companyName={t("components.hero.companyName")}
+        description={t("components.hero.description")}
+        ctaLabel={t("components.hero.ctaLabel")}
+      />
     </MainLayout>
   )
 }
-
-<style is:global>
-  @import "../../../styles/main.css";
-</style>

@@ -1,4 +1,11 @@
 ---
+type HomeHeroProps = {
+  title: string;
+  description: string;
+  ctaLabel: string;
+  companyName: string;
+};
+
 import UserLaptopImage from "../../assets/png/user-laptop.png";
 import SpaceshipImage from "../../assets/png/spaceship.png";
 import SwitchImage from "../../assets/png/switch.png";
@@ -6,16 +13,19 @@ import NotepadImage from "../../assets/png/notepad.png";
 import WindowImage from "../../assets/png/window.png";
 import HandImage from "../../assets/png/hand.png";
 import LinkButton from "../shared/LinkButton.astro";
+
+const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroProps;
 ---
 
 <section class="h-box-shadow home-hero-container">
   <article class="home-hero-container__content">
     <h1 class="home-hero-container__title animate__animated animate__fadeIn">
-      Si tienes una idea, necesitas <span class="home-hero-container__company-name">kokua</span>
+      {title}
+      <span class="home-hero-container__company-name">{companyName}</span>
     </h1>
-    <p class="home-hero-container__description">Tu partner y asesor para la tranformación digital de tu negocio</p>
+    <p class="home-hero-container__description">{description}</p>
     <div class="h-drop-shadow">
-      <LinkButton to="/contact" label="Hablemos 😉" />
+      <LinkButton to="/contact" label={ctaLabel} />
     </div>
     <figure class="home-hero-container__user-image">
       <img loading="lazy" alt="user with 3d laptop image" src={UserLaptopImage} />
