@@ -1,9 +1,17 @@
-type CookiesText = { [key: string]: { title: string; description: string; knowMore: string; ctaLabel: string } };
+type CookiesText = {
+  [key: string]: {
+    title: string;
+    description: string;
+    knowMore: string;
+    ctaLabel: string;
+  };
+};
 
 export const cookiesTexts: CookiesText = {
   en: {
     title: "About our 🍪",
-    description: "We use Cookies to facilitate navigation and provide a better web experience.",
+    description:
+      "We use Cookies to facilitate navigation and provide a better web experience.",
     knowMore: "learn more",
     ctaLabel: "Accept",
   },
