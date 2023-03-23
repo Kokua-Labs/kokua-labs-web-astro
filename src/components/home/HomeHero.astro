@@ -14,8 +14,7 @@ import WindowImage from "../../assets/png/window.png";
 import HandImage from "../../assets/png/hand.png";
 import LinkButton from "../shared/LinkButton.astro";
 
-const { title, description, ctaLabel, companyName } =
-  Astro.props as HomeHeroProps;
+const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroProps;
 ---
 
 <section class="h-box-shadow home-hero-container">
@@ -29,20 +28,12 @@ const { title, description, ctaLabel, companyName } =
       <LinkButton to="/contact" label={ctaLabel} />
     </div>
     <figure class="home-hero-container__user-image">
-      <img
-        loading="lazy"
-        alt="user with 3d laptop image"
-        src={UserLaptopImage}
-      />
+      <img loading="lazy" alt="user with 3d laptop image" src={UserLaptopImage} />
     </figure>
-    <figure
-      class="home-hero-container__spaceship-image animate__animated animate__fadeInBottomLeft h-drop-shadow"
-    >
+    <figure class="home-hero-container__spaceship-image animate__animated animate__fadeInBottomLeft h-drop-shadow">
       <img loading="lazy" alt="spaceship 3d image" src={SpaceshipImage} />
     </figure>
-    <figure
-      class="home-hero-container__switch-image h-drop-shadow animate__animated animate__bounce"
-    >
+    <figure class="home-hero-container__switch-image h-drop-shadow animate__animated animate__bounce">
       <img loading="lazy" alt="switch 3d image" src={SwitchImage} />
     </figure>
     <figure class="home-hero-container__notepad-image h-drop-shadow">
@@ -51,9 +42,7 @@ const { title, description, ctaLabel, companyName } =
     <figure class="home-hero-container__window-image h-drop-shadow">
       <img loading="lazy" alt="window 3d image" src={WindowImage} />
     </figure>
-    <figure
-      class="home-hero-container__hand-image animate__animated animate__fadeInRight"
-    >
+    <figure class="home-hero-container__hand-image animate__animated animate__fadeInRight">
       <img loading="lazy" alt="hand 3d image" src={HandImage} />
     </figure>
   </article>
@@ -68,16 +57,7 @@ const { title, description, ctaLabel, companyName } =
     height: 456px;
     margin-top: var(--space-medium);
     border-radius: var(--border-radius);
-    background: linear-gradient(
-      -45deg,
-      #2400ff,
-      #0062ff,
-      #00f0ff,
-      #38a3a5,
-      #0096c7,
-      #00b4d8,
-      #004cff
-    );
+    background: linear-gradient(-45deg, #2400ff, #0062ff, #00f0ff, #38a3a5, #0096c7, #00b4d8, #004cff);
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
     color: var(--color-white);
@@ -97,7 +77,7 @@ const { title, description, ctaLabel, companyName } =
         width: 480px;
       }
       @media (--vp-media-desktop) {
-        width: 650px;
+        width: 680px;
       }
     }
     &__title {
@@ -156,17 +136,19 @@ const { title, description, ctaLabel, companyName } =
     }
     &__spaceship-image {
       position: absolute;
-      transform: scale(0.5) !important;
-      top: -80px;
-      left: -125px;
+      left: -84px;
+      position: absolute;
+      top: -26px;
+      width: 181px;
+
       @media (--vp-media-tablet) {
-        left: -135px;
+        left: -90px;
         transform: scale(0.6) !important;
       }
       @media (--vp-media-desktop) {
         top: -70px;
         left: 588px;
-        transform: scale(0.8) !important;
+        width: 231px;
       }
     }
     &__switch-image {
@@ -176,11 +158,11 @@ const { title, description, ctaLabel, companyName } =
       right: 0;
       @media (--vp-media-tablet) {
         top: 60px;
-        right: 180px;
+        right: 280px;
       }
       @media (--vp-media-desktop) {
         top: 44px;
-        right: 354px;
+        right: 300px;
       }
     }
     &__notepad-image {
@@ -214,18 +196,17 @@ const { title, description, ctaLabel, companyName } =
     &__hand-image {
       display: block;
       position: absolute;
-      right: -105px;
-      top: -50px;
-      transform: scale(0.3) !important;
+      right: 0px;
+      top: 55px;
+      width: 100px;
       @media (--vp-media-tablet) {
-        top: -40px;
-        right: -60px;
-        transform: scale(0.6) !important;
+        top: 10px;
+        right: 0;
+        width: 200px;
       }
       @media (--vp-media-desktop) {
         top: 0;
         right: 0px;
-        transform: scale(1) !important;
       }
     }
   }
