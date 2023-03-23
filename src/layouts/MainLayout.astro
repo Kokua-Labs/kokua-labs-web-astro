@@ -2,7 +2,7 @@
 export interface LayoutProps {
   title: string;
 }
-
+import { SEO } from "astro-seo";
 import Header from "../components/header/Header.astro";
 import Footer from "../components/Footer.astro";
 import i18next from "i18next";
@@ -23,6 +23,8 @@ const { title } = Astro.props as LayoutProps;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <HeadHrefLangs />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <SEO />
   </head>
   <body>
     <GoogleAnalytics />
