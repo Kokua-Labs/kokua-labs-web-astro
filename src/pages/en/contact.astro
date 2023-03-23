@@ -1,8 +1,14 @@
 ---
-import { changeLanguage } from "i18next";
+import { changeLanguage, t, setDefaultNamespace } from "i18next";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 changeLanguage("en");
+
+setDefaultNamespace("contact");
 ---
 
-<MainLayout />
+<MainLayout title={t("content.title")}>
+  <h1>{t("content.title")}</h1>
+  <iframe width="100%" height="100%" src="https://kokualabs.agilecrm.com/forms/5975734860709888" frameborder="0"
+  ></iframe>
+</MainLayout>

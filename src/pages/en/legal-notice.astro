@@ -6,15 +6,23 @@ changeLanguage("en");
 
 setDefaultNamespace("legal");
 type TextItem = {
-    sectionTitle: string;
-    description: string;
+    text: string;
 };
-const texts: TextItem[] = t("legal.texts") as any;
+const texts: TextItem[] = t("content.texts") as any;
 ---
 
 <MainLayout title={t("title")}>
   <section class="legal-page">
     <h1 class="legal-page__title">{t("content.title")}</h1>
+    {
+      texts.map((el) => {
+        return (
+          <article class="legal-page__text">
+            <p>{el.text}</p>
+          </article>
+        );
+      })
+    }
   </section>
 </MainLayout>
 
@@ -30,11 +38,8 @@ const texts: TextItem[] = t("legal.texts") as any;
       }
     }
     &__text {
+      line-height: 1.3;
       margin-bottom: var(--space-large);
-      h3 {
-        font-family: "bioticbold";
-        margin-bottom: var(--space-small-2);
-      }
     }
   }
 </style>

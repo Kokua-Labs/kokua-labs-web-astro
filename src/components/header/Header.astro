@@ -5,8 +5,7 @@ import { navigationItems } from "../../config/navigation";
 import LanguageSelector from "./LanguageSelector.astro";
 
 const lang = i18next.language;
-const homePath =
-  i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
+const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 const currentPagePath = Astro.url.pathname;
 ---
 
@@ -39,6 +38,7 @@ const currentPagePath = Astro.url.pathname;
 <style>
   .nav-bar-container {
     margin-top: var(--space-medium) !important;
+    margin-bottom: var(--space-large) !important;
     &__nav {
       display: flex;
       justify-content: space-between;
@@ -64,9 +64,7 @@ const currentPagePath = Astro.url.pathname;
 
 <script>
   /* Detects when user use a mobile device */
-  const navBar = document.querySelector(
-    ".nav-bar-container__nav-items"
-  ) as HTMLUListElement;
+  const navBar = document.querySelector(".nav-bar-container__nav-items") as HTMLUListElement;
 
   const toggleMenuNavBar = (screenWidth: number): void => {
     if (screenWidth < 600) {
