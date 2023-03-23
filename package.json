@@ -21,6 +21,7 @@
     "postcss-custom-media": "^9.1.2"
   },
   "devDependencies": {
+    "astro-compress": "^1.1.35",
     "autoprefixer": "^10.4.14",
     "cssnano": "^5.1.15",
     "postcss-nested": "^6.0.1",
