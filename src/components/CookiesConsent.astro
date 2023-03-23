@@ -1,17 +1,23 @@
 ---
 import TextLink from "./shared/TextLink.astro";
+import { cookiesTexts } from "../config/cookies";
+import i18next from "i18next";
+
+const lang = i18next.language;
 ---
 
 <div class="h-box-shadow cookies-consent">
-  <h4 class="cookies-consent__title">Sobre nuestas 🍪</h4>
+  <h4 class="cookies-consent__title">{cookiesTexts[lang].title}</h4>
   <p class="cookies-consent__description">
-    Hacemos uso de Cookies para facilitar la navegación y porder ofrecer una mejor experiencia en de la web.
-    <TextLink label="saber más" to="/cookies-policy" />
+    {cookiesTexts[lang].description}
+    <TextLink label={cookiesTexts[lang].knowMore} to="/cookies-policy" />
   </p>
-  <button class="cookies-consent__consent">Aceptar</button>
+  <button class="cookies-consent__consent">{cookiesTexts[lang].ctaLabel}</button>
 </div>
 
 <style>
+  @import "../../styles/media-queries.css";
+
   .cookies-consent {
     background-color: var(--color-white);
     padding: var(--space-medium);
@@ -19,13 +25,27 @@ import TextLink from "./shared/TextLink.astro";
     border-radius: var(--border-radius);
     position: fixed;
     bottom: 0;
+    z-index: 9;
+    right: 0;
+    @media (--vp-media-tablet) {
+      width: 500px;
+    }
+    @media (--vp-media-desktop) {
+      width: 400px;
+    }
     &__title {
       font-family: "bioticbold";
       margin-bottom: var(--space-small-2);
+      @media (--vp-media-desktop) {
+        font-size: 21px;
+      }
     }
     &__description {
       line-height: 1.3;
       margin-bottom: var(--space-medium);
+      @media (--vp-media-desktop) {
+        font-size: 18px;
+      }
     }
     &__consent {
       font-family: "rykerbold";
