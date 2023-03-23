@@ -4,11 +4,11 @@ export interface LayoutProps {
 }
 
 import Header from "../components/header/Header.astro";
-import Footer from "../components/footer/Footer.astro";
+import Footer from "../components/Footer.astro";
 import i18next from "i18next";
 import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
 import { HeadHrefLangs } from "astro-i18next/components";
-
+import CookiesConsent from "../components/CookiesConsent.astro";
 const { title } = Astro.props as LayoutProps;
 ---
 
@@ -29,7 +29,8 @@ const { title } = Astro.props as LayoutProps;
     <main class="h-content-wrapper">
       <slot />
     </main>
-    <Footer />
+    <!-- <Footer /> -->
+    <CookiesConsent />
     <style is:global>
       @import "../../styles/main.css";
     </style>

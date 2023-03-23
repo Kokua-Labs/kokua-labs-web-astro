@@ -1,0 +1,56 @@
+---
+import TextLink from "./shared/TextLink.astro";
+---
+
+<div class="h-box-shadow cookies-consent">
+  <h4 class="cookies-consent__title">Sobre nuestas 🍪</h4>
+  <p class="cookies-consent__description">
+    Hacemos uso de Cookies para facilitar la navegación y porder ofrecer una mejor experiencia en de la web.
+    <TextLink label="saber más" to="/cookies-policy" />
+  </p>
+  <button class="cookies-consent__consent">Aceptar</button>
+</div>
+
+<style>
+  .cookies-consent {
+    background-color: var(--color-white);
+    padding: var(--space-medium);
+    margin: var(--space-medium);
+    border-radius: var(--border-radius);
+    position: fixed;
+    bottom: 0;
+    &__title {
+      font-family: "bioticbold";
+      margin-bottom: var(--space-small-2);
+    }
+    &__description {
+      line-height: 1.3;
+      margin-bottom: var(--space-medium);
+    }
+    &__consent {
+      font-family: "rykerbold";
+      color: var(--color-white);
+      border-radius: var(--border-radius);
+      background-color: var(--color-main);
+      margin-right: auto;
+      padding: var(--space-medium);
+      border: none;
+      float: right;
+    }
+  }
+</style>
+
+<script>
+  const cookiesBanner = document.querySelector(".cookies-consent") as HTMLDivElement;
+  const isAlreadyAccepted = localStorage.getItem("cookies-consent");
+
+  if (isAlreadyAccepted) {
+    cookiesBanner.style.display = "none";
+  } else {
+    const acceptButton = document.querySelector(".cookies-consent__consent") as HTMLButtonElement;
+    acceptButton.addEventListener("click", () => {
+      localStorage.setItem("cookies-consent", "true");
+      cookiesBanner.classList.add("animate__animated", "animate__bounceOutDown");
+    });
+  }
+</script>
