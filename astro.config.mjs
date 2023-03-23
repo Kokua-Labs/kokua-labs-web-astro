@@ -8,5 +8,10 @@ import compressor from "astro-compressor";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.kokualabs.com",
-  integrations: [astroI18next(), compress(), sitemap(), compressor({gzip: true})]
+  integrations: [
+    astroI18next(),
+    compress(),
+    sitemap(),
+    compressor({ gzip: true }),
+  ],
 });

@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bioticlight";
-  src: url("../../public/fonts/biotic-extralight-webfont.woff2") format("woff2"),
-    url("../../public/fonts/biotic-extralight-webfont.woff") format("woff");
+  src: url("/fonts/biotic-extralight-webfont.woff2") format("woff2"),
+    url("/fonts/biotic-extralight-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "bioticbold";
-  src: url("../../public/fonts/biotic-bold-webfont.woff2") format("woff2"),
-    url("../../public/fonts/biotic-bold-webfont.woff") format("woff");
+  src: url("/fonts/biotic-bold-webfont.woff2") format("woff2"),
+    url("/fonts/biotic-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "bioticregular";
-  src: url("../../public/fonts/biotic-regular-webfont.woff2") format("woff2"),
-    url("../../public/fonts/biotic-regular-webfont.woff") format("woff");
+  src: url("/fonts/biotic-regular-webfont.woff2") format("woff2"),
+    url("/fonts/biotic-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: "rykerbold";
-  src: url("../../public/fonts/fontspring-ryker-bold-webfont.woff2") format("woff2"),
-    url("../../public/fonts/fontspring-ryker-bold-webfont.woff") format("woff");
+  src: url("/fonts/fontspring-ryker-bold-webfont.woff2") format("woff2"),
+    url("/fonts/fontspring-ryker-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
