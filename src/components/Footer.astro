@@ -1,5 +1,5 @@
 ---
-import { navigationItems } from "../config/footer";
+import { navigationItems } from "../config/navigation";
 import i18next from "i18next";
 import SocialLinks from "./shared/SocialLinks.astro";
 
@@ -12,13 +12,15 @@ const lang = i18next.language;
       <nav>
         <ul>
           {
-            navigationItems[lang].map((el) => (
-              <li class="footer__link-wrapper">
-                <a class="footer__link" href={el.to}>
-                  {el.label}
-                </a>
-              </li>
-            ))
+            navigationItems[lang]
+              .filter((el) => el.inFooter)
+              .map((el) => (
+                <li class="footer__link-wrapper">
+                  <a class="footer__link" href={el.to}>
+                    {el.label}
+                  </a>
+                </li>
+              ))
           }
         </ul>
       </nav>

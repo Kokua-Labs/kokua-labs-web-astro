@@ -7,5 +7,5 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.kokualabs.com",
-  integrations: [astroI18next(), compress(), sitemap()]
+  integrations: [astroI18next(), compress(), sitemap()],
 });
