@@ -1,0 +1,45 @@
+---
+import { t, changeLanguage, setDefaultNamespace } from "i18next";
+import MainLayout from "../layouts/MainLayout.astro";
+
+changeLanguage("es");
+
+setDefaultNamespace("legal");
+type TextItem = {
+  text: string;
+};
+const texts: TextItem[] = t("content.texts") as any;
+---
+
+<MainLayout title={t("title")}>
+  <section class="legal-page">
+    <h1 class="legal-page__title">{t("content.title")}</h1>
+    {
+      texts.map((el) => {
+        return (
+          <article class="legal-page__text">
+            <p>{el.text}</p>
+          </article>
+        );
+      })
+    }
+  </section>
+</MainLayout>
+
+<style>
+  @import "../../styles/media-queries.css";
+  .legal-page {
+    &__title {
+      margin: var(--space-medium) 0;
+      font-family: "bioticbold";
+      font-size: 34px;
+      @media (--vp-media-desktop) {
+        font-size: 46px;
+      }
+    }
+    &__text {
+      line-height: 1.3;
+      margin-bottom: var(--space-large);
+    }
+  }
+</style>
