@@ -22,11 +22,15 @@ const { title } = Astro.props as LayoutProps;
     <title>{title}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
     <HeadHrefLangs />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preload" href="/fonts/biotic-bold-webfont.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/biotic-bold-webfont.woff2" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/biotic-extralight-webfont.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/biotic-extralight-webfont.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/biotic-regular-webfont.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/biotic-regular-webfont.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fontspring-ryker-bold-webfont.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/fontspring-ryker-bold-webfont.woff2" as="font" type="font/woff2" crossorigin />
     <SEO />
   </head>
   <body>

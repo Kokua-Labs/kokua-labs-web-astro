@@ -1,20 +1,16 @@
 ---
 import { Icon } from "astro-icon";
+import { socialLinks } from "../../config/social";
 ---
 
 <section class="social-links-container">
-  <a href="" target="_blank">
-    <Icon class="social-links-container__icon" pack="mdi" name="linkedin" />
-  </a>
-  <a href="https://www.instagram.com/kokualabs/" target="_blank">
-    <Icon class="social-links-container__icon" pack="mdi" name="instagram" />
-  </a>
-  <a href="" target="_blank">
-    <Icon class="social-links-container__icon" pack="mdi" name="facebook" />
-  </a>
-  <a target="_blank" href="mailto:hello@kokualabs.com">
-    <Icon class="social-links-container__icon" pack="mdi" name="mail" />
-  </a>
+  {
+    socialLinks.map((el) => (
+      <a href={el.to} target="_blank">
+        <Icon class="social-links-container__icon" pack="mdi" name={el.icon} />
+      </a>
+    ))
+  }
 </section>
 
 <style>

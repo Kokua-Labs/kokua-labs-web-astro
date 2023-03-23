@@ -811,6 +811,11 @@ astro-compress@^1.1.35:
     svgo "3.0.2"
     terser "5.16.5"
 
+astro-compressor@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/astro-compressor/-/astro-compressor-0.4.0.tgz#43449877235e2ee9d8b03a6caa8af076c6f38536"
+  integrity sha512-yw6wM+cjkdyAMc6HW2lrdinOxt64PwQuL5NCAe71cXF/5xjnyJhgg9nyyFE32oQtmtd5I/57Pyp/kPe9IfYAxg==
+
 astro-i18next@1.0.0-beta.20:
   version "1.0.0-beta.20"
   resolved "https://registry.npmjs.org/astro-i18next/-/astro-i18next-1.0.0-beta.20.tgz"
