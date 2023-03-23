@@ -1,0 +1,84 @@
+---
+import TextLink from "./shared/TextLink.astro";
+import { cookiesTexts } from "../config/cookies";
+import i18next from "i18next";
+
+const lang = i18next.language;
+---
+
+<div class="h-box-shadow cookies-consent">
+  <h4 class="cookies-consent__title">{cookiesTexts[lang].title}</h4>
+  <p class="cookies-consent__description">
+    {cookiesTexts[lang].description}
+    <TextLink label={cookiesTexts[lang].knowMore} to="/cookies-policy" />
+  </p>
+  <button class="cookies-consent__consent">{cookiesTexts[lang].ctaLabel}</button
+  >
+</div>
+
+<style>
+  @import "../../styles/media-queries.css";
+
+  .cookies-consent {
+    background-color: var(--color-white);
+    padding: var(--space-medium-2);
+    margin: var(--space-medium);
+    border-radius: var(--border-radius);
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    right: 0;
+    @media (--vp-media-tablet) {
+      width: 500px;
+    }
+    @media (--vp-media-desktop) {
+      width: 400px;
+    }
+    &__title {
+      font-family: "bioticbold";
+      margin-bottom: var(--space-small-2);
+      @media (--vp-media-desktop) {
+        font-size: 21px;
+      }
+    }
+    &__description {
+      line-height: 1.3;
+      margin-bottom: var(--space-medium);
+      @media (--vp-media-desktop) {
+        font-size: 18px;
+      }
+    }
+    &__consent {
+      font-family: "rykerbold";
+      color: var(--color-white);
+      border-radius: var(--border-radius);
+      background-color: var(--color-main);
+      margin-right: auto;
+      padding: var(--space-medium);
+      border: none;
+      float: right;
+    }
+  }
+</style>
+
+<script>
+  const cookiesBanner = document.querySelector(
+    ".cookies-consent"
+  ) as HTMLDivElement;
+  const isAlreadyAccepted = localStorage.getItem("cookies-consent");
+
+  if (isAlreadyAccepted) {
+    cookiesBanner.style.display = "none";
+  } else {
+    const acceptButton = document.querySelector(
+      ".cookies-consent__consent"
+    ) as HTMLButtonElement;
+    acceptButton.addEventListener("click", () => {
+      localStorage.setItem("cookies-consent", "true");
+      cookiesBanner.classList.add(
+        "animate__animated",
+        "animate__bounceOutDown"
+      );
+    });
+  }
+</script>

@@ -5,7 +5,8 @@ import { navigationItems } from "../../config/navigation";
 import LanguageSelector from "./LanguageSelector.astro";
 
 const lang = i18next.language;
-const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
+const homePath =
+  i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 const currentPagePath = Astro.url.pathname;
 ---
 
@@ -17,18 +18,20 @@ const currentPagePath = Astro.url.pathname;
 
     <ul class="nav-bar-container__nav-items">
       {
-        navigationItems[lang].map(({ label, to }) => (
-          <li
-            class="nav-bar-container__nav-item"
-            class:list={{
-              "h-neu-up": currentPagePath === to,
-            }}
-          >
-            <a class="nav-bar-container__nav-link" href={to}>
-              {label}
-            </a>
-          </li>
-        ))
+        navigationItems[lang]
+          .filter((el) => el.inHeader)
+          .map(({ label, to }) => (
+            <li
+              class="nav-bar-container__nav-item"
+              class:list={{
+                "h-neu-up": currentPagePath === to,
+              }}
+            >
+              <a class="nav-bar-container__nav-link" href={to}>
+                {label}
+              </a>
+            </li>
+          ))
       }
       <LanguageSelector />
     </ul>
@@ -38,6 +41,7 @@ const currentPagePath = Astro.url.pathname;
 <style>
   .nav-bar-container {
     margin-top: var(--space-medium) !important;
+    margin-bottom: var(--space-large) !important;
     &__nav {
       display: flex;
       justify-content: space-between;
@@ -63,7 +67,9 @@ const currentPagePath = Astro.url.pathname;
 
 <script>
   /* Detects when user use a mobile device */
-  const navBar = document.querySelector(".nav-bar-container__nav-items") as HTMLUListElement;
+  const navBar = document.querySelector(
+    ".nav-bar-container__nav-items"
+  ) as HTMLUListElement;
 
   const toggleMenuNavBar = (screenWidth: number): void => {
     if (screenWidth < 600) {

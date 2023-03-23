@@ -1,0 +1,32 @@
+{
+  "title": "Política de cookies",
+  "content": {
+    "title": "Política de cookies",
+    "texts": [
+      {
+        "sectionTitle": "¿Qué son las cookies?",
+        "description": "Las cookies son pequeños archivos de texto que se colocan en su ordenador o dispositivo móvil cuando visita un sitio web. Se utilizan ampliamente para hacer que los sitios web funcionen, o funcionen de manera más eficiente, así como para proporcionar información a los propietarios del sitio web."
+      },
+      {
+        "sectionTitle": "Cómo utilizamos las cookies",
+        "description": "Utilizamos cookies para recopilar información sobre su uso de nuestro sitio web a través de Google Analytics. Esto nos ayuda a analizar los datos sobre el tráfico de las páginas web y mejorar nuestro sitio web para adaptarlo a las necesidades de los clientes."
+      },
+      {
+        "sectionTitle": "Tipos de cookies que utilizamos",
+        "description": "Solo utilizamos un tipo de cookie, que es Google Analytics. Esta cookie nos permite recopilar información sobre cómo los visitantes usan nuestro sitio web, incluidos los detalles del sitio web desde el que ha venido el visitante y el número total de veces que un visitante ha visitado nuestro sitio web. Utilizamos esta información para mejorar nuestro sitio web y adaptarlo a las necesidades de los clientes."
+      },
+      {
+        "sectionTitle": "Cómo administrar las cookies",
+        "description": "La mayoría de los navegadores web le permiten controlar las cookies a través de sus preferencias de configuración. Sin embargo, si limita la capacidad de los sitios web para establecer cookies, puede empeorar su experiencia de usuario en general, ya que ya no será personalizada para usted. Para aprender cómo administrar las cookies en su navegador, puede consultar la sección de ayuda de su navegador o dispositivo."
+      },
+      {
+        "sectionTitle": "Cambios en nuestra política de cookies",
+        "description": "Podemos actualizar esta política de cookies de vez en cuando para reflejar cambios en nuestras prácticas y ofertas de servicios. Le recomendamos que revise esta política periódicamente para estar informado sobre nuestro uso de cookies."
+      },
+      {
+        "sectionTitle": "Información de contacto",
+        "description": "Si tiene alguna pregunta o inquietud acerca de nuestra política de cookies, por favor contáctenos en info@kokualabs.com."
+      }
+    ]
+  }
+}

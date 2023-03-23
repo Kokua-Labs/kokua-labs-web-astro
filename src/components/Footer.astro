@@ -1,0 +1,63 @@
+---
+import { navigationItems } from "../config/navigation";
+import i18next from "i18next";
+import SocialLinks from "./shared/SocialLinks.astro";
+
+const lang = i18next.language;
+---
+
+<footer class="h-content-wrapper">
+  <section class="footer__content h-box-shadow">
+    <article>
+      <nav>
+        <ul>
+          {
+            navigationItems[lang]
+              .filter((el) => el.inFooter)
+              .map((el) => (
+                <li class="footer__link-wrapper">
+                  <a class="footer__link" href={el.to}>
+                    {el.label}
+                  </a>
+                </li>
+              ))
+          }
+        </ul>
+      </nav>
+      <article>
+        <SocialLinks />
+      </article>
+    </article>
+  </section>
+</footer>
+
+<style>
+  .footer {
+    &__content {
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      background: linear-gradient(-90deg, #00b4d8, #004cff);
+      padding: var(--space-large-2) var(--space-medium-2);
+      width: 100%;
+
+      @media (--vp-media-tablet) {
+        padding: 0 var(--space-large-3);
+        align-items: center;
+      }
+      @media (--vp-media-desktop) {
+        padding: 0 var(--space-xl-large);
+      }
+    }
+    &__link-wrapper  {
+      margin-bottom: var(--space-small-2);
+    }
+    &__link {
+      color: var(--color-white);
+      font-family: "bioticbold";
+      font-size: 14px;
+      @media (--vp-media-desktop) {
+        font-size: 16px;
+        padding: 0 var(--space-xl-large);
+      }
+    }
+  }
+</style>
