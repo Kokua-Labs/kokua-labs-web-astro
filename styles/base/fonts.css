@@ -9,7 +9,8 @@
 
 @font-face {
   font-family: "bioticbold";
-  src: url("/fonts/biotic-bold-webfont.woff2") format("woff2"), url("/fonts/biotic-bold-webfont.woff") format("woff");
+  src: url("/fonts/biotic-bold-webfont.woff2") format("woff2"),
+    url("/fonts/biotic-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
