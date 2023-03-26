@@ -5,8 +5,8 @@ import { t, changeLanguage, setDefaultNamespace } from "i18next";
 changeLanguage("es");
 
 type TextItem = {
-  sectionTitle: string;
-  description: string;
+    sectionTitle: string;
+    description: string;
 };
 setDefaultNamespace("cookies");
 const texts: TextItem[] = t("content.texts") as any;
