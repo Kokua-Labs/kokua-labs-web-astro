@@ -18,7 +18,7 @@ const { title, description, ctaLabel, companyName } =
   Astro.props as HomeHeroProps;
 ---
 
-<section class="h-box-shadow home-hero-container">
+<section class="h-box-shadow h-content-wrapper home-hero-container">
   <article class="home-hero-container__content">
     <h1 class="home-hero-container__title animate__animated animate__fadeIn">
       {title}
@@ -119,7 +119,7 @@ const { title, description, ctaLabel, companyName } =
       align-items: center;
     }
     @media (--vp-media-desktop) {
-      padding: 0 var(--space-xl-large);
+      padding: 0 var(--space-xl-large) !important;
       height: 549px;
     }
 
@@ -133,6 +133,7 @@ const { title, description, ctaLabel, companyName } =
       }
     }
     &__title {
+      line-height: 1;
       position: relative;
       margin-bottom: var(--space-medium);
       font-family: "bioticbold";
@@ -158,7 +159,6 @@ const { title, description, ctaLabel, companyName } =
     &__description {
       font-family: "bioticregular";
       margin-bottom: var(--space-medium-2);
-      line-height: 1.3;
       width: 80%;
       font-size: 16px;
       @media (--vp-media-tablet) {

@@ -1,29 +1,35 @@
 ---
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
+import Banner from "../../components/home/Banner.astro";
 import HomeHero from "../../components/home/HomeHero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ParkingLayout from "../../layouts/ParkingLayout.astro";
 
 changeLanguage("en");
 
-const isParkingMode: boolean = import.meta.env.PUBLIC_PARKING_MODE;
-setDefaultNamespace(!!!isParkingMode ? "parking" : "home");
+const parkingMode: string = import.meta.env.PUBLIC_PARKING_MODE;
+const isParkingMode: boolean = parkingMode === "true";
+setDefaultNamespace(!!isParkingMode ? "parking" : "home");
 ---
 
 {
-  !!!isParkingMode ? (
+  !!isParkingMode ? (
     <ParkingLayout
       title={t("title")}
       contentTitle={t("content.mainTitle")}
       contentDescription={t("content.description")}
     />
   ) : (
-    <MainLayout title={t("title")}>
+    <MainLayout title={t("title")} description={t("description")}>
       <HomeHero
         title={t("components.hero.title")}
         companyName={t("components.hero.companyName")}
         description={t("components.hero.description")}
         ctaLabel={t("components.hero.ctaLabel")}
+      />
+      <Banner
+        title={t("components.banner.title")}
+        subtitle={t("components.banner.subtitle")}
       />
     </MainLayout>
   )

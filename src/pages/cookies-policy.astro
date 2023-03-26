@@ -5,8 +5,8 @@ import { t, changeLanguage, setDefaultNamespace } from "i18next";
 changeLanguage("es");
 
 type TextItem = {
-  sectionTitle: string;
-  description: string;
+    sectionTitle: string;
+    description: string;
 };
 setDefaultNamespace("cookies");
 const texts: TextItem[] = t("content.texts") as any;
@@ -39,7 +39,6 @@ const texts: TextItem[] = t("content.texts") as any;
         }
       }
       &__text {
-        line-height: 1.3;
         margin-bottom: var(--space-large);
         h3 {
           font-family: "bioticbold";

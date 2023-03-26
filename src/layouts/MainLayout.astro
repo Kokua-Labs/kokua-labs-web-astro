@@ -1,6 +1,7 @@
 ---
 export interface LayoutProps {
   title: string;
+  description: string;
 }
 import { SEO } from "astro-seo";
 import Header from "../components/header/Header.astro";
@@ -9,29 +10,40 @@ import i18next from "i18next";
 import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
 import { HeadHrefLangs } from "astro-i18next/components";
 import CookiesConsent from "../components/CookiesConsent.astro";
-const { title } = Astro.props as LayoutProps;
+const { title, description } = Astro.props as LayoutProps;
 ---
 
 <!DOCTYPE html>
 <html lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <link rel="sitemap" href="/sitemap-index.xml" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <HeadHrefLangs />
-    <SEO />
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: "website",
+          url: Astro.site?.href,
+          image: "/images/logo.png",
+        },
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.svg", type: "mage/svg+xml" }],
+        link: [{ rel: "sitemap", href: "/sitemap-0.xml" }],
+      }}
+    />
   </head>
   <body>
     <GoogleAnalytics />
     <Header />
-    <main class="h-content-wrapper">
+    <main>
       <slot />
     </main>
     <Footer />
