@@ -2,11 +2,12 @@
 import { navigationItems } from "../config/navigation";
 import i18next from "i18next";
 import SocialLinks from "./shared/SocialLinks.astro";
+import KokuaLabsLogo from "./shared/KokuaLabsLogo.astro";
 
 const lang = i18next.language;
 ---
 
-<footer class="h-content-wrapper">
+<footer class="footer h-content-wrapper">
   <section class="footer__content h-box-shadow">
     <article>
       <nav>
@@ -24,8 +25,9 @@ const lang = i18next.language;
           }
         </ul>
       </nav>
-      <article>
+      <article class="footer__social">
         <SocialLinks />
+        <KokuaLabsLogo dark width="150px" />
       </article>
     </article>
   </section>
@@ -58,6 +60,13 @@ const lang = i18next.language;
         font-size: 16px;
         padding: 0 var(--space-xl-large);
       }
+    }
+    &__social {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-medium);
     }
   }
 </style>

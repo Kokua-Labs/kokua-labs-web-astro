@@ -1,11 +1,16 @@
 {
   "title": "Kokua | Labs",
+  "description": "Somos una agencia de desarrollo web y móvil en Madrid que ofrece soluciones tecnológicas a medida para empresas emergentes con nuevas tecnologías.",
   "components": {
     "hero": {
       "title": "Si tienes una idea, necesitas",
       "companyName": "Kokua",
       "description": "Tu partner y asesor para la transformación digital de tu negocio",
       "ctaLabel": "Hablemos 🤓"
+    },
+    "banner": {
+      "title": "El poder de kokua en tu negocio",
+      "subtitle": "Creemos en el poder de kokua para crear soluciones innovadoras e impactantes para ti. Kokua, el valor hawaiano de la ayuda mutua y la colaboración, está en el centro de todo lo que hacemos."
     }
   }
 }
