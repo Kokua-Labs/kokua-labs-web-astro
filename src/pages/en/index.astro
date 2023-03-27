@@ -1,15 +1,19 @@
 ---
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
-import Banner from "../../components/home/Banner.astro";
+import KPIs from "../../components/home/KPIs.astro";
 import HomeHero from "../../components/home/HomeHero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ParkingLayout from "../../layouts/ParkingLayout.astro";
+import HandWritingImage from "../../../assets/png/hand-writing.png";
+import UserProfileImage from "../../../assets/png/user-profile.png";
+import HandsImage from "../../../assets/png/phone-hands.png";
 
 changeLanguage("en");
 
 const parkingMode: string = import.meta.env.PUBLIC_PARKING_MODE;
 const isParkingMode: boolean = parkingMode === "true";
 setDefaultNamespace(!!isParkingMode ? "parking" : "home");
+const kpis = [{ title: "dd", description: "djdd", image: HandWritingImage }];
 ---
 
 {
@@ -27,9 +31,11 @@ setDefaultNamespace(!!isParkingMode ? "parking" : "home");
         description={t("components.hero.description")}
         ctaLabel={t("components.hero.ctaLabel")}
       />
-      <Banner
+      <KPIs
         title={t("components.banner.title")}
+        title2={t("components.banner.title2")}
         subtitle={t("components.banner.subtitle")}
+        kpis={kpis}
       />
     </MainLayout>
   )

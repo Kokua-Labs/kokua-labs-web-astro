@@ -8,9 +8,22 @@
       "description": "Tu partner y asesor para la transformación digital de tu negocio",
       "ctaLabel": "Hablemos 🤓"
     },
-    "banner": {
-      "title": "El poder de kokua en tu negocio",
-      "subtitle": "Creemos en el poder de kokua para crear soluciones innovadoras e impactantes para ti. Kokua, el valor hawaiano de la ayuda mutua y la colaboración, está en el centro de todo lo que hacemos."
+    "kpis": {
+      "title": "El poder de",
+      "title2": "en tu negocio",
+      "subtitle": "Creemos en el poder de kokua para crear soluciones innovadoras e impactantes para ti. Kokua, el valor hawaiano de la ayuda mutua y la colaboración, está en el centro de todo lo que hacemos.",
+      "kpi1": {
+        "title": "Comprender",
+        "description": "Trabajamos estrechamente contigo para comprender tus necesidades y objetivos únicos."
+      },
+      "kpi2": {
+        "title": "Crear",
+        "description": "Creamos soluciones de software personalizadas que satisfagan y superen tus expectativas."
+      },
+      "kpi3": {
+        "title": "Colaborar",
+        "description": " Aplicamos un enfoque colaborativo, trabajando estrechamente contigo para asegurarnos de que tu visión se haga realidad."
+      }
     }
   }
 }
