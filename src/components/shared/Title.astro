@@ -5,46 +5,73 @@ enum AlignTypes {
   Right = "right",
 }
 
-type TitleProps = { title: string; subtitle?: string; align?: AlignTypes };
+type TitleProps = { title: string; subtitle?: string; titleAlign?: AlignTypes; subtitleAlign?: AlignTypes.Center };
 
-const { title, subtitle, align = AlignTypes.Center } = Astro.props as TitleProps;
+const {
+  title,
+  subtitle,
+  titleAlign = AlignTypes.Center,
+  subtitleAlign = AlignTypes.Center,
+} = Astro.props as TitleProps;
 
 const parsedTitle = title.replaceAll("kokua", '<span class="h-ryker-font">kokua</span>');
 ---
 
-<section
-  class="title-container h-content-wrapper"
-  class:list={{
-    "title-container--right": align === AlignTypes.Right,
-    "title-container--center": align === AlignTypes.Center,
-    "title-container--left": align === AlignTypes.Right,
-  }}
->
-  <h2 class="title-container__title" set:html={parsedTitle} />
-  {subtitle && <p class="title-container__subtitle">{subtitle}</p>}
+<section class="title-container h-content-wrapper">
+  <h2
+    class="title-container__title"
+    set:html={parsedTitle}
+    class:list={{
+      "title-container__title--right": titleAlign === AlignTypes.Right,
+      "title-container__title--center": titleAlign === AlignTypes.Center,
+      "title-container__title--left": titleAlign === AlignTypes.Right,
+    }}
+  />
+  {
+    subtitle && (
+      <p
+        class="title-container__subtitle"
+        class:list={{
+          "title-container__subtitle--right": subtitleAlign === AlignTypes.Right,
+          "title-container__subtitle--center": subtitleAlign === AlignTypes.Center,
+          "title-container__subtitle--left": subtitleAlign === AlignTypes.Right,
+        }}
+      >
+        {subtitle}
+      </p>
+    )
+  }
 </section>
 
 <style>
   .title-container {
-    &--center {
-      text-align: center;
-    }
-    &--right {
-      text-align: right;
-    }
-    &--left {
-      text-align: left;
-    }
-
     &__title {
       font-family: "bioticbold";
       font-size: 48px;
       line-height: 1.4;
       color: var(--color-main);
+      &--center {
+        text-align: center;
+      }
+      &--right {
+        text-align: right;
+      }
+      &--left {
+        text-align: left;
+      }
     }
     &__subtitle {
       font-size: 21px;
       margin: var(--space-large) 0;
+      &--center {
+        text-align: center;
+      }
+      &--right {
+        text-align: right;
+      }
+      &--left {
+        text-align: left;
+      }
     }
   }
 </style>

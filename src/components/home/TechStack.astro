@@ -46,7 +46,7 @@ const stack = [
 
 <section class="tech-stack h-content-wrapper">
   <article class="tech-stack__title">
-    <Title title={title} subtitle={subtitle} align="left" />
+    <Title title={title} subtitle={subtitle} titleAlign="left" subtitleAlign="left" />
   </article>
   <article class="tech-stack__grid">
     {
@@ -80,6 +80,10 @@ const stack = [
       padding: var(--space-medium-2);
       width: 100px;
       height: 100px;
+      transition: all 0.1s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 </style>

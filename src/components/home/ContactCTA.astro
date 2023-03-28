@@ -1,0 +1,46 @@
+---
+import LinkButton from "../shared/LinkButton.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section class="h-content-wrapper">
+  <div class="contact-cta__container">
+    <article class="contact-cta__card">
+      <Title
+        title="Contactanos"
+        subtitle="Cuando mejor te venga. Clickando en el siguiente boton, te redireccionara a nuestro formulario de contacto donde podras pedirnos toda la informacion que necesites"
+        subtitleAlign="left"
+      />
+      <div class="contact-cta__cta">
+        <LinkButton to="/contact" label="Contactar 😎" />
+      </div>
+    </article>
+    <article class="contact-cta__card">
+      <Title
+        title="Te contactamos 😀"
+        subtitle="Introduce tu email a continuación, nosotros nos encargamos de contactar a través de email lo antes que podamos"
+        subtitleAlign="left"
+      />
+    </article>
+  </div>
+</section>
+
+<style>
+  .contact-cta {
+    &__container {
+      display: flex;
+      margin: 156px 0 100px;
+      gap: var(--space-large);
+    }
+    &__card {
+      width: 50%;
+      background-color: var(--color-white);
+      border-radius: var(--border-radius);
+      padding: var(--space-large-2) var(--space-medium-2);
+    }
+    &__cta {
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>
