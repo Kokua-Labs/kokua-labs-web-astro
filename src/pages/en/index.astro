@@ -4,16 +4,14 @@ import KPIs from "../../components/home/KPIs.astro";
 import HomeHero from "../../components/home/HomeHero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ParkingLayout from "../../layouts/ParkingLayout.astro";
-import HandWritingImage from "../../../assets/png/hand-writing.png";
-import UserProfileImage from "../../../assets/png/user-profile.png";
-import HandsImage from "../../../assets/png/phone-hands.png";
+import About from "../../components/home/About.astro";
+import TechStack from "../../components/home/TechStack.astro";
 
 changeLanguage("en");
 
 const parkingMode: string = import.meta.env.PUBLIC_PARKING_MODE;
 const isParkingMode: boolean = parkingMode === "true";
 setDefaultNamespace(!!isParkingMode ? "parking" : "home");
-const kpis = [{ title: "dd", description: "djdd", image: HandWritingImage }];
 ---
 
 {
@@ -32,11 +30,31 @@ const kpis = [{ title: "dd", description: "djdd", image: HandWritingImage }];
         ctaLabel={t("components.hero.ctaLabel")}
       />
       <KPIs
-        title={t("components.banner.title")}
-        title2={t("components.banner.title2")}
-        subtitle={t("components.banner.subtitle")}
-        kpis={kpis}
+        title={t("components.kpis.title")}
+        subtitle={t("components.kpis.subtitle")}
+        kpi1={{
+          title: t("components.kpis.kpi1.title"),
+          description: t("components.kpis.kpi1.description"),
+        }}
+        kpi2={{
+          title: t("components.kpis.kpi2.title"),
+          description: t("components.kpis.kpi2.description"),
+        }}
+        kpi3={{
+          title: t("components.kpis.kpi3.title"),
+          description: t("components.kpis.kpi3.description"),
+        }}
+        kpi4={{
+          title: t("components.kpis.kpi4.title"),
+          description: t("components.kpis.kpi4.description"),
+        }}
+        kpi5={{
+          title: t("components.kpis.kpi5.title"),
+          description: t("components.kpis.kpi5.description"),
+        }}
       />
+      <TechStack title={t("components.techStack.title")} subtitle={t("components.techStack.subtitle")} />
+      <About />
     </MainLayout>
   )
 }

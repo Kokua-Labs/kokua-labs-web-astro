@@ -4,6 +4,8 @@ import KPIs from "../components/home/KPIs.astro";
 import HomeHero from "../components/home/HomeHero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import ParkingLayout from "../layouts/ParkingLayout.astro";
+import About from "../components/home/About.astro";
+import TechStack from "../components/home/TechStack.astro";
 
 changeLanguage("es");
 
@@ -29,7 +31,6 @@ setDefaultNamespace(!!isParkingMode ? "parking" : "home");
       />
       <KPIs
         title={t("components.kpis.title")}
-        title2={t("components.kpis.title2")}
         subtitle={t("components.kpis.subtitle")}
         kpi1={{
           title: t("components.kpis.kpi1.title"),
@@ -43,7 +44,17 @@ setDefaultNamespace(!!isParkingMode ? "parking" : "home");
           title: t("components.kpis.kpi3.title"),
           description: t("components.kpis.kpi3.description"),
         }}
+        kpi4={{
+          title: t("components.kpis.kpi4.title"),
+          description: t("components.kpis.kpi4.description"),
+        }}
+        kpi5={{
+          title: t("components.kpis.kpi5.title"),
+          description: t("components.kpis.kpi5.description"),
+        }}
       />
+      <TechStack title={t("components.techStack.title")} subtitle={t("components.techStack.subtitle")} />
+      <About />
     </MainLayout>
   )
 }

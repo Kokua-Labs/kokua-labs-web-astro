@@ -10,6 +10,12 @@ type NavigationItem = {
 export const navigationItems: NavigationItem = {
   es: [
     {
+      label: "Servicios",
+      to: "/services",
+      inHeader: true,
+      inFooter: false,
+    },
+    {
       label: "Contacto",
       to: "/contact",
       inHeader: true,
@@ -29,6 +35,7 @@ export const navigationItems: NavigationItem = {
     },
   ],
   en: [
+    { label: "Services", to: "/services", inHeader: true, inFooter: false },
     {
       label: "Contact",
       to: "/en/contact",

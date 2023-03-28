@@ -1,0 +1,50 @@
+---
+enum AlignTypes {
+  Left = "left",
+  Center = "center",
+  Right = "right",
+}
+
+type TitleProps = { title: string; subtitle?: string; align?: AlignTypes };
+
+const { title, subtitle, align = AlignTypes.Center } = Astro.props as TitleProps;
+
+const parsedTitle = title.replaceAll("kokua", '<span class="h-ryker-font">kokua</span>');
+---
+
+<section
+  class="title-container h-content-wrapper"
+  class:list={{
+    "title-container--right": align === AlignTypes.Right,
+    "title-container--center": align === AlignTypes.Center,
+    "title-container--left": align === AlignTypes.Right,
+  }}
+>
+  <h2 class="title-container__title" set:html={parsedTitle} />
+  {subtitle && <p class="title-container__subtitle">{subtitle}</p>}
+</section>
+
+<style>
+  .title-container {
+    &--center {
+      text-align: center;
+    }
+    &--right {
+      text-align: right;
+    }
+    &--left {
+      text-align: left;
+    }
+
+    &__title {
+      font-family: "bioticbold";
+      font-size: 48px;
+      line-height: 1.4;
+      color: var(--color-main);
+    }
+    &__subtitle {
+      font-size: 21px;
+      margin: var(--space-large) 0;
+    }
+  }
+</style>

@@ -9,8 +9,7 @@
       "ctaLabel": "Hablemos 🤓"
     },
     "kpis": {
-      "title": "El poder de",
-      "title2": "en tu negocio",
+      "title": "El poder de kokua en tu negocio",
       "subtitle": "Creemos en el poder de kokua para crear soluciones innovadoras e impactantes para ti. Kokua, el valor hawaiano de la ayuda mutua y la colaboración, está en el centro de todo lo que hacemos.",
       "kpi1": {
         "title": "Comprender",
@@ -23,7 +22,19 @@
       "kpi3": {
         "title": "Colaborar",
         "description": " Aplicamos un enfoque colaborativo, trabajando estrechamente contigo para asegurarnos de que tu visión se haga realidad."
+      },
+      "kpi4": {
+        "title": "Impactar",
+        "description": "Creamos impacto en el mundo digital apostando por las últimas tecnologías y lenguajes de programación."
+      },
+      "kpi5": {
+        "title": "Diferenciar",
+        "description": "Cada negocio es único, por eso, no puede parecerse a los demás para ello, desarrollamos soluciones a medida."
       }
+    },
+    "techStack": {
+      "title": "Usamos las últimas tecnologías disponibles, para las mejores ideas del momento",
+      "subtitle": "cada negocio, tiene unas necesidades. Aplicamos la solución digital más óptima y eficaz para ima y eficaz parima y eficaz parima y eficaz parima y eficaz par"
     }
   }
 }

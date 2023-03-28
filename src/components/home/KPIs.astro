@@ -1,16 +1,21 @@
 ---
 type BannerProps = {
   title: string;
-  title2: string;
   subtitle: string;
   kpi1: Kpi;
   kpi2: Kpi;
   kpi3: Kpi;
+  kpi4: Kpi;
+  kpi5: Kpi;
 };
 
 import HandWritingImage from "../../assets/png/hand-writing.png";
 import UserProfileImage from "../../assets/png/user-profile.png";
 import HandsImage from "../../assets/png/phone-hands.png";
+import PlanetImage from "../../assets/png/planet.png";
+import NotesImage from "../../assets/png/notes.png";
+import LinkButton from "../shared/LinkButton.astro";
+import Title from "../shared/Title.astro";
 
 type Kpi = {
   title: string;
@@ -18,19 +23,19 @@ type Kpi = {
   image?: string;
 };
 
-const { title, title2, subtitle, kpi1, kpi2, kpi3 } = Astro.props as BannerProps;
+const { title, subtitle, kpi1, kpi2, kpi3, kpi4, kpi5 } = Astro.props as BannerProps;
 kpi1.image = UserProfileImage;
 kpi2.image = HandWritingImage;
 kpi3.image = HandsImage;
+kpi4.image = NotesImage;
+kpi5.image = PlanetImage;
 
-const kpis = [kpi1, kpi2, kpi3];
+const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
 ---
 
 <section class="banner-container h-content-wrapper">
-  <article class="banner-container__content">
-    <h2 class="banner-container__title">{title} <span class="h-ryker-font">Kokua</span> {title2}</h2>
-    <p class="banner-container__subtitle">{subtitle}</p>
-  </article>
+  {title && <Title title={title} subtitle={subtitle} />}
+
   <article class="banner-container__kpis">
     {
       kpis.map((kpi) => (
@@ -44,35 +49,31 @@ const kpis = [kpi1, kpi2, kpi3];
       ))
     }
   </article>
+  <article class="banner-container__cta">
+    <LinkButton to="/services" label="Conoce lo que hacemos" />
+  </article>
 </section>
 
 <style>
   .banner-container {
-    margin-top: var(--space-xl-large) !important;
-    text-align: center;
-    padding: var(--space-large-4) 0;
-    &__title {
-      margin-bottom: var(--space-medium);
-      font-family: "bioticbold";
-      font-size: 48px;
-      line-height: 1;
-      color: var(--color-main);
-    }
-    &__subtitle {
-      font-size: 21px;
-      margin-bottom: var(--space-large);
-    }
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 156px !important;
     &__kpis {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      column-gap: var(--space-large);
+      justify-content: space-evenly;
+      gap: var(--space-large);
+      margin-bottom: var(--space-xl-large) !important;
     }
     &__kpi {
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex: 0 0 30%;
       gap: var(--space-small-2);
       text-align: center;
       padding: 0 var(--space-large);
