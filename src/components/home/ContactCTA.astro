@@ -19,14 +19,8 @@ const { cards } = Astro.props as ContactCTAProps;
       cards.map((card) => {
         return (
           <article class="contact-cta__card">
-            <Title
-              title={card.title}
-              subtitle={card.description}
-              subtitleAlign="left"
-            />
-            <div class="contact-cta__cta">
-              {card.cta ? <LinkButton to="/contact" label={card.cta} /> : null}
-            </div>
+            <Title title={card.title} subtitle={card.description} subtitleAlign="left" />
+            <div class="contact-cta__cta">{card.cta ? <LinkButton to="/contact" label={card.cta} /> : null}</div>
           </article>
         );
       })
@@ -36,7 +30,6 @@ const { cards } = Astro.props as ContactCTAProps;
 
 <style>
   @import "../../../styles/media-queries.css";
-
   .contact-cta {
     margin: 86px 0 50px !important;
     display: flex;
@@ -44,7 +37,7 @@ const { cards } = Astro.props as ContactCTAProps;
     gap: var(--space-large);
 
     @media (--vp-media-desktop) {
-      margin: 156px 0 100px !important;
+      margin: 112px 0 136px !important;
       flex-direction: row;
     }
     &__card {

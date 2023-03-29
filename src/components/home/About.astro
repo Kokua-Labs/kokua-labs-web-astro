@@ -6,11 +6,13 @@ type AboutProps = {
   texts: string[];
 };
 
+import bgImage from "../../assets/jpg/waves.jpg";
+
 const { title, texts } = Astro.props as AboutProps;
 ---
 
 <section class="about-container h-content-wrapper">
-  <div class="about-container__content">
+  <div style={{ backgroundImage: `url(${bgImage})` }} class="about-container__content">
     <Title dark title={title} />
     <article class="about-container__text">
       {texts.map((text) => <p>{text}</p>)}
@@ -18,7 +20,7 @@ const { title, texts } = Astro.props as AboutProps;
   </div>
 </section>
 
-<style>
+<style define:vars={{ bgImage }}>
   @import "../../../styles/media-queries.css";
 
   .about-container  {
@@ -30,9 +32,7 @@ const { title, texts } = Astro.props as AboutProps;
     &__content {
       border-radius: var(--border-radius);
       padding: var(--space-medium-2);
-      background: url("https://img.freepik.com/free-vector/dark-blue-waves-dots-abstract-background_79603-879.jpg?w=1800&t=st=1680097367~exp=1680097967~hmac=a0b380483eb9944e02ff4487c30972c3d19e9861c3440b466095a3e1ad4e0f80");
       background-repeat: no-repeat;
-      background-size: 150% 150%;
       background-position: center right;
       @media (--vp-media-desktop) {
         padding: var(--space-large-2);
