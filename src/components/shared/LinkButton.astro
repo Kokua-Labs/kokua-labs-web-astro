@@ -11,7 +11,9 @@ const { label, to } = Astro.props as LinkButtonProps;
 const toUrl = i18next.language === "es" ? to : `${i18next.language}/${to}`;
 ---
 
-<a href={toUrl} class="custom-button">{label}</a>
+<div class="h-drop-shadow">
+  <a href={toUrl} class="custom-button">{label}</a>
+</div>
 
 <style>
   .custom-button {

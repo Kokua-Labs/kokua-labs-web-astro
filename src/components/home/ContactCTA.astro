@@ -1,0 +1,64 @@
+---
+import LinkButton from "../shared/LinkButton.astro";
+import Title from "../shared/Title.astro";
+
+type ContactCTAProps = {
+  cards: {
+    title: string;
+    description: string;
+    cta?: string;
+  }[];
+};
+
+const { cards } = Astro.props as ContactCTAProps;
+---
+
+<section class="h-content-wrapper">
+  <div class="contact-cta">
+    {
+      cards.map((card) => {
+        return (
+          <article class="contact-cta__card">
+            <Title
+              title={card.title}
+              subtitle={card.description}
+              subtitleAlign="left"
+            />
+            <div class="contact-cta__cta">
+              {card.cta ? <LinkButton to="/contact" label={card.cta} /> : null}
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+</section>
+
+<style>
+  @import "../../../styles/media-queries.css";
+
+  .contact-cta {
+    margin: 86px 0 50px !important;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-large);
+
+    @media (--vp-media-desktop) {
+      margin: 156px 0 100px !important;
+      flex-direction: row;
+    }
+    &__card {
+      flex: 1 1 100%;
+      background-color: var(--color-white);
+      border-radius: var(--border-radius);
+      padding: var(--space-large-2) var(--space-medium-2);
+      @media (--vp-media-desktop) {
+        flex: 1 1 50%;
+      }
+    }
+    &__cta {
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>

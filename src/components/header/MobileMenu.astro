@@ -1,0 +1,108 @@
+---
+import { Icon } from "astro-icon";
+import { navigationItems } from "../../config/navigation";
+import i18next from "i18next";
+import LanguageSelector from "./LanguageSelector.astro";
+
+const lang = i18next.language;
+---
+
+<>
+  <div class="burger-button h-neu-up">
+    <Icon pack="mdi" name="menu" />
+  </div>
+  <ul class="mobile-menu">
+    <div class="close-button">
+      <Icon pack="mdi" name="close" />
+    </div>
+    {
+      navigationItems[lang]
+        .filter((el) => el.inHeader)
+        .map((item) => (
+          <li class="mobile-menu__item">
+            <a href={item.to}>{item.label}</a>
+          </li>
+        ))
+    }
+    <LanguageSelector />
+  </ul>
+</>
+
+<style>
+  a,
+  a:focus,
+  a:visited,
+  a:active {
+    color: inherit;
+  }
+
+  [astro-icon="mdi:close"]  {
+    color: var(--color-white);
+  }
+
+  .burger-button {
+    height: 36px;
+    width: 36px;
+    padding: var(--space-small);
+  }
+
+  .close-button {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
+  .mobile-menu {
+    display: none;
+    padding: 128px var(--space-large) 0;
+    z-index: 9;
+    position: fixed;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-main);
+    &--visible {
+      display: block;
+    }
+    &__item {
+      font-family: "bioticbold";
+      font-size: 36px;
+      color: var(--color-white);
+      margin-bottom: var(--space-large);
+    }
+  }
+</style>
+
+<script>
+  const burgerButton = document.querySelector(
+    ".burger-button"
+  ) as HTMLDivElement;
+  const mobileMenu = document.querySelector(".mobile-menu") as HTMLUListElement;
+  const closeButton = document.querySelector(
+    ".close-button"
+  ) as HTMLUListElement;
+
+  burgerButton.addEventListener("click", () => {
+    mobileMenu.classList.remove(
+      "animate__animated--visible",
+      "animate__rotateOutDownRight"
+    );
+    mobileMenu.classList.add(
+      "mobile-menu--visible",
+      "animate__animated",
+      "animate__rotateInDownRight"
+    );
+  });
+
+  closeButton.addEventListener("click", () => {
+    mobileMenu.classList.add(
+      "animate__animated",
+      "animate__rotateOutDownRight"
+    );
+  });
+</script>

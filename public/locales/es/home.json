@@ -8,9 +8,52 @@
       "description": "Tu partner y asesor para la transformación digital de tu negocio",
       "ctaLabel": "Hablemos 🤓"
     },
-    "banner": {
+    "kpis": {
       "title": "El poder de kokua en tu negocio",
-      "subtitle": "Creemos en el poder de kokua para crear soluciones innovadoras e impactantes para ti. Kokua, el valor hawaiano de la ayuda mutua y la colaboración, está en el centro de todo lo que hacemos."
-    }
+      "subtitle": "Creemos en el poder de kokua para crear soluciones innovadoras e impactantes para ti. Kokua, el valor hawaiano de la ayuda mutua y la colaboración, está en el centro de todo lo que hacemos.",
+      "kpi1": {
+        "title": "Comprender",
+        "description": "Trabajamos estrechamente contigo para comprender tus necesidades y objetivos únicos."
+      },
+      "kpi2": {
+        "title": "Crear",
+        "description": "Creamos soluciones de software personalizadas que satisfagan y superen tus expectativas."
+      },
+      "kpi3": {
+        "title": "Colaborar",
+        "description": " Aplicamos un enfoque colaborativo, trabajando estrechamente contigo para asegurarnos de que tu visión se haga realidad."
+      },
+      "kpi4": {
+        "title": "Impactar",
+        "description": "Creamos impacto en el mundo digital apostando por las últimas tecnologías y lenguajes de programación."
+      },
+      "kpi5": {
+        "title": "Diferenciar",
+        "description": "Cada negocio es único, por eso, no puede parecerse a los demás para ello, desarrollamos soluciones a medida."
+      }
+    },
+    "techStack": {
+      "title": "Usamos las últimas tecnologías disponibles, para las mejores ideas del momento",
+      "subtitle": "cada negocio, tiene unas necesidades. Aplicamos la solución digital más óptima y eficaz para ima y eficaz parima y eficaz parima y eficaz parima y eficaz par"
+    },
+    "about": {
+      "title": "Sobre kokua",
+      "texts": [
+        "Somos un equipo de profesionales apasionados que creemos en el poder de la tecnología para transformar los negocios y la vida de las personas.",
+        "Fundada en 2023, segumos creciendo gracias a nuestro compromiso con la innovación, la excelencia y la satisfacción de nuestros clientes. Nos impulsa el deseo de crear software que empodere a nuestros clientes para lograr sus objetivos y tener un impacto positivo en sus negocios.",
+        "En el corazón de nuestra agencia se encuentra el concepto de Kokua. Kokua es una palabra hawaiana que significa 'ayuda' o 'servicio'. Creemos que al encarnar el espíritu de Kokua, podemos crear software que no solo satisfaga las necesidades de nuestros clientes, sino que también supere sus expectativas."
+      ]
+    },
+    "contactCtaCards": [
+      {
+        "title": "Contactanos",
+        "description": "Cuando mejor te venga. Clickando en el siguiente boton, te redireccionara a nuestro formulario de contacto donde podras pedirnos toda la informacion que necesites",
+        "cta": "Contactar 😎"
+      },
+      {
+        "title": "Te contactamos 🥸",
+        "description": "Introduce tu email a continuación, nosotros nos encargamos de contactar a través de email lo antes que podamos"
+      }
+    ]
   }
 }

@@ -18,85 +18,87 @@ const { title, description, ctaLabel, companyName } =
   Astro.props as HomeHeroProps;
 ---
 
-<section class="h-box-shadow h-content-wrapper home-hero-container">
-  <article class="home-hero-container__content">
-    <h1 class="home-hero-container__title animate__animated animate__fadeIn">
-      {title}
-      <span class="home-hero-container__company-name">{companyName}</span>
-    </h1>
-    <p class="home-hero-container__description">{description}</p>
-    <div class="h-drop-shadow">
+<div class="belt">
+  <section class="h-box-shadow h-content-wrapper home-hero-container">
+    <article class="home-hero-container__content">
+      <h1 class="home-hero-container__title animate__animated animate__fadeIn">
+        {title}
+        <span class="home-hero-container__company-name">{companyName}</span>
+      </h1>
+      <p class="home-hero-container__description">{description}</p>
       <LinkButton to="/contact" label={ctaLabel} />
-    </div>
-    <figure class="home-hero-container__user-image">
-      <img
-        width="100%"
-        height="100%"
-        loading="lazy"
-        alt="user with 3d laptop image"
-        src={UserLaptopImage}
-      />
-    </figure>
-    <figure
-      class="home-hero-container__spaceship-image animate__animated animate__fadeInBottomLeft h-drop-shadow"
-    >
-      <img
-        width="100%"
-        height="100%"
-        loading="lazy"
-        alt="spaceship 3d image"
-        src={SpaceshipImage}
-      />
-    </figure>
-    <figure
-      class="home-hero-container__switch-image h-drop-shadow animate__animated animate__bounce"
-    >
-      <img
-        width="100%"
-        height="100%"
-        loading="lazy"
-        alt="switch 3d image"
-        src={SwitchImage}
-      />
-    </figure>
-    <figure class="home-hero-container__notepad-image h-drop-shadow">
-      <img
-        width="100%"
-        height="50%"
-        loading="lazy"
-        alt="notepad 3d image"
-        src={NotepadImage}
-      />
-    </figure>
-    <figure class="home-hero-container__window-image h-drop-shadow">
-      <img
-        width="100%"
-        height="100%"
-        loading="lazy"
-        alt="window 3d image"
-        src={WindowImage}
-      />
-    </figure>
-    <figure
-      class="home-hero-container__hand-image animate__animated animate__fadeInRight"
-    >
-      <img
-        width="100%"
-        height="100%"
-        loading="lazy"
-        alt="hand 3d image"
-        src={HandImage}
-      />
-    </figure>
-  </article>
-</section>
-
+      <figure class="home-hero-container__user-image">
+        <img
+          width="100%"
+          height="100%"
+          loading="lazy"
+          alt="user with 3d laptop image"
+          src={UserLaptopImage}
+        />
+      </figure>
+      <figure
+        class="home-hero-container__spaceship-image animate__animated animate__fadeInBottomLeft h-drop-shadow"
+      >
+        <img
+          width="100%"
+          height="100%"
+          loading="lazy"
+          alt="spaceship 3d image"
+          src={SpaceshipImage}
+        />
+      </figure>
+      <figure
+        class="home-hero-container__switch-image h-drop-shadow animate__animated animate__bounce"
+      >
+        <img
+          width="100%"
+          height="100%"
+          loading="lazy"
+          alt="switch 3d image"
+          src={SwitchImage}
+        />
+      </figure>
+      <figure class="home-hero-container__notepad-image h-drop-shadow">
+        <img
+          width="100%"
+          height="50%"
+          loading="lazy"
+          alt="notepad 3d image"
+          src={NotepadImage}
+        />
+      </figure>
+      <figure class="home-hero-container__window-image h-drop-shadow">
+        <img
+          width="100%"
+          height="100%"
+          loading="lazy"
+          alt="window 3d image"
+          src={WindowImage}
+        />
+      </figure>
+      <figure
+        class="home-hero-container__hand-image animate__animated animate__fadeInRight"
+      >
+        <img
+          width="100%"
+          height="100%"
+          loading="lazy"
+          alt="hand 3d image"
+          src={HandImage}
+        />
+      </figure>
+    </article>
+  </section>
+</div>
 <style>
   @import "../../../styles/media-queries.css";
+  .belt {
+    padding: 0 16px;
+  }
   .home-hero-container {
     position: relative;
     display: flex;
-    padding: var(--space-xl-large) var(--space-medium-2) 0;
+    padding: var(--space-xl-large) var(--space-medium-2) 0 !important;
     height: 456px;
     margin-top: var(--space-medium);
     border-radius: var(--border-radius);
@@ -115,7 +117,7 @@ const { title, description, ctaLabel, companyName } =
     color: var(--color-white);
     @media (--vp-media-tablet) {
       height: 384px;
-      padding: 0 var(--space-large-3);
+      padding: 0 var(--space-large-3) !important;
       align-items: center;
     }
     @media (--vp-media-desktop) {
@@ -209,10 +211,10 @@ const { title, description, ctaLabel, companyName } =
       top: 140px;
       right: 0;
       @media (--vp-media-tablet) {
-        top: 60px;
-        right: 280px;
+        display: none;
       }
       @media (--vp-media-desktop) {
+        display: block;
         top: 44px;
         right: 300px;
       }

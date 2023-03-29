@@ -3,6 +3,7 @@ import i18next from "i18next";
 import KokuaLabsLogo from "../shared/KokuaLabsLogo.astro";
 import { navigationItems } from "../../config/navigation";
 import LanguageSelector from "./LanguageSelector.astro";
+import MobileMenu from "./MobileMenu.astro";
 
 const lang = i18next.language;
 const homePath =
@@ -35,6 +36,11 @@ const currentPagePath = Astro.url.pathname;
       }
       <LanguageSelector />
     </ul>
+    <div
+      class="nav-bar-container__mobile-menu nav-bar-container__mobile-menu--hide"
+    >
+      <MobileMenu />
+    </div>
   </nav>
 </header>
 
@@ -55,10 +61,16 @@ const currentPagePath = Astro.url.pathname;
         display: none;
       }
     }
+    &__mobile-menu {
+      &--hide {
+        display: none;
+      }
+    }
     &__nav-item {
       font-family: "bioticbold";
       padding: var(--space-small) var(--space-small-2);
     }
+
     &__nav-link {
       color: var(--color-text);
     }
@@ -70,12 +82,17 @@ const currentPagePath = Astro.url.pathname;
   const navBar = document.querySelector(
     ".nav-bar-container__nav-items"
   ) as HTMLUListElement;
+  const mobileNavBar = document.querySelector(
+    ".nav-bar-container__mobile-menu"
+  ) as HTMLUListElement;
 
   const toggleMenuNavBar = (screenWidth: number): void => {
     if (screenWidth < 600) {
       navBar.classList.add("nav-bar-container__nav-items--hide");
+      mobileNavBar.classList.remove("nav-bar-container__mobile-menu--hide");
     } else {
       navBar.classList.remove("nav-bar-container__nav-items--hide");
+      mobileNavBar.classList.add("nav-bar-container__mobile-menu--hide");
     }
   };
 

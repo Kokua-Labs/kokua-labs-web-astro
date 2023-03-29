@@ -1,0 +1,108 @@
+---
+enum AlignTypes {
+  Left = "left",
+  Center = "center",
+  Right = "right",
+}
+
+type TitleProps = {
+  dark: boolean;
+  title: string;
+  subtitle?: string;
+  titleAlign?: AlignTypes;
+  subtitleAlign?: AlignTypes;
+};
+
+const {
+  dark = false,
+  title,
+  subtitle,
+  titleAlign = AlignTypes.Center,
+  subtitleAlign = AlignTypes.Center,
+} = Astro.props as TitleProps;
+
+const parsedTitle = title.replaceAll(
+  "kokua",
+  '<span class="h-ryker-font">kokua</span>'
+);
+---
+
+<section class="title-container">
+  <h2
+    class="title-container__title"
+    set:html={parsedTitle}
+    class:list={{
+      "title-container__title--dark": dark,
+      "title-container__title--right": titleAlign === AlignTypes.Right,
+      "title-container__title--center": titleAlign === AlignTypes.Center,
+      "title-container__title--left": titleAlign === AlignTypes.Right,
+    }}
+  />
+  {
+    subtitle && (
+      <p
+        class="title-container__subtitle"
+        class:list={{
+          "title-container__subtitle--right":
+            subtitleAlign === AlignTypes.Right,
+          "title-container__subtitle--center":
+            subtitleAlign === AlignTypes.Center,
+          "title-container__subtitle--left": subtitleAlign === AlignTypes.Left,
+        }}
+      >
+        {subtitle}
+      </p>
+    )
+  }
+</section>
+
+<style>
+  .title-container {
+    &__title {
+      font-family: "bioticbold";
+      color: var(--color-main);
+      font-size: 32px;
+
+      @media (--vp-media-tablet) {
+        font-size: 34px;
+      }
+      @media (--vp-media-desktop) {
+        font-size: 36px;
+      }
+
+      &--dark {
+        color: var(--color-white);
+      }
+      &--center {
+        text-align: center;
+      }
+      &--right {
+        text-align: right;
+      }
+      &--left {
+        text-align: left;
+      }
+    }
+    &__subtitle {
+      font-size: 16px;
+      margin: var(--space-large) 0;
+      line-height: 1.6;
+      @media (--vp-media-tablet) {
+        font-size: 18px;
+      }
+      @media (--vp-media-desktop) {
+        font-size: 21px;
+        line-height: 1.3;
+      }
+      &--center {
+        text-align: center;
+      }
+      &--right {
+        text-align: right;
+      }
+      &--left {
+        text-align: left;
+      }
+    }
+  }
+</style>

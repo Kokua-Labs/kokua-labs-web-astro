@@ -21,3 +21,10 @@
 .h-ryker-font {
   font-family: "rykerbold";
 }
+
+.h-clip-title {
+  background: linear-gradient(-45deg, #38a3a5, #294b65);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

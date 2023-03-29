@@ -34,11 +34,13 @@ const lang = i18next.language;
 </footer>
 
 <style>
+  @import "../../styles/media-queries.css";
+
   .footer {
     &__content {
       border-radius: var(--border-radius) var(--border-radius) 0 0;
       background: linear-gradient(-90deg, #00b4d8, #004cff);
-      padding: var(--space-large-2) var(--space-medium-2);
+      padding: var(--space-large-2) !important;
       width: 100%;
 
       @media (--vp-media-tablet) {
@@ -55,10 +57,13 @@ const lang = i18next.language;
     &__link {
       color: var(--color-white);
       font-family: "bioticbold";
-      font-size: 14px;
+      font-size: 12px;
+      @media (--vp-media-tablet) {
+        font-size: 14px;
+      }
+
       @media (--vp-media-desktop) {
         font-size: 16px;
-        padding: 0 var(--space-xl-large);
       }
     }
     &__social {
