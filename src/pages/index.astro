@@ -58,8 +58,11 @@ setDefaultNamespace(!!isParkingMode ? "parking" : "home");
         title={t("components.techStack.title")}
         subtitle={t("components.techStack.subtitle")}
       />
-      <About />
-      <ContactCTA />
+      <About
+        title={t("components.about.title")}
+        texts={t("components.about.texts")}
+      />
+      <ContactCTA cards={t("components.contactCtaCards")} />
     </MainLayout>
   )
 }

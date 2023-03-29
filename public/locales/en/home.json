@@ -1,11 +1,59 @@
 {
   "title": "Kokua | Labs",
+  "description": "We are a web and mobile development agency in Madrid offering tailor-made technological solutions for emerging companies with new technologies.",
   "components": {
     "hero": {
-      "title": "Si tienes una idea, necesitas",
+      "title": "If you have an idea, you need",
       "companyName": "Kokua",
-      "description": "Tu partner y asesor para la tranformación digital de tu negocio",
-      "ctaLabel": "Hablemos 🤓"
-    }
+      "description": "Your partner and advisor for the digital transformation of your business",
+      "ctaLabel": "Let's talk 🤓"
+    },
+    "kpis": {
+      "title": "The power of kokua in your business",
+      "subtitle": "We believe in the power of kokua to create innovative and impactful solutions for you. Kokua, the Hawaiian value of mutual help and collaboration, is at the heart of everything we do.",
+      "kpi1": {
+        "title": "Understand",
+        "description": "We work closely with you to understand your unique needs and goals."
+      },
+      "kpi2": {
+        "title": "Create",
+        "description": "We create custom software solutions that meet and exceed your expectations."
+      },
+      "kpi3": {
+        "title": "Collaborate",
+        "description": "We apply a collaborative approach, working closely with you to ensure your vision becomes a reality."
+      },
+      "kpi4": {
+        "title": "Impact",
+        "description": "We create impact in the digital world by betting on the latest technologies and programming languages."
+      },
+      "kpi5": {
+        "title": "Differentiate",
+        "description": "Each business is unique, so it cannot resemble others; for this reason, we develop tailor-made solutions."
+      }
+    },
+    "techStack": {
+      "title": "We use the latest technologies available, for the best ideas of the moment",
+      "subtitle": "each business has its needs. We apply the most optimal and effective digital solution for each one."
+    },
+    "about": {
+      "title": "About kokua",
+      "texts": [
+        "We are a team of passionate professionals who believe in the power of technology to transform businesses and people's lives.",
+        "Founded in 2023, we continue to grow thanks to our commitment to innovation, excellence, and customer satisfaction. We are driven by the desire to create software that empowers our clients to achieve their goals and have a positive impact on their businesses.",
+        "At the heart of our agency is the concept of Kokua. Kokua is a Hawaiian word that means 'help' or 'service'. We believe that by embodying the spirit of Kokua, we can create software that not only meets our clients' needs but also exceeds their expectations."
+      ]
+    },
+    "contactCtaCards": [
+      {
+        "title": "Contact us",
+        "description": "Whenever it suits you best. By clicking on the following button, you will be redirected to our contact form where you can request all the information you need",
+        "cta": "Contact 😎"
+      },
+      {
+        "title": "We contact you 🥸",
+        "description": "Enter your email below, and we will take care of contacting you by email as soon as we can"
+      }
+    ]
   }
 }

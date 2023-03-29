@@ -35,6 +35,25 @@
     "techStack": {
       "title": "Usamos las últimas tecnologías disponibles, para las mejores ideas del momento",
       "subtitle": "cada negocio, tiene unas necesidades. Aplicamos la solución digital más óptima y eficaz para ima y eficaz parima y eficaz parima y eficaz parima y eficaz par"
-    }
+    },
+    "about": {
+      "title": "Sobre kokua",
+      "texts": [
+        "Somos un equipo de profesionales apasionados que creemos en el poder de la tecnología para transformar los negocios y la vida de las personas.",
+        "Fundada en 2023, segumos creciendo gracias a nuestro compromiso con la innovación, la excelencia y la satisfacción de nuestros clientes. Nos impulsa el deseo de crear software que empodere a nuestros clientes para lograr sus objetivos y tener un impacto positivo en sus negocios.",
+        "En el corazón de nuestra agencia se encuentra el concepto de Kokua. Kokua es una palabra hawaiana que significa 'ayuda' o 'servicio'. Creemos que al encarnar el espíritu de Kokua, podemos crear software que no solo satisfaga las necesidades de nuestros clientes, sino que también supere sus expectativas."
+      ]
+    },
+    "contactCtaCards": [
+      {
+        "title": "Contactanos",
+        "description": "Cuando mejor te venga. Clickando en el siguiente boton, te redireccionara a nuestro formulario de contacto donde podras pedirnos toda la informacion que necesites",
+        "cta": "Contactar 😎"
+      },
+      {
+        "title": "Te contactamos 🥸",
+        "description": "Introduce tu email a continuación, nosotros nos encargamos de contactar a través de email lo antes que podamos"
+      }
+    ]
   }
 }

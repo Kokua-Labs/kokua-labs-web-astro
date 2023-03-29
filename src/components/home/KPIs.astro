@@ -23,7 +23,8 @@ type Kpi = {
   image?: string;
 };
 
-const { title, subtitle, kpi1, kpi2, kpi3, kpi4, kpi5 } = Astro.props as BannerProps;
+const { title, subtitle, kpi1, kpi2, kpi3, kpi4, kpi5 } =
+  Astro.props as BannerProps;
 kpi1.image = UserProfileImage;
 kpi2.image = HandWritingImage;
 kpi3.image = HandsImage;

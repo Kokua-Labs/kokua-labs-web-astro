@@ -1,25 +1,19 @@
 ---
 import Title from "../shared/Title.astro";
+
+type AboutProps = {
+  title: string;
+  texts: string[];
+};
+
+const { title, texts } = Astro.props as AboutProps;
 ---
 
 <section class="about-container h-content-wrapper">
   <div class="about-container__content">
-    <Title dark title="Sobre kokua" />
+    <Title dark title={title} />
     <article class="about-container__text">
-      <p>
-        Somos un equipo de profesionales apasionados que creemos en el poder de la tecnología para transformar los
-        negocios y la vida de las personas.
-      </p>
-      <p>
-        Fundada en 2023, segumos creciendo gracias a nuestro compromiso con la innovación, la excelencia y la
-        satisfacción de nuestros clientes. Nos impulsa el deseo de crear software que empodere a nuestros clientes para
-        lograr sus objetivos y tener un impacto positivo en sus negocios.
-      </p>
-      <p>
-        En el corazón de nuestra agencia se encuentra el concepto de Kokua. Kokua es una palabra hawaiana que significa
-        "ayuda" o "servicio". Creemos que al encarnar el espíritu de Kokua, podemos crear software que no solo satisfaga
-        las necesidades de nuestros clientes, sino que también supere sus expectativas.
-      </p>
+      {texts.map((text) => <p>{text}</p>)}
     </article>
   </div>
 </section>
@@ -35,22 +29,22 @@ import Title from "../shared/Title.astro";
 
     &__content {
       border-radius: var(--border-radius);
-      padding: 24px;
+      padding: var(--space-medium-2);
       background: url("https://img.freepik.com/free-vector/dark-blue-waves-dots-abstract-background_79603-879.jpg?w=1800&t=st=1680097367~exp=1680097967~hmac=a0b380483eb9944e02ff4487c30972c3d19e9861c3440b466095a3e1ad4e0f80");
       background-repeat: no-repeat;
       background-size: 150% 150%;
       background-position: center right;
       @media (--vp-media-desktop) {
-        padding: 36px;
+        padding: var(--space-large-2);
       }
     }
 
     &__text {
-      font-size: 16px;
-      margin-top: 32px !important;
+      font-size: var(--space-medium);
+      margin-top: var(--space-large) !important;
       color: white;
       p {
-        margin-bottom: 24px;
+        margin-bottom: var(--space-medium-2);
       }
       @media (--vp-media-tablet) {
         font-size: 18px;

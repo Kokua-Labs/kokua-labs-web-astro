@@ -1,27 +1,36 @@
 ---
 import LinkButton from "../shared/LinkButton.astro";
 import Title from "../shared/Title.astro";
+
+type ContactCTAProps = {
+  cards: {
+    title: string;
+    description: string;
+    cta?: string;
+  }[];
+};
+
+const { cards } = Astro.props as ContactCTAProps;
 ---
 
 <section class="h-content-wrapper">
   <div class="contact-cta">
-    <article class="contact-cta__card">
-      <Title
-        title="Contactanos"
-        subtitle="Cuando mejor te venga. Clickando en el siguiente boton, te redireccionara a nuestro formulario de contacto donde podras pedirnos toda la informacion que necesites"
-        subtitleAlign="left"
-      />
-      <div class="contact-cta__cta">
-        <LinkButton to="/contact" label="Contactar 😎" />
-      </div>
-    </article>
-    <article class="contact-cta__card">
-      <Title
-        title="Te contactamos 😀"
-        subtitle="Introduce tu email a continuación, nosotros nos encargamos de contactar a través de email lo antes que podamos"
-        subtitleAlign="left"
-      />
-    </article>
+    {
+      cards.map((card) => {
+        return (
+          <article class="contact-cta__card">
+            <Title
+              title={card.title}
+              subtitle={card.description}
+              subtitleAlign="left"
+            />
+            <div class="contact-cta__cta">
+              {card.cta ? <LinkButton to="/contact" label={card.cta} /> : null}
+            </div>
+          </article>
+        );
+      })
+    }
   </div>
 </section>
 

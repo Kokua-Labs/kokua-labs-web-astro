@@ -6,6 +6,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import ParkingLayout from "../../layouts/ParkingLayout.astro";
 import About from "../../components/home/About.astro";
 import TechStack from "../../components/home/TechStack.astro";
+import ContactCTA from "../../components/home/ContactCTA.astro";
 
 changeLanguage("en");
 
@@ -57,7 +58,11 @@ setDefaultNamespace(!!isParkingMode ? "parking" : "home");
         title={t("components.techStack.title")}
         subtitle={t("components.techStack.subtitle")}
       />
-      <About />
+      <About
+        title={t("components.about.title")}
+        texts={t("components.about.texts")}
+      />
+      <ContactCTA cards={t("components.contactCtaCards")} />
     </MainLayout>
   )
 }
