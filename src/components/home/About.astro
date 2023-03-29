@@ -7,7 +7,12 @@ import Title from "../shared/Title.astro";
 </section>
 
 <style>
+  @import "../../../styles/media-queries.css";
+
   .about-container  {
-    margin-top: 156px !important;
+    margin-top: 86px !important;
+    @media (--vp-media-desktop) {
+      margin-top: 156px !important;
+    }
   }
 </style>

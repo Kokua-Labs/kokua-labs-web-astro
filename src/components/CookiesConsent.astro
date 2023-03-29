@@ -12,7 +12,8 @@ const lang = i18next.language;
     {cookiesTexts[lang].description}
     <TextLink label={cookiesTexts[lang].knowMore} to="/cookies-policy" />
   </p>
-  <button class="cookies-consent__consent">{cookiesTexts[lang].ctaLabel}</button>
+  <button class="cookies-consent__consent">{cookiesTexts[lang].ctaLabel}</button
+  >
 </div>
 
 <style>
@@ -60,16 +61,23 @@ const lang = i18next.language;
 </style>
 
 <script>
-  const cookiesBanner = document.querySelector(".cookies-consent") as HTMLDivElement;
+  const cookiesBanner = document.querySelector(
+    ".cookies-consent"
+  ) as HTMLDivElement;
   const isAlreadyAccepted = localStorage.getItem("cookies-consent");
 
   if (isAlreadyAccepted) {
     cookiesBanner.style.display = "none";
   } else {
-    const acceptButton = document.querySelector(".cookies-consent__consent") as HTMLButtonElement;
+    const acceptButton = document.querySelector(
+      ".cookies-consent__consent"
+    ) as HTMLButtonElement;
     acceptButton.addEventListener("click", () => {
       localStorage.setItem("cookies-consent", "true");
-      cookiesBanner.classList.add("animate__animated", "animate__bounceOutDown");
+      cookiesBanner.classList.add(
+        "animate__animated",
+        "animate__bounceOutDown"
+      );
     });
   }
 </script>

@@ -62,25 +62,46 @@ const stack = [
 </section>
 
 <style>
+  @import "../../../styles/media-queries.css";
+
   .tech-stack {
     display: flex;
-    margin-top: 156px !important;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    gap: var(--space-large);
+    margin-top: 86px !important;
+
+    @media (--vp-media-desktop) {
+      margin-top: 156px !important;
+      flex-direction: row;
+      gap: var(--space-large);
+    }
     &__title {
-      width: 50%;
+      @media (--vp-media-desktop) {
+        width: 50%;
+      }
     }
     &__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-medium-2);
+      gap: var(--space-small);
+      @media (--vp-media-desktop) {
+        gap: var(--space-medium-2);
+      }
     }
     &__grid-item {
       padding: var(--space-medium-2);
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       transition: all 0.1s ease;
+
+      @media (--vp-media-tablet) {
+        width: 90px;
+        height: 90px;
+      }
+      @media (--vp-media-desktop) {
+        width: 100px;
+        height: 100px;
+      }
       &:hover {
         transform: scale(1.2);
       }

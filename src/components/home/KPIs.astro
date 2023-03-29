@@ -55,11 +55,16 @@ const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
 </section>
 
 <style>
+  @import "../../../styles/media-queries.css";
+
   .banner-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 156px !important;
+    margin-top: 86px !important;
+    @media (--vp-media-desktop) {
+      margin-top: 156px !important;
+    }
     &__kpis {
       text-align: center;
       display: flex;
@@ -73,11 +78,20 @@ const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex: 0 0 30%;
       gap: var(--space-small-2);
       text-align: center;
-      padding: 0 var(--space-large);
-      font-size: 21px;
+      padding: 0;
+      font-size: 16px;
+      flex: 1 1 100%;
+      @media (--vp-media-tablet) {
+        flex: 1 1 45%;
+        font-size: 18px;
+      }
+      @media (--vp-media-desktop) {
+        flex: 1 1 30%;
+        font-size: 21px;
+        padding: 0 var(--space-large);
+      }
     }
   }
 </style>
