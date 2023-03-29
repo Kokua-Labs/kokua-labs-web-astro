@@ -65,7 +65,7 @@ const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroPro
     color: var(--color-white);
     @media (--vp-media-tablet) {
       height: 384px;
-      padding: 0 var(--space-large-3);
+      padding: 0 var(--space-large-3) !important;
       align-items: center;
     }
     @media (--vp-media-desktop) {
@@ -159,10 +159,10 @@ const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroPro
       top: 140px;
       right: 0;
       @media (--vp-media-tablet) {
-        top: 60px;
-        right: 280px;
+        display: none;
       }
       @media (--vp-media-desktop) {
+        display: block;
         top: 44px;
         right: 300px;
       }

@@ -6,6 +6,7 @@ enum AlignTypes {
 }
 
 type TitleProps = {
+  dark: boolean;
   title: string;
   subtitle?: string;
   titleAlign?: AlignTypes;
@@ -13,6 +14,7 @@ type TitleProps = {
 };
 
 const {
+  dark = false,
   title,
   subtitle,
   titleAlign = AlignTypes.Center,
@@ -27,6 +29,7 @@ const parsedTitle = title.replaceAll("kokua", '<span class="h-ryker-font">kokua<
     class="title-container__title"
     set:html={parsedTitle}
     class:list={{
+      "title-container__title--dark": dark,
       "title-container__title--right": titleAlign === AlignTypes.Right,
       "title-container__title--center": titleAlign === AlignTypes.Center,
       "title-container__title--left": titleAlign === AlignTypes.Right,
@@ -54,11 +57,16 @@ const parsedTitle = title.replaceAll("kokua", '<span class="h-ryker-font">kokua<
       font-family: "bioticbold";
       color: var(--color-main);
       font-size: 32px;
+
       @media (--vp-media-tablet) {
         font-size: 34px;
       }
       @media (--vp-media-desktop) {
         font-size: 36px;
+      }
+
+      &--dark {
+        color: var(--color-white);
       }
       &--center {
         text-align: center;
