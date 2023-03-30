@@ -9,18 +9,18 @@ type NavigationItem = {
 
 export const navigationItems: NavigationItem = {
   es: [
-    {
-      label: "Servicios",
-      to: "/services",
-      inHeader: true,
-      inFooter: false,
-    },
-    {
-      label: "Contacto",
-      to: "/contact",
-      inHeader: true,
-      inFooter: false,
-    },
+    // {
+    //   label: "Servicios",
+    //   to: "/services",
+    //   inHeader: true,
+    //   inFooter: false,
+    // },
+    // {
+    //   label: "Contacto",
+    //   to: "/contact",
+    //   inHeader: true,
+    //   inFooter: false,
+    // },
     {
       label: "Política de Cookies",
       to: "/cookies-policy",
@@ -35,13 +35,13 @@ export const navigationItems: NavigationItem = {
     },
   ],
   en: [
-    { label: "Services", to: "/services", inHeader: true, inFooter: false },
-    {
-      label: "Contact",
-      to: "/en/contact",
-      inHeader: true,
-      inFooter: false,
-    },
+    // { label: "Services", to: "/services", inHeader: true, inFooter: false },
+    // {
+    //   label: "Contact",
+    //   to: "/en/contact",
+    //   inHeader: true,
+    //   inFooter: false,
+    // },
     {
       label: "Cookies policy",
       to: "/cookies-policy",
