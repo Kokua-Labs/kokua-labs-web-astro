@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
+import Title from "../../components/shared/Title.astro";
 
 changeLanguage("en");
 
@@ -12,9 +13,11 @@ setDefaultNamespace("cookies");
 const texts: TextItem[] = t("content.texts") as any;
 ---
 
-<MainLayout title={t("title")}>
-  <section class="cookies-page">
-    <h1 class="cookies-page__title">{t("content.title")}</h1>
+<MainLayout title={t("title")} noFollow>
+  <section class="cookies-page h-content-wrapper">
+    <article class="cookies-page__title">
+      <Title title={t("content.title")} />
+    </article>
     {
       texts.map((el) => {
         return (
@@ -32,11 +35,6 @@ const texts: TextItem[] = t("content.texts") as any;
     .cookies-page {
       &__title {
         margin-bottom: var(--space-medium);
-        font-family: "bioticbold";
-        font-size: 34px;
-        @media (--vp-media-desktop) {
-          font-size: 46px;
-        }
       }
       &__text {
         margin-bottom: var(--space-large);

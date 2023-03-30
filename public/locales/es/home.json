@@ -1,58 +1,58 @@
 {
-  "title": "Kokua | Labs",
-  "description": "Somos una agencia de desarrollo web y móvil en Madrid que ofrece soluciones tecnológicas a medida para empresas emergentes con nuevas tecnologías.",
+  "title": "kokua | Labs",
+  "description": "Agencia de desarrollo web, móvil y soluciones digitales a medida para empresas y particulares en Madrid.",
   "components": {
     "hero": {
       "title": "Si tienes una idea, necesitas",
-      "companyName": "Kokua",
-      "description": "Tu partner y asesor para la transformación digital de tu negocio",
+      "companyName": "kokua",
+      "description": "Tu partner, guía y asesor en la transformación digital de tu negocio.",
       "ctaLabel": "Hablemos 🤓"
     },
     "kpis": {
-      "title": "El poder de kokua en tu negocio",
-      "subtitle": "Creemos en el poder de kokua para crear soluciones innovadoras e impactantes para ti. Kokua, el valor hawaiano de la ayuda mutua y la colaboración, está en el centro de todo lo que hacemos.",
+      "title": "El poder de kokua, en el centro de tu negocio",
+      "subtitle": "kokua, el valor hawaiano de la ayuda mutua y la colaboración, es nuestro mantra. Creemos en el poder de kokua para crear soluciones tecnológicas innovadoras y que generen impacto. Estaremos contigo en todo el proceso de transformación digital de tu negocio.",
       "kpi1": {
         "title": "Comprender",
         "description": "Trabajamos estrechamente contigo para comprender tus necesidades y objetivos únicos."
       },
       "kpi2": {
         "title": "Crear",
-        "description": "Creamos soluciones de software personalizadas que satisfagan y superen tus expectativas."
+        "description": "Creamos soluciones de software personalizadas a tu medida. Controlamos cada píxel."
       },
       "kpi3": {
         "title": "Colaborar",
-        "description": " Aplicamos un enfoque colaborativo, trabajando estrechamente contigo para asegurarnos de que tu visión se haga realidad."
+        "description": "Aplicamos un enfoque colaborativo, trabajando estrechamente contigo para asegurarnos de que tu visión se haga realidad."
       },
       "kpi4": {
         "title": "Impactar",
-        "description": "Creamos impacto en el mundo digital apostando por las últimas tecnologías y lenguajes de programación."
+        "description": "Creamos impacto en el mundo digital apostando por las últimas tecnologías y lenguajes de programación. Mayor rapidez y escalabilidad."
       },
       "kpi5": {
-        "title": "Diferenciar",
-        "description": "Cada negocio es único, por eso, no puede parecerse a los demás para ello, desarrollamos soluciones a medida."
+        "title": "Diferenciarnos",
+        "description": "Cada negocio es único, por eso no puede parecerse a los demás. Por eso desarrollamos soluciones a medida."
       }
     },
     "techStack": {
-      "title": "Usamos las últimas tecnologías disponibles, para las mejores ideas del momento",
-      "subtitle": "cada negocio, tiene unas necesidades. Aplicamos la solución digital más óptima y eficaz para ima y eficaz parima y eficaz parima y eficaz parima y eficaz par"
+      "title": "Usamos las últimas tecnologías disponibles para las mejores ideas del momento.",
+      "subtitle": "Utilizamos las últimas tecnologías disponibles porque cada tecnología se adapta a una necesidad. Aplicamos la solución digital más óptima y eficaz para garantizar velocidad, escalabilidad, fluidez e impacto. Control total, de píxel a píxel."
     },
     "about": {
       "title": "Sobre kokua",
       "texts": [
-        "Somos un equipo de profesionales apasionados que creemos en el poder de la tecnología para transformar los negocios y la vida de las personas.",
-        "Fundada en 2023, segumos creciendo gracias a nuestro compromiso con la innovación, la excelencia y la satisfacción de nuestros clientes. Nos impulsa el deseo de crear software que empodere a nuestros clientes para lograr sus objetivos y tener un impacto positivo en sus negocios.",
-        "En el corazón de nuestra agencia se encuentra el concepto de Kokua. Kokua es una palabra hawaiana que significa 'ayuda' o 'servicio'. Creemos que al encarnar el espíritu de Kokua, podemos crear software que no solo satisfaga las necesidades de nuestros clientes, sino que también supere sus expectativas."
+        "Somos un equipo de profesionales que creemos en el poder de la tecnología para transformar los negocios y la vida de las personas.",
+        "Desde 2021, seguimos creciendo gracias a nuestro compromiso con la innovación, la excelencia y la satisfacción de nuestros clientes. Nos impulsa el deseo de crear software que empodere a nuestros clientes para lograr sus objetivos y tener un impacto positivo en sus negocios.",
+        "En el corazón de nuestra agencia se encuentra el concepto de kokua. kokua es una palabra hawaiana que significa 'ayuda' o 'servicio'. Al encarnar el espíritu de kokua, podemos crear productos que no solo satisfagan las necesidades de nuestros clientes, sino que también superen sus expectativas."
       ]
     },
     "contactCtaCards": [
       {
-        "title": "Contactanos",
-        "description": "Cuando mejor te venga. Clickando en el siguiente boton, te redireccionara a nuestro formulario de contacto donde podras pedirnos toda la informacion que necesites",
-        "cta": "Contactar 😎"
+        "title": "Contáctanos",
+        "description": "Cuando te vaya bien. Al hacer click en el botón de abajo, serás redirigido a nuestro formulario de contacto donde puedes proporcionarnos toda la información.",
+        "cta": "Contáctanos 😎"
       },
       {
-        "title": "Te contactamos 🥸",
-        "description": "Introduce tu email a continuación, nosotros nos encargamos de contactar a través de email lo antes que podamos"
+        "title": "Nosotros te contactamos 🥸",
+        "description": "Ingresa tu correo electrónico a continuación. Nosotros nos encargaremos de contactarte por correo electrónico lo antes posible."
       }
     ]
   }

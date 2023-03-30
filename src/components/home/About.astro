@@ -11,7 +11,7 @@ import bgImage from "../../assets/jpg/waves.jpg";
 const { title, texts } = Astro.props as AboutProps;
 ---
 
-<section class="about-container h-content-wrapper">
+<section class="about-container">
   <div style={{ backgroundImage: `url(${bgImage})` }} class="about-container__content">
     <Title dark title={title} />
     <article class="about-container__text">
@@ -24,9 +24,9 @@ const { title, texts } = Astro.props as AboutProps;
   @import "../../../styles/media-queries.css";
 
   .about-container  {
-    margin-top: 86px !important;
+    margin-top: 86px;
     @media (--vp-media-desktop) {
-      margin-top: 156px !important;
+      margin-top: 156px;
     }
 
     &__content {
@@ -41,8 +41,8 @@ const { title, texts } = Astro.props as AboutProps;
 
     &__text {
       font-size: var(--space-medium);
-      margin-top: var(--space-large) !important;
-      color: white;
+      margin-top: var(--space-large);
+      color: var(--color-white);
       p {
         margin-bottom: var(--space-medium-2);
       }
