@@ -8,8 +8,8 @@ const lang = i18next.language;
 ---
 
 <footer class="footer h-content-wrapper">
-  <section class="footer__content h-box-shadow">
-    <article>
+  <div class="footer__belt h-box-shadow">
+    <section class="footer__content">
       <nav>
         <ul>
           {
@@ -25,30 +25,33 @@ const lang = i18next.language;
           }
         </ul>
       </nav>
-      <article class="footer__social">
-        <SocialLinks />
-        <KokuaLabsLogo dark width="150px" />
+      <article class="footer__right">
+        <a class="footer__link" href="mailto:hello@kokualabs.com">hello@kokualabs.com</a>
       </article>
+    </section>
+    <article class="footer__social">
+      <SocialLinks />
+      <KokuaLabsLogo dark width="150px" />
     </article>
-  </section>
+  </div>
 </footer>
 
 <style>
   @import "../../styles/media-queries.css";
 
   .footer {
-    &__content {
-      border-radius: var(--border-radius) var(--border-radius) 0 0;
+    &__belt {
       background: linear-gradient(-90deg, #00b4d8, #004cff);
-      padding: var(--space-large-2) !important;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-large) var(--space-large) 0 !important;
       width: 100%;
-
       @media (--vp-media-tablet) {
         padding: 0 var(--space-large-3);
         align-items: center;
-      }
-      @media (--vp-media-desktop) {
-        padding: 0 var(--space-xl-large);
       }
     }
     &__link-wrapper  {
@@ -66,12 +69,20 @@ const lang = i18next.language;
         font-size: 16px;
       }
     }
+
+    &__right  {
+      text-align: left;
+      @media (--vp-media-desktop) {
+        text-align: right;
+      }
+    }
     &__social {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: var(--space-medium);
+      padding-bottom: var(--space-medium);
     }
   }
 </style>

@@ -21,10 +21,7 @@ const {
   subtitleAlign = AlignTypes.Center,
 } = Astro.props as TitleProps;
 
-const parsedTitle = title.replaceAll(
-  "kokua",
-  '<span class="h-ryker-font">kokua</span>'
-);
+const parsedTitle = title.replaceAll("kokua", '<span class="h-ryker-font">kokua</span>');
 ---
 
 <section class="title-container">
@@ -43,10 +40,8 @@ const parsedTitle = title.replaceAll(
       <p
         class="title-container__subtitle"
         class:list={{
-          "title-container__subtitle--right":
-            subtitleAlign === AlignTypes.Right,
-          "title-container__subtitle--center":
-            subtitleAlign === AlignTypes.Center,
+          "title-container__subtitle--right": subtitleAlign === AlignTypes.Right,
+          "title-container__subtitle--center": subtitleAlign === AlignTypes.Center,
           "title-container__subtitle--left": subtitleAlign === AlignTypes.Left,
         }}
       >
@@ -57,6 +52,8 @@ const parsedTitle = title.replaceAll(
 </section>
 
 <style>
+  @import "../../../styles/media-queries.css";
+
   .title-container {
     &__title {
       font-family: "bioticbold";
