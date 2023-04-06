@@ -41,7 +41,7 @@ const { title, subtitle, description } = Astro.props as HeroProps;
     justify-content: space-between;
     position: relative;
     margin-top: var(--space-medium);
-    padding: var(--space-large-3);
+    padding: var(--space-large);
     border-radius: var(--border-radius);
     color: var(--color-white);
     background-color: var(--color-black);
@@ -49,7 +49,7 @@ const { title, subtitle, description } = Astro.props as HeroProps;
     &::before {
       z-index: -1;
       background-repeat: no-repeat;
-      background-position: -10% 88%;
+      background-position: -5% 88%;
       background-image: url("../../assets/png/waves.png");
       border-radius: var(--border-radius);
       content: "";
@@ -58,7 +58,7 @@ const { title, subtitle, description } = Astro.props as HeroProps;
       bottom: 0;
       left: 0;
       right: 0;
-      opacity: 0.4;
+      opacity: 0.5;
       width: 100%;
       height: 100%;
     }
@@ -83,8 +83,12 @@ const { title, subtitle, description } = Astro.props as HeroProps;
     }
     &__icons {
       display: flex;
-      justify-content: space-evenly;
-      height: 34px;
+      height: 28px;
+      justify-content: space-between;
+      @media (--vp-media-desktop) {
+        height: 34px;
+        justify-content: space-evenly;
+      }
     }
 
     &__title {
@@ -113,14 +117,15 @@ const { title, subtitle, description } = Astro.props as HeroProps;
       }
     }
     &__description {
-      font-size: 21px;
+      font-size: 14px;
+      line-height: 1.6;
       margin-bottom: var(--space-large-2);
       @media (--vp-media-tablet) {
-        font-size: 18px;
+        font-size: 16px;
       }
       @media (--vp-media-desktop) {
         margin-bottom: var(--space-large-4);
-        font-size: 21px;
+        font-size: 18px;
       }
     }
   }
