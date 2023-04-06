@@ -62,30 +62,52 @@ const servicesStylesMap: { [key: string]: { image: string; alt: string } } = {
 </article>
 
 <style>
+  @import "../../../../styles/media-queries.css";
+
   .service-item {
-    margin-top: 78px;
+    margin-bottom: 116px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px 64px;
-    &--reverse {
-      flex-direction: row-reverse;
+    flex-direction: column;
+    padding: 0 var(--space-medium);
+    @media (--vp-media-tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
-    &--dark {
-      background-color: var(--color-black);
+    @media (--vp-media-desktop) {
+      flex-direction: row;
+      padding: var(--space-medium-2) var(--space-large-4);
+    }
+    &--reverse {
+      @media (--vp-media-tablet) {
+        flex-direction: row-reverse;
+      }
     }
     &__content {
-      flex-basis: 45%;
+      @media (--vp-media-tablet) {
+        flex-basis: 45%;
+      }
+      @media (--vp-media-desktop) {
+        flex-basis: 45%;
+      }
     }
     &__image {
-      flex-basis: 50%;
       display: flex;
       justify-content: center;
       img {
         object-fit: contain;
-        width: 512px;
+        width: 312px;
         height: auto;
+      }
+      @media (--vp-media-desktop) {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        img {
+          object-fit: contain;
+          width: 512px;
+          height: auto;
+        }
       }
     }
   }
