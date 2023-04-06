@@ -12,7 +12,7 @@ type ServicesListProps = {
 const { items } = Astro.props as ServicesListProps;
 ---
 
-<section>
+<section class="services-list">
   {
     items.map((item, i) => {
       return <ServiceItem rightAlign={i % 2 !== 0} {...item} />;
@@ -21,7 +21,9 @@ const { items } = Astro.props as ServicesListProps;
 </section>
 
 <style>
-  section {
-    margin-top: 156px;
+  @import "../../../../styles/media-queries.css";
+
+  .services-list {
+    margin-top: 86px;
   }
 </style>
