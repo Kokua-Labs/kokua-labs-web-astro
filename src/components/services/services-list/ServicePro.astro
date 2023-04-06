@@ -43,6 +43,7 @@ const { title, description } = Astro.props as ServiceProProps;
       }
     }
     &__image {
+      margin-top: var(--space-large);
       display: flex;
       justify-content: center;
       flex-basis: 50%;
@@ -50,6 +51,9 @@ const { title, description } = Astro.props as ServiceProProps;
         object-fit: contain;
         width: 252px;
         height: auto;
+      }
+      @media (--vp-media-tablet) {
+        margin-top: 0;
       }
       @media (--vp-media-desktop) {
         display: flex;
