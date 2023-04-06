@@ -6,14 +6,14 @@ type AboutProps = {
   texts: string[];
 };
 
-import bgImage from "../../assets/jpg/waves.jpg";
+import bgImage from "../../assets/png/waves.png";
 
 const { title, texts } = Astro.props as AboutProps;
 ---
 
 <section class="about-container">
   <div style={{ backgroundImage: `url(${bgImage})` }} class="about-container__content">
-    <Title dark title={title} />
+    <Title dark title={title} titleAlign="left" />
     <article class="about-container__text">
       {texts.map((text) => <p>{text}</p>)}
     </article>
@@ -31,9 +31,10 @@ const { title, texts } = Astro.props as AboutProps;
 
     &__content {
       border-radius: var(--border-radius);
+      background-color: var(--color-black);
       padding: var(--space-medium-2);
       background-repeat: no-repeat;
-      background-position: center right;
+      background-position: -208% 75%;
       @media (--vp-media-desktop) {
         padding: var(--space-large-2);
       }

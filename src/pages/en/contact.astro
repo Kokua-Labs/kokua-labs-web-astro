@@ -1,6 +1,7 @@
 ---
 import { changeLanguage, t, setDefaultNamespace } from "i18next";
 import MainLayout from "../../layouts/MainLayout.astro";
+import ContactForm from "../../components/contact/ContactForm.astro";
 
 changeLanguage("en");
 
@@ -8,5 +9,15 @@ setDefaultNamespace("contact");
 ---
 
 <MainLayout title={t("content.title")}>
-  <h1>{t("content.title")}</h1>
+  <h1></h1>
+  <section class="contact-content">
+    <article></article>
+    <ContactForm />
+  </section>
 </MainLayout>
+
+<style>
+  .contact-content {
+    display: grid;
+  }
+</style>

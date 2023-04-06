@@ -51,7 +51,7 @@ const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroPro
   .home-hero-container {
     position: relative;
     display: flex;
-    padding: var(--space-xl-large) var(--space-medium-2) 0 !important;
+    padding: var(--space-xl-large) var(--space-medium-2) 0;
     height: 456px;
     margin-top: var(--space-medium);
     border-radius: var(--border-radius);
@@ -61,11 +61,11 @@ const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroPro
     color: var(--color-white);
     @media (--vp-media-tablet) {
       height: 384px;
-      padding: 0 var(--space-large-3) !important;
+      padding: 0 var(--space-large-3);
       align-items: center;
     }
     @media (--vp-media-desktop) {
-      padding: 0 var(--space-xl-large) !important;
+      padding: 0 var(--space-xl-large);
       height: 549px;
     }
 
@@ -141,7 +141,7 @@ const { title, description, ctaLabel, companyName } = Astro.props as HomeHeroPro
 
       @media (--vp-media-tablet) {
         left: -90px;
-        transform: scale(0.6) !important;
+        transform: scale(0.6);
       }
       @media (--vp-media-desktop) {
         top: -70px;

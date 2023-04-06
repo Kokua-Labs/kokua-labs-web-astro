@@ -1,0 +1,89 @@
+---
+import bgImage from "../../assets/png/waves.png";
+import { Icon } from "astro-icon";
+type HeroProps = {
+  title: string;
+  subtitle: string;
+  description: string;
+};
+
+const { title, subtitle, description } = Astro.props as HeroProps;
+---
+
+<section class="hero h-box-shadow" style={{ backgroundImage: `url(${bgImage})` }}>
+  <div>
+    <article class="hero__content">
+      <h1 class="hero__title">{title}</h1>
+      <h3 class="hero__subtitle">{subtitle}</h3>
+      <p class="hero__description">
+        {description}
+      </p>
+    </article>
+    <div class="hero__icons">
+      <Icon pack="mdi" name="web" />
+      <Icon pack="mdi" name="apple-ios" />
+      <Icon pack="mdi" name="android" />
+      <Icon pack="mdi" name="search-web" />
+      <Icon pack="mdi" name="cart" />
+      <Icon pack="mdi" name="cloud" />
+    </div>
+  </div>
+</section>
+
+<style>
+  @import "../../../styles/media-queries.css";
+
+  [astro-icon] {
+    color: white;
+  }
+
+  .hero {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: -156% 98%;
+    margin-top: var(--space-medium);
+    border-radius: var(--border-radius);
+    padding: var(--space-xl-large);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-black);
+
+    @media (--vp-media-tablet) {
+    }
+    @media (--vp-media-desktop) {
+    }
+    &__content {
+      width: 70%;
+      margin-bottom: var(--space-large-4);
+    }
+    &__icons {
+      display: flex;
+      justify-content: space-evenly;
+      max-height: 34px;
+    }
+
+    &__title {
+      line-height: 1;
+      position: relative;
+      margin-bottom: var(--space-medium);
+      font-family: "bioticbold";
+      font-size: 36px;
+      z-index: 1;
+
+      @media (--vp-media-tablet) {
+        font-size: 42px;
+      }
+      @media (--vp-media-desktop) {
+        font-size: 84px;
+      }
+    }
+    &__subtitle {
+      font-size: 36px;
+      margin-bottom: var(--space-medium);
+    }
+    &__description {
+      font-size: 21px;
+    }
+  }
+</style>

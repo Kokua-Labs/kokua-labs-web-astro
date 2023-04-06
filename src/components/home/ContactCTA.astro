@@ -19,7 +19,16 @@ const { cards } = Astro.props as ContactCTAProps;
       return (
         <article class="contact-cta__card">
           <Title title={card.title} subtitle={card.description} subtitleAlign="left" />
-          <div class="contact-cta__cta">{card.cta ? <LinkButton to="/contact" label={card.cta} /> : null}</div>
+          <div class="contact-cta__cta">
+            {card.cta ? (
+              <LinkButton to="/contact" label={card.cta} />
+            ) : (
+              <form>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                <button type="submit">Enviar</button>
+              </form>
+            )}
+          </div>
         </article>
       );
     })
@@ -35,10 +44,11 @@ const { cards } = Astro.props as ContactCTAProps;
     gap: var(--space-large);
 
     @media (--vp-media-desktop) {
-      margin: 112px 0 136px;
+      margin: 112px 0 0;
       flex-direction: row;
     }
     &__card {
+      border: 1px solid var(--color-main);
       flex: 1 1 100%;
       background-color: var(--color-white);
       border-radius: var(--border-radius);

@@ -21,10 +21,7 @@ const {
   subtitleAlign = AlignTypes.Center,
 } = Astro.props as TitleProps;
 
-const parsedTitle = title.replaceAll(
-  "kokua",
-  '<span class="h-ryker-font">kokua</span>'
-);
+const parsedTitle = title.replaceAll("kokua", '<span class="h-ryker-font">kokua</span>');
 ---
 
 <section class="title-container">
@@ -35,7 +32,7 @@ const parsedTitle = title.replaceAll(
       "title-container__title--dark": dark,
       "title-container__title--right": titleAlign === AlignTypes.Right,
       "title-container__title--center": titleAlign === AlignTypes.Center,
-      "title-container__title--left": titleAlign === AlignTypes.Right,
+      "title-container__title--left": titleAlign === AlignTypes.Left,
     }}
   />
   {
@@ -43,10 +40,9 @@ const parsedTitle = title.replaceAll(
       <p
         class="title-container__subtitle"
         class:list={{
-          "title-container__subtitle--right":
-            subtitleAlign === AlignTypes.Right,
-          "title-container__subtitle--center":
-            subtitleAlign === AlignTypes.Center,
+          "title-container__subtitle--dark": dark,
+          "title-container__subtitle--right": subtitleAlign === AlignTypes.Right,
+          "title-container__subtitle--center": subtitleAlign === AlignTypes.Center,
           "title-container__subtitle--left": subtitleAlign === AlignTypes.Left,
         }}
       >
@@ -95,6 +91,9 @@ const parsedTitle = title.replaceAll(
       @media (--vp-media-desktop) {
         font-size: 21px;
         line-height: 1.3;
+      }
+      &--dark {
+        color: var(--color-white);
       }
       &--center {
         text-align: center;

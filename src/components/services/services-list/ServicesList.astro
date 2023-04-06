@@ -1,0 +1,27 @@
+---
+import ServiceItem from "./ServiceItem.astro";
+
+type ServicesListProps = {
+  items: {
+    title: string;
+    type: string;
+    descripcion: string;
+  }[];
+};
+
+const { items } = Astro.props as ServicesListProps;
+---
+
+<section>
+  {
+    items.map((item, i) => {
+      return <ServiceItem rightAlign={i % 2 !== 0} {...item} />;
+    })
+  }
+</section>
+
+<style>
+  section {
+    margin-top: 156px;
+  }
+</style>

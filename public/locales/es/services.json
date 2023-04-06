@@ -1,0 +1,49 @@
+{
+  "title": "TODO",
+  "description": "TODO",
+  "components": {
+    "hero": {
+      "title": "Desarrollo a medida",
+      "subtitle": "control de pixel a pixel",
+      "description": "En kokua nos encargamos de todo el proceso de desarrollo de principio a fin, desde el almacenaje hasta el diseño, los despliegues y el apartado legal. Nuestro objetivo es hacer que el proceso sea lo más fácil y eficiente posible para nuestros clientes, para que puedan centrarse en su negocio mientras nosotros nos encargamos del resto."
+    },
+    "serviesList": {
+      "items": [
+        {
+          "title": "Desarrollo de webs",
+          "type": "web",
+          "description": "Diseñamos y desarrollamos sitios web personalizados para ayudar a nuestros clientes a tener una presencia en línea efectiva. Desde sitios informativos hasta sitios de comercio electrónico, nos aseguramos de que su sitio sea atractivo, funcional y fácil de navegar para sus clientes."
+        },
+        {
+          "title": "Desarrollo de eCommerce",
+          "type": "ecommerce",
+          "description": "Creamos tiendas en línea personalizadas para ayudar a nuestros clientes a vender en línea. Nos aseguramos de que su tienda sea fácil de usar y atractiva para sus clientes, desde el diseño hasta la integración del pago."
+        },
+        {
+          "title": "Desarrollo de Aplicaciones Móviles",
+          "type": "apps",
+          "description": "Creamos aplicaciones móviles personalizadas para nuestros clientes, ya sea para Android o iOS. Desde aplicaciones para el sector empresarial hasta aplicaciones de entretenimiento, nuestro equipo de desarrolladores trabajará contigo para crear la aplicación que necesitas."
+        },
+        {
+          "title": "Posicionamiento SEO",
+          "type": "seo",
+          "description": "Mejoramos el posicionamiento de su sitio web en los motores de búsqueda para atraer más tráfico orgánico y aumentar su visibilidad en línea."
+        },
+        {
+          "title": "Diseño y mejora de experiencia de usuarios",
+          "type": "design",
+          "description": "Ayudamos a mejorar la experiencia de usuario en su sitio web para que sus clientes se sientan cómodos y confiados en su marca. Desde la navegación hasta el diseño, nos aseguramos de que cada detalle sea intuitivo y atractivo."
+        },
+        {
+          "title": "Servicios de Legal y Protección de Datos",
+          "type": "legal",
+          "description": "Ofrecemos servicios legales y de protección de datos para garantizar el cumplimiento de las normativas en materia de privacidad y seguridad de la información."
+        }
+      ],
+      "pro": {
+        "title": "Soluciones digitales a medida",
+        "description": "Ofrecemos soluciones digitales personalizadas para satisfacer las necesidades específicas de su negocio. Desde el desarrollo de aplicaciones móviles hasta la integración de sistemas, nos aseguramos de que nuestras soluciones digitales sean efectivas y eficientes para su negocio."
+      }
+    }
+  }
+}
