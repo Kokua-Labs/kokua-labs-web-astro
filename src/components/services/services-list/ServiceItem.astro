@@ -68,6 +68,8 @@ const servicesStylesMap: { [key: string]: { image: string; alt: string } } = {
     margin-bottom: 116px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
     @media (--vp-media-tablet) {
       flex-direction: row;
       align-items: center;
@@ -75,10 +77,12 @@ const servicesStylesMap: { [key: string]: { image: string; alt: string } } = {
     }
     @media (--vp-media-desktop) {
       flex-direction: row;
-      padding: var(--space-medium-2) var(--space-large-4);
     }
     &--reverse {
       @media (--vp-media-tablet) {
+        flex-direction: row-reverse;
+      }
+      @media (--vp-media-desktop) {
         flex-direction: row-reverse;
       }
     }
