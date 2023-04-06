@@ -1,0 +1,92 @@
+---
+import Title from "../../shared/Title.astro";
+
+import WebImage from "../../../assets/png/web.png";
+import AppImage from "../../../assets/png/apps.png";
+import EcommerceImage from "../../../assets/png/eccomerce.png";
+import SeoImage from "../../../assets/png/seo.png";
+import DesignImage from "../../../assets/png/design.png";
+import LegalImage from "../../../assets/png/legal.png";
+
+type ServiceItemProps = {
+  title: string;
+  type: string;
+  description: string;
+  rightAlign: boolean;
+};
+
+const { title, description, rightAlign, type } = Astro.props as ServiceItemProps;
+
+const servicesStylesMap: { [key: string]: { image: string; alt: string } } = {
+  web: {
+    image: WebImage,
+    alt: "Web image with transparency kokua service",
+  },
+  seo: {
+    image: SeoImage,
+    alt: "Seo image with transparency kokua service",
+  },
+  design: {
+    image: DesignImage,
+    alt: "Design image with transparency kokua service",
+  },
+  ecommerce: {
+    image: EcommerceImage,
+    alt: "Ecommerce image with transparency kokua service",
+  },
+  apps: {
+    image: AppImage,
+    alt: "App image with transparency kokua service",
+  },
+  legal: {
+    image: LegalImage,
+    alt: "Legal image with transparency kokua service",
+  },
+};
+---
+
+<article class="service-item" class:list={{ "service-item--reverse": rightAlign }}>
+  <div class="service-item__content">
+    <Title title={title} titleAlign="left" subtitleAlign="left" subtitle={description} />
+  </div>
+  <figure class="service-item__image h-drop-shadow">
+    <img
+      width="100%"
+      height="100%"
+      loading="lazy"
+      src={servicesStylesMap[type].image}
+      alt={servicesStylesMap[type].alt}
+      srcset=""
+    />
+  </figure>
+</article>
+
+<style>
+  .service-item {
+    margin-top: 78px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 64px;
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+    &--dark {
+      background-color: var(--color-black);
+    }
+    &__content {
+      flex-basis: 45%;
+    }
+    &__image {
+      flex-basis: 50%;
+      display: flex;
+      justify-content: center;
+      img {
+        object-fit: contain;
+        width: 512px;
+        height: auto;
+      }
+    }
+  }
+</style>

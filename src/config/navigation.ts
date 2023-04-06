@@ -13,13 +13,13 @@ export const navigationItems: NavigationItem = {
       label: "Servicios",
       to: "/services",
       inHeader: true,
-      inFooter: false,
+      inFooter: true,
     },
     {
       label: "Contacto",
       to: "/contact",
       inHeader: true,
-      inFooter: false,
+      inFooter: true,
     },
     {
       label: "Política de Cookies",

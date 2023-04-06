@@ -6,14 +6,14 @@ import Title from "../components/shared/Title.astro";
 changeLanguage("es");
 
 type TextItem = {
-  sectionTitle: string;
-  description: string;
+    sectionTitle: string;
+    description: string;
 };
 setDefaultNamespace("cookies");
 const texts: TextItem[] = t("content.texts") as any;
 ---
 
-<MainLayout title={t("title")}>
+<MainLayout title={t("title")} noFollow>
   <section class="cookies-page h-content-wrapper">
     <article class="cookies-page__title">
       <Title title={t("content.title")} />

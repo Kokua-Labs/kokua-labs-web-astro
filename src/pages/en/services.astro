@@ -1,8 +1,19 @@
 ---
-import { changeLanguage } from "i18next";
+import { changeLanguage, setDefaultNamespace, t } from "i18next";
+import Hero from "../../components/services/Hero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
+import ServicesList from "../../components/services/services-list/ServicesList.astro";
 
 changeLanguage("en");
+
+setDefaultNamespace("services");
 ---
 
-<MainLayout />
+<MainLayout title={t("title")} description={t("description")}>
+  <Hero
+    title={t("components.hero.title")}
+    subtitle={t("components.hero.subtitle")}
+    description={t("components.hero.description")}
+  />
+  <ServicesList items={t("components.serviesList.items")} />
+</MainLayout>

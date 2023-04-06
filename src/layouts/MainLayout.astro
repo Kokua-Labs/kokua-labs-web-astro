@@ -2,6 +2,7 @@
 export interface LayoutProps {
   title: string;
   description: string;
+  noFollow?: boolean;
 }
 import { SEO } from "astro-seo";
 import Header from "../components/header/Header.astro";
@@ -10,7 +11,7 @@ import i18next from "i18next";
 import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
 import { HeadHrefLangs } from "astro-i18next/components";
 import CookiesConsent from "../components/CookiesConsent.astro";
-const { title, description } = Astro.props as LayoutProps;
+const { title, description, noFollow = false } = Astro.props as LayoutProps;
 ---
 
 <!DOCTYPE html>
@@ -19,10 +20,7 @@ const { title, description } = Astro.props as LayoutProps;
     <meta charset="UTF-8" />
     <link rel="icon" type="mage/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/logo.png" />
     <meta property="og:url" content={Astro.site?.href} />
@@ -30,7 +28,8 @@ const { title, description } = Astro.props as LayoutProps;
     <HeadHrefLangs />
     <SEO
       title={title}
-      description={description}
+      nofollow={noFollow}
+      description={description || ""}
       extend={{
         link: [{ rel: "sitemap", href: "/sitemap-0.xml" }],
       }}
@@ -39,7 +38,7 @@ const { title, description } = Astro.props as LayoutProps;
   <body>
     <GoogleAnalytics />
     <Header />
-    <main>
+    <main class="h-content-wrapper animate__animated animate__fadeIn">
       <slot />
     </main>
     <Footer />

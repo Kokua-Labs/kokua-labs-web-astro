@@ -1,5 +1,6 @@
 ---
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
+import Title from "../../components/shared/Title.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 changeLanguage("en");
@@ -11,9 +12,11 @@ type TextItem = {
 const texts: TextItem[] = t("content.texts") as any;
 ---
 
-<MainLayout title={t("title")}>
-  <section class="legal-page">
-    <h1 class="legal-page__title">{t("content.title")}</h1>
+<MainLayout title={t("title")} noFollow>
+  <section class="legal-page h-content-wrapper">
+    <article class="legal-page__title">
+      <Title title={t("content.title")} />
+    </article>
     {
       texts.map((el) => {
         return (
@@ -31,11 +34,6 @@ const texts: TextItem[] = t("content.texts") as any;
   .legal-page {
     &__title {
       margin-bottom: var(--space-medium);
-      font-family: "bioticbold";
-      font-size: 34px;
-      @media (--vp-media-desktop) {
-        font-size: 46px;
-      }
     }
     &__text {
       margin-bottom: var(--space-large);

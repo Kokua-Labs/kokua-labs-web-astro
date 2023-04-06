@@ -1,0 +1,44 @@
+---
+import Title from "../shared/Title.astro";
+---
+
+<article class="contact-form">
+  <div>
+    <Title title="¡Queremos estar en tu equipo!" />
+  </div>
+  <form action="">
+    <input required type="text" placeholder="Nombre 🥶" />
+    <input required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail 🫡" />
+    <select required name="categorias">
+      <option> </option>
+      <option value="opcion1">Opción 1</option>
+      <option value="opcion2">Opción 2</option>
+      <option value="opcion3">Opción 3</option>
+      <option value="opcion4">Opción 4</option>
+    </select>
+    <textarea placeholder="Describenos 👿"></textarea>
+    <p>
+      <input type="checkbox" id="terms" />
+      <label for="terms"
+        >Al enviar este formulario, aceptas que nosotros podamos utilizar tus datos de contacto para responder a tu
+        solicitud. Tus datos serán tratados de forma confidencial y no serán compartidos con terceros sin tu
+        consentimiento.</label
+      >
+    </p>
+
+    <button type="submit">enviar</button>
+  </form>
+</article>
+
+<style>
+  .contact-form  {
+    background-color: var(--color-white);
+    padding: var(--space-large);
+    border-radius: var(--border-radius);
+  }
+  input,
+  textarea,
+  select {
+    margin-bottom: var(--space-large);
+  }
+</style>

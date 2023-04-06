@@ -23,8 +23,7 @@ type Kpi = {
   image?: string;
 };
 
-const { title, subtitle, kpi1, kpi2, kpi3, kpi4, kpi5 } =
-  Astro.props as BannerProps;
+const { title, subtitle, kpi1, kpi2, kpi3, kpi4, kpi5 } = Astro.props as BannerProps;
 kpi1.image = UserProfileImage;
 kpi2.image = HandWritingImage;
 kpi3.image = HandsImage;
@@ -34,7 +33,7 @@ kpi5.image = PlanetImage;
 const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
 ---
 
-<section class="banner-container h-content-wrapper">
+<section class="banner-container">
   {title && <Title title={title} subtitle={subtitle} />}
 
   <article class="banner-container__kpis">
@@ -62,9 +61,9 @@ const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 86px !important;
+    margin-top: 86px;
     @media (--vp-media-desktop) {
-      margin-top: 156px !important;
+      margin-top: 156px;
     }
     &__kpis {
       text-align: center;
@@ -73,7 +72,7 @@ const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
       align-items: center;
       justify-content: space-evenly;
       gap: var(--space-large);
-      margin-bottom: var(--space-xl-large) !important;
+      margin-bottom: var(--space-xl-large);
     }
     &__kpi {
       display: flex;

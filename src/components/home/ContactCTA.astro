@@ -13,34 +13,42 @@ type ContactCTAProps = {
 const { cards } = Astro.props as ContactCTAProps;
 ---
 
-<section class="h-content-wrapper">
-  <div class="contact-cta">
-    {
-      cards.map((card) => {
-        return (
-          <article class="contact-cta__card">
-            <Title title={card.title} subtitle={card.description} subtitleAlign="left" />
-            <div class="contact-cta__cta">{card.cta ? <LinkButton to="/contact" label={card.cta} /> : null}</div>
-          </article>
-        );
-      })
-    }
-  </div>
+<section class="contact-cta">
+  {
+    cards.map((card) => {
+      return (
+        <article class="contact-cta__card">
+          <Title title={card.title} subtitle={card.description} subtitleAlign="left" />
+          <div class="contact-cta__cta">
+            {card.cta ? (
+              <LinkButton to="/contact" label={card.cta} />
+            ) : (
+              <form>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                <button type="submit">Enviar</button>
+              </form>
+            )}
+          </div>
+        </article>
+      );
+    })
+  }
 </section>
 
 <style>
   @import "../../../styles/media-queries.css";
   .contact-cta {
-    margin: 86px 0 50px !important;
+    margin: 86px 0 50px;
     display: flex;
     flex-direction: column;
     gap: var(--space-large);
 
     @media (--vp-media-desktop) {
-      margin: 112px 0 136px !important;
+      margin: 112px 0 0;
       flex-direction: row;
     }
     &__card {
+      border: 1px solid var(--color-main);
       flex: 1 1 100%;
       background-color: var(--color-white);
       border-radius: var(--border-radius);

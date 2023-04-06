@@ -7,12 +7,12 @@ changeLanguage("es");
 
 setDefaultNamespace("legal");
 type TextItem = {
-  text: string;
+    text: string;
 };
 const texts: TextItem[] = t("content.texts") as any;
 ---
 
-<MainLayout title={t("title")}>
+<MainLayout title={t("title")} noFollow>
   <section class="legal-page h-content-wrapper">
     <article class="legal-page__title">
       <Title title={t("content.title")} />
