@@ -1,8 +1,7 @@
 {
-    "title": "TODO",
-    "description": "TODO",
-    "components": {
-      "serviesList": []
-    }
+  "title": "TODO",
+  "description": "TODO",
+  "components": {
+    "serviesList": []
   }
-  
+}

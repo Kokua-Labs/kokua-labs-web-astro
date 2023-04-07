@@ -8,7 +8,12 @@ import Title from "../shared/Title.astro";
   </div>
   <form action="">
     <input required type="text" placeholder="Nombre 🥶" />
-    <input required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail 🫡" />
+    <input
+      required
+      type="email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      placeholder="E-mail 🫡"
+    />
     <select required name="categorias">
       <option> </option>
       <option value="opcion1">Opción 1</option>
@@ -20,9 +25,10 @@ import Title from "../shared/Title.astro";
     <p>
       <input type="checkbox" id="terms" />
       <label for="terms"
-        >Al enviar este formulario, aceptas que nosotros podamos utilizar tus datos de contacto para responder a tu
-        solicitud. Tus datos serán tratados de forma confidencial y no serán compartidos con terceros sin tu
-        consentimiento.</label
+        >Al enviar este formulario, aceptas que nosotros podamos utilizar tus
+        datos de contacto para responder a tu solicitud. Tus datos serán
+        tratados de forma confidencial y no serán compartidos con terceros sin
+        tu consentimiento.</label
       >
     </p>
 

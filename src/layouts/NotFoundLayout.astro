@@ -22,7 +22,12 @@ const { title } = Astro.props as LayoutProps;
     <GoogleAnalytics />
     <main class="not-found-layout-content">
       <figure class="not-found-layout-content__image">
-        <img height="100%" width="100%" src={PlanetImage} alt="planet image not found page kookua labs " />
+        <img
+          height="100%"
+          width="100%"
+          src={PlanetImage}
+          alt="planet image not found page kookua labs "
+        />
       </figure>
       <h1 class="not-found-layout-content__title">NOT FOUND</h1>
       <LinkButton to="/" label="Volver" />
