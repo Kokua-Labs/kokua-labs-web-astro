@@ -17,8 +17,22 @@ setDefaultNamespace("services");
     subtitle={t("components.hero.subtitle")}
     description={t("components.hero.description")}
   />
-  <ServicesList items={t("components.serviesList.items")} />
-  <ServicePro title={t("components.serviesList.pro.title")} description={t("components.serviesList.pro.description")} />
+  <ServicesList items={t("components.servicesList.items")} />
+  <ServicePro
+    title={t("components.servicesList.pro.title")}
+    description={t("components.servicesList.pro.description")}
+  />
 
-  <LinkButton label="Contacta" to="Contact" />
+  <div class="services-cta">
+    <LinkButton label={t("components.contactCTALabel")} to="/contact" />
+  </div>
 </MainLayout>
+
+<style>
+  .services-cta {
+    margin-top: var(--space-large-4);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+</style>
