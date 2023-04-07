@@ -7,7 +7,7 @@
       "subtitle": "control de pixel a pixel",
       "description": "En kokua nos encargamos de todo el proceso de desarrollo de principio a fin, desde el almacenaje hasta el diseño, los despliegues y el apartado legal. Nuestro objetivo es hacer que el proceso sea lo más fácil y eficiente posible para nuestros clientes, para que puedan centrarse en su negocio mientras nosotros nos encargamos del resto."
     },
-    "serviesList": {
+    "servicesList": {
       "items": [
         {
           "title": "Desarrollo de webs",
@@ -44,6 +44,7 @@
         "title": "Soluciones digitales a medida",
         "description": "Ofrecemos soluciones digitales personalizadas para satisfacer las necesidades específicas de su negocio. Desde el desarrollo de aplicaciones móviles hasta la integración de sistemas, nos aseguramos de que nuestras soluciones digitales sean efectivas y eficientes para su negocio."
       }
-    }
+    },
+    "contactCTALabel": "Contactanos 😋"
   }
 }

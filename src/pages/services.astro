@@ -4,6 +4,7 @@ import Hero from "../components/services/Hero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import ServicesList from "../components/services/services-list/ServicesList.astro";
 import ServicePro from "../components/services/services-list/ServicePro.astro";
+import LinkButton from "../components/shared/LinkButton.astro";
 
 changeLanguage("es");
 
@@ -16,6 +17,22 @@ setDefaultNamespace("services");
     subtitle={t("components.hero.subtitle")}
     description={t("components.hero.description")}
   />
-  <ServicesList items={t("components.serviesList.items")} />
-  <ServicePro title={t("components.serviesList.pro.title")} description={t("components.serviesList.pro.description")} />
+  <ServicesList items={t("components.servicesList.items")} />
+  <ServicePro
+    title={t("components.servicesList.pro.title")}
+    description={t("components.servicesList.pro.description")}
+  />
+
+  <div class="services-cta">
+    <LinkButton label={t("components.contactCTALabel")} to="/contact" />
+  </div>
 </MainLayout>
+
+<style>
+  .services-cta {
+    margin-top: var(--space-large-4);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+</style>

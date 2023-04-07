@@ -3,6 +3,8 @@ import { changeLanguage, setDefaultNamespace, t } from "i18next";
 import Hero from "../../components/services/Hero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ServicesList from "../../components/services/services-list/ServicesList.astro";
+import ServicePro from "../../components/services/services-list/ServicePro.astro";
+import LinkButton from "../../components/shared/LinkButton.astro";
 
 changeLanguage("en");
 
@@ -16,4 +18,7 @@ setDefaultNamespace("services");
     description={t("components.hero.description")}
   />
   <ServicesList items={t("components.serviesList.items")} />
+  <ServicePro title={t("components.serviesList.pro.title")} description={t("components.serviesList.pro.description")} />
+
+  <LinkButton label="Contacta" to="Contact" />
 </MainLayout>
