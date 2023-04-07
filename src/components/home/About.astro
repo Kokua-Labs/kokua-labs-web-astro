@@ -23,7 +23,7 @@ const { title, texts } = Astro.props as AboutProps;
 <style define:vars={{ bgImage }}>
   @import "../../../styles/media-queries.css";
 
-  .about-container  {
+  .about-container {
     margin-top: 86px;
     @media (--vp-media-desktop) {
       margin-top: 156px;
@@ -34,9 +34,13 @@ const { title, texts } = Astro.props as AboutProps;
       background-color: var(--color-black);
       padding: var(--space-medium-2);
       background-repeat: no-repeat;
-      background-position: -208% 75%;
+      background-position: -25% 75%;
+      @media (--vp-media-tablet) {
+        background-position: -90% 25%;
+      }
       @media (--vp-media-desktop) {
         padding: var(--space-large-2);
+        background-position: -208% 75%;
       }
     }
 

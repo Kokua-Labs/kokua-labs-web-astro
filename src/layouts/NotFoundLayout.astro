@@ -5,7 +5,8 @@ export interface LayoutProps {
 
 import i18next from "i18next";
 import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
-
+import PlanetImage from "../assets/png/planet.png";
+import LinkButton from "../components/shared/LinkButton.astro";
 const { title } = Astro.props as LayoutProps;
 ---
 
@@ -20,22 +21,30 @@ const { title } = Astro.props as LayoutProps;
   <body>
     <GoogleAnalytics />
     <main class="not-found-layout-content">
+      <figure class="not-found-layout-content__image">
+        <img height="100%" width="100%" src={PlanetImage} alt="planet image not found page kookua labs " />
+      </figure>
       <h1 class="not-found-layout-content__title">NOT FOUND</h1>
+      <LinkButton to="/" label="Volver" />
     </main>
   </body>
 </html>
 
 <style>
+  @import "../../styles/main.css";
+
   .not-found-layout-content {
-    padding: 96px 32px;
     background-color: var(--color-main);
-    height: 100%;
-    width: 100%;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    color: var(--color-white);
-    text-align: center;
+    font-family: "bioticbold";
+    gap: var(--space-large);
+    &__image {
+      height: 200px;
+      width: 200px;
+    }
   }
 </style>
