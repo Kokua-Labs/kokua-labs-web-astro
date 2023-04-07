@@ -15,7 +15,8 @@ type ServiceItemProps = {
   rightAlign: boolean;
 };
 
-const { title, description, rightAlign, type } = Astro.props as ServiceItemProps;
+const { title, description, rightAlign, type } =
+  Astro.props as ServiceItemProps;
 
 const servicesStylesMap: { [key: string]: { image: string; alt: string } } = {
   web: {
@@ -45,9 +46,17 @@ const servicesStylesMap: { [key: string]: { image: string; alt: string } } = {
 };
 ---
 
-<article class="service-item" class:list={{ "service-item--reverse": rightAlign }}>
+<article
+  class="service-item"
+  class:list={{ "service-item--reverse": rightAlign }}
+>
   <div class="service-item__content">
-    <Title title={title} titleAlign="left" subtitleAlign="left" subtitle={description} />
+    <Title
+      title={title}
+      titleAlign="left"
+      subtitleAlign="left"
+      subtitle={description}
+    />
   </div>
   <figure class="service-item__image h-drop-shadow">
     <img

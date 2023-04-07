@@ -13,10 +13,22 @@ const { title, description } = Astro.props as ServiceProProps;
 
 <article class="service-pro h-box-shadow">
   <div class="service-pro__content">
-    <Title dark title={title} subtitle={description} titleAlign="left" subtitleAlign="left" />
+    <Title
+      dark
+      title={title}
+      subtitle={description}
+      titleAlign="left"
+      subtitleAlign="left"
+    />
   </div>
   <figure class="service-pro__image">
-    <img width="100%" height="100%" loading="lazy" src={WavesImage} alt="waves image" />
+    <img
+      width="100%"
+      height="100%"
+      loading="lazy"
+      src={WavesImage}
+      alt="waves image"
+    />
   </figure>
 </article>
 
