@@ -65,11 +65,14 @@ input[type="email"],
 input[type="text"] {
   border-radius: var(--border-radius);
   border: none;
-  height: 48px;
+  height: 64px;
   width: 100%;
   padding: 0 30px;
   border: 1px solid var(--color-main);
   font-size: 21px;
+}
+input[type="checkbox"] {
+  margin: 0;
 }
 
 input::placeholder  {
@@ -95,7 +98,7 @@ textarea {
   border: none;
   resize: none;
   height: 148px;
-  padding: 30px;
+  padding: 20px 30px;
   font-size: 21px;
   border: 1px solid var(--color-main);
 }

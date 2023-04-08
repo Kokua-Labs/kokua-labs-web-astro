@@ -18,21 +18,16 @@ const { cards } = Astro.props as ContactCTAProps;
     cards.map((card) => {
       return (
         <article class="contact-cta__card">
-          <Title
-            title={card.title}
-            subtitle={card.description}
-            subtitleAlign="left"
-          />
+          <Title title={card.title} subtitle={card.description} subtitleAlign="left" />
           <div class="contact-cta__cta">
             {card.cta ? (
               <LinkButton to="/contact" label={card.cta} />
             ) : (
-              <form>
-                <input
-                  type="email"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                />
-                <button type="submit">Enviar</button>
+              <form id="form">
+                <div class="contact-cta__form">
+                  <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                  <button type="submit">Enviar</button>
+                </div>
               </form>
             )}
           </div>
@@ -67,6 +62,12 @@ const { cards } = Astro.props as ContactCTAProps;
     &__cta {
       display: flex;
       justify-content: center;
+      margin-top: var(--space-medium-2);
+    }
+    &__form {
+      display: flex;
+      align-items: center;
+      gap: var(--space-small);
     }
   }
 </style>
