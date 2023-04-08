@@ -1,38 +1,36 @@
 ---
 import Title from "../shared/Title.astro";
+import { contactTopis } from "../../config/contact-topics";
+import i18n from "i18next";
+const lang = i18n.language;
 ---
 
-<article class="contact-form">
-  <div>
+<article class="contact-form h-box-shadow">
+  <div class="contact-form__title">
     <Title title="¡Queremos estar en tu equipo!" />
   </div>
-  <form action="">
-    <input required type="text" placeholder="Nombre 🥶" />
-    <input
-      required
-      type="email"
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-      placeholder="E-mail 🫡"
-    />
-    <select required name="categorias">
-      <option> </option>
-      <option value="opcion1">Opción 1</option>
-      <option value="opcion2">Opción 2</option>
-      <option value="opcion3">Opción 3</option>
-      <option value="opcion4">Opción 4</option>
+  <form id="form" action="">
+    <input id="name" required type="text" placeholder="Nombre 🥶" />
+    <input id="email" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail 🫡" />
+    <select id="topic" required name="categorias">
+      {
+        contactTopis[lang].map((el) => {
+          return <option value={el.value}>{el.label}</option>;
+        })
+      }
     </select>
-    <textarea placeholder="Describenos 👿"></textarea>
+    <textarea id="description" placeholder="Describe 👿"></textarea>
     <p>
-      <input type="checkbox" id="terms" />
-      <label for="terms"
-        >Al enviar este formulario, aceptas que nosotros podamos utilizar tus
-        datos de contacto para responder a tu solicitud. Tus datos serán
-        tratados de forma confidencial y no serán compartidos con terceros sin
-        tu consentimiento.</label
-      >
+      <input required type="checkbox" id="terms" />
+      <label for="terms">
+        Al enviar este formulario, aceptas que nosotros podamos utilizar tus datos de contacto para responder a tu
+        solicitud. Tus datos serán tratados de forma confidencial y no serán compartidos con terceros sin tu
+        consentimiento.
+      </label>
     </p>
-
-    <button type="submit">enviar</button>
+    <div class="contact-form__submit">
+      <button type="submit">enviar</button>
+    </div>
   </form>
 </article>
 
@@ -41,6 +39,14 @@ import Title from "../shared/Title.astro";
     background-color: var(--color-white);
     padding: var(--space-large);
     border-radius: var(--border-radius);
+    &__title {
+      margin-bottom: var(--space-large);
+    }
+    &__submit {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: var(--space-large);
+    }
   }
   input,
   textarea,
@@ -48,3 +54,17 @@ import Title from "../shared/Title.astro";
     margin-bottom: var(--space-large);
   }
 </style>
+
+<script>
+  const form = document.getElementById("form") as HTMLFormElement;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const topic = form.elements.topic.value;
+    const description = form.elements?.description.value;
+
+    console.log(name, email, topic, description);
+  });
+</script>
