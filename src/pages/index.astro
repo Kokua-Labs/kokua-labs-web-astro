@@ -43,13 +43,11 @@ setDefaultNamespace("home");
       description: t("components.kpis.kpi5.description"),
     }}
   />
-  <TechStack
-    title={t("components.techStack.title")}
-    subtitle={t("components.techStack.subtitle")}
-  />
-  <About
-    title={t("components.about.title")}
-    texts={t("components.about.texts")}
-  />
+  <TechStack title={t("components.techStack.title")} subtitle={t("components.techStack.subtitle")} />
+  <About title={t("components.about.title")} texts={t("components.about.texts")} />
   <ContactCTA cards={t("components.contactCtaCards")} />
 </MainLayout>
+
+<style>
+  @import "../../styles/media-queries.css";
+</style>
