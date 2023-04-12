@@ -48,11 +48,12 @@
       {
         "title": "Contact us",
         "description": "Whenever it suits you. By clicking the button below, you will be redirected to our contact form where you can provide us with all the information.",
-        "cta": "Contact us 😎"
+        "cta": "Contact us 🤓"
       },
       {
         "title": "We'll contact you 🥸",
-        "description": "Enter your email below. We'll take care of contacting you via email as soon as possible."
+        "description": "Enter your email below. We'll take care of contacting you via email as soon as possible.",
+        "submit": "Send"
       }
     ]
   }

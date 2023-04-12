@@ -1,6 +1,17 @@
 {
-  "title": "Contacta",
+  "title": "Contacta - Kokua | Labs",
+  "description": "TODO",
   "content": {
-    "title": "Contacta"
+    "title": "Contacta",
+    "components": {
+      "form": {
+        "title": "¡Queremos estar en tu equipo!",
+        "name": "Nombre",
+        "email": "Email",
+        "description": "Descripción",
+        "terms": "Al enviar este formulario, aceptas que nosotros podamos utilizar tus datos de contacto para responder a tu solicitud. Tus datos serán tratados de forma confidencial y no serán compartidos con terceros sin tu consentimiento.",
+        "submit": "Enviar"
+      }
+    }
   }
 }

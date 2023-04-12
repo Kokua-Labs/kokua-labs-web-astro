@@ -1,4 +1,6 @@
-export const contactTopis: { [key: string]: { label: string; value: string }[] } = {
+export const contactTopis: {
+  [key: string]: { label: string; value: string }[];
+} = {
   es: [
     {
       label: "Web",
