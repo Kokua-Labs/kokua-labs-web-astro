@@ -3,6 +3,7 @@ import { changeLanguage, t, setDefaultNamespace } from "i18next";
 import MainLayout from "../layouts/MainLayout.astro";
 import ContactForm from "../components/contact/ContactForm.astro";
 import WavesImage from "../assets/png/waves-with-logo.png";
+
 changeLanguage("es");
 
 setDefaultNamespace("contact");
@@ -13,7 +14,7 @@ setDefaultNamespace("contact");
     <article class="contact-content__1col h-box-shadow">
       <img src={WavesImage} alt="waves image with company logo" />
     </article>
-    <ContactForm />
+    <ContactForm {...t("content.components.form") as any} />
   </section>
 </MainLayout>
 

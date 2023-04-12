@@ -23,7 +23,6 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         env:
-          PUBLIC_PARKING_MODE: ${{ secrets.PUBLIC_PARKING_MODE }}
           PUBLIC_GA_UID: ${{ secrets.PUBLIC_GA_UID }}
         # with:
         # path: . # The root location of your Astro project inside the repository. (optional)

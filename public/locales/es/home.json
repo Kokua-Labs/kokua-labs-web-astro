@@ -48,11 +48,12 @@
       {
         "title": "Contáctanos",
         "description": "Cuando te vaya bien. Al hacer click en el botón de abajo, serás redirigido a nuestro formulario de contacto donde puedes proporcionarnos toda la información.",
-        "cta": "Contáctanos 😎"
+        "cta": "Contáctanos 🤓"
       },
       {
         "title": "Nosotros te contactamos 🥸",
-        "description": "Ingresa tu correo electrónico a continuación. Nosotros nos encargaremos de contactarte por correo electrónico lo antes posible."
+        "description": "Ingresa tu correo electrónico a continuación. Nosotros nos encargaremos de contactarte por correo electrónico lo antes posible.",
+        "submit": "Enviar"
       }
     ]
   }

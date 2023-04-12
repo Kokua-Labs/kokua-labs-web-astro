@@ -1,6 +1,6 @@
 {
-  "title": "TODO",
-  "description": "TODO",
+  "title": "Servicios - Kokua | Labs",
+  "description": "Soluciones digitales personalizadas para las necesidades de tu negocio. Desarrollo web, eCommerce, aplicaciones móviles, SEO, diseño y mejora de experiencia de usuarios. Aumenta tu visibilidad en línea y cumple con las normativas de privacidad y seguridad con nuestros servicios.",
   "components": {
     "hero": {
       "title": "Desarrollo a medida",
@@ -45,6 +45,6 @@
         "description": "Ofrecemos soluciones digitales personalizadas para satisfacer las necesidades específicas de su negocio. Desde el desarrollo de aplicaciones móviles hasta la integración de sistemas, nos aseguramos de que nuestras soluciones digitales sean efectivas y eficientes para su negocio."
       }
     },
-    "contactCTALabel": "Contactanos 😋"
+    "contactCTALabel": "Contactanos 😊"
   }
 }

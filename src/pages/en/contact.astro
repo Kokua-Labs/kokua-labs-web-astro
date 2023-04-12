@@ -2,22 +2,41 @@
 import { changeLanguage, t, setDefaultNamespace } from "i18next";
 import MainLayout from "../../layouts/MainLayout.astro";
 import ContactForm from "../../components/contact/ContactForm.astro";
+import WavesImage from "../../assets/png/waves-with-logo.png";
 
 changeLanguage("en");
 
 setDefaultNamespace("contact");
 ---
 
-<MainLayout title={t("content.title")}>
-  <h1></h1>
+<MainLayout title={t("content.title")} description="TODO">
   <section class="contact-content">
-    <article></article>
-    <ContactForm />
+    <article class="contact-content__1col h-box-shadow">
+      <img src={WavesImage} alt="waves image with company logo" />
+    </article>
+    <ContactForm {...t("content.components.form") as any} />
   </section>
 </MainLayout>
 
 <style>
+  @import "../../../styles/media-queries.css";
   .contact-content {
-    display: grid;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-large);
+    grid-template-columns: 1fr;
+    @media (--vp-media-desktop) {
+      flex-direction: row;
+    }
+    &__1col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-large-2);
+      background-color: var(--color-black);
+      border-radius: var(--border-radius);
+      background-position: center;
+      background-color: var(--color-black);
+    }
   }
 </style>

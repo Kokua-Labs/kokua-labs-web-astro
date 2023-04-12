@@ -1,7 +1,50 @@
 {
-  "title": "TODO",
-  "description": "TODO",
+  "title": "Services - Kokua | Labs",
+  "description": "Customized digital solutions for your business needs. Web development, eCommerce, mobile application development, SEO, user experience design and improvement, legal and data protection services. Boost your online visibility and comply with privacy and security regulations with our services.",
   "components": {
-    "serviesList": []
+    "hero": {
+      "title": "Tailored Development",
+      "subtitle": "Pixel-perfect control",
+      "description": "At Kokua, we take care of the entire development process from start to finish, from storage to design, deployment, and legal matters. Our goal is to make the process as easy and efficient as possible for our clients, so they can focus on their business while we take care of the rest."
+    },
+    "servicesList": {
+      "items": [
+        {
+          "title": "Web Development",
+          "type": "web",
+          "description": "We design and develop custom websites to help our clients have an effective online presence. From informational sites to eCommerce sites, we ensure your site is attractive, functional, and easy to navigate for your customers."
+        },
+        {
+          "title": "eCommerce Development",
+          "type": "ecommerce",
+          "description": "We create custom online stores to help our clients sell online. We ensure your store is easy to use and attractive to your customers, from design to payment integration."
+        },
+        {
+          "title": "Mobile Application Development",
+          "type": "apps",
+          "description": "We create custom mobile applications for our clients, whether for Android or iOS. From business apps to entertainment apps, our team of developers will work with you to create the app you need."
+        },
+        {
+          "title": "SEO Positioning",
+          "type": "seo",
+          "description": "We improve your website's positioning in search engines to attract more organic traffic and increase your online visibility."
+        },
+        {
+          "title": "User Experience Design and Improvement",
+          "type": "design",
+          "description": "We help improve the user experience on your website so your customers feel comfortable and confident in your brand. From navigation to design, we ensure every detail is intuitive and attractive."
+        },
+        {
+          "title": "Legal and Data Protection Services",
+          "type": "legal",
+          "description": "We offer legal and data protection services to ensure compliance with privacy and information security regulations."
+        }
+      ],
+      "pro": {
+        "title": "Tailored Digital Solutions",
+        "description": "We offer customized digital solutions to meet the specific needs of your business. From mobile application development to system integration, we ensure our digital solutions are effective and efficient for your business."
+      }
+    },
+    "contactCTALabel": "Contact us 😊"
   }
 }
