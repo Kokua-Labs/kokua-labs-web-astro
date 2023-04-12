@@ -79,4 +79,36 @@ const { cards } = Astro.props as ContactCTAProps;
       gap: var(--space-small);
     }
   }
+
+  input[type="email"] {
+    border-radius: var(--border-radius);
+    border: none;
+    width: 100%;
+    padding: 0 30px;
+    border: 1px solid var(--color-main);
+    font-size: 21px;
+    height: 48px;
+
+    @media (--vp-media-desktop) {
+      height: 64px;
+    }
+  }
+
+  button[type="submit"] {
+    display: block;
+    font-family: "rykerbold";
+    box-shadow: 11px 17px 27px -5px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-main);
+    border-radius: var(--border-radius);
+    border: none;
+    padding: var(--space-medium) var(--space-medium-2);
+    color: var(--color-white);
+    width: fit-content;
+    text-align: center;
+    font-size: 16px;
+
+    @media (--vp-media-desktop) {
+      font-size: 21px;
+    }
+  }
 </style>
