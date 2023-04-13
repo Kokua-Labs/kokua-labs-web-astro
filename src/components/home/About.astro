@@ -14,10 +14,7 @@ const { title, cta, texts } = Astro.props as AboutProps;
 ---
 
 <section class="about-container">
-  <div
-    style={{ backgroundImage: `url(${bgImage})` }}
-    class="about-container__content"
-  >
+  <div style={{ backgroundImage: `url(${bgImage})` }} class="about-container__content">
     <Title dark title={title} titleAlign="left" />
     <article class="about-container__text">
       {texts.map((text) => <p>{text}</p>)}
@@ -52,7 +49,7 @@ const { title, cta, texts } = Astro.props as AboutProps;
 
     &__text {
       font-size: 16px;
-      margin: var(--space-large) 0;
+      margin: var(--space-large) 0 var(--space-large-3) 0;
       color: var(--color-white);
       p {
         margin-bottom: var(--space-medium-2);
