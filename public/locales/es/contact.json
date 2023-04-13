@@ -1,8 +1,7 @@
 {
-  "title": "Contacta - Kokua | Labs",
-  "description": "TODO",
+  "title": "Contacta - kokua | labs",
+  "description": "Contacta con nosotros para más información sobre nuestros servicios y soluciones digitales personalizadas. Rellena el formulario con tu nombre, email y una breve descripción de tus necesidades y nos pondremos en contacto contigo lo antes posible.",
   "content": {
-    "title": "Contacta",
     "components": {
       "form": {
         "title": "¡Queremos estar en tu equipo!",

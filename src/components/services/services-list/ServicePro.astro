@@ -48,9 +48,16 @@ const { title, description } = Astro.props as ServiceProProps;
       flex-direction: row;
       padding: var(--space-medium-2) var(--space-large-4);
     }
+    @media (--vp-media-desktop) {
+      flex-direction: row;
+      padding: var(--space-medium-2) var(--space-large-4);
+    }
     &__content {
       flex-basis: 100%;
       @media (--vp-media-tablet) {
+        flex-basis: 50%;
+      }
+      @media (--vp-media-desktop) {
         flex-basis: 50%;
       }
     }
