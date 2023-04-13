@@ -1,11 +1,10 @@
 ---
 import { t, changeLanguage, setDefaultNamespace } from "i18next";
 import KPIs from "../../components/home/KPIs.astro";
-import HomeHero from "../../components/home/HomeHero.astro";
+import Hero from "../../components/home/Hero.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import About from "../../components/home/About.astro";
 import TechStack from "../../components/home/TechStack.astro";
-import ContactCTA from "../../components/home/ContactCTA.astro";
 
 changeLanguage("en");
 
@@ -13,7 +12,7 @@ setDefaultNamespace("home");
 ---
 
 <MainLayout title={t("title")} description={t("description")}>
-  <HomeHero
+  <Hero
     title={t("components.hero.title")}
     companyName={t("components.hero.companyName")}
     description={t("components.hero.description")}
@@ -22,26 +21,8 @@ setDefaultNamespace("home");
   <KPIs
     title={t("components.kpis.title")}
     subtitle={t("components.kpis.subtitle")}
-    kpi1={{
-      title: t("components.kpis.kpi1.title"),
-      description: t("components.kpis.kpi1.description"),
-    }}
-    kpi2={{
-      title: t("components.kpis.kpi2.title"),
-      description: t("components.kpis.kpi2.description"),
-    }}
-    kpi3={{
-      title: t("components.kpis.kpi3.title"),
-      description: t("components.kpis.kpi3.description"),
-    }}
-    kpi4={{
-      title: t("components.kpis.kpi4.title"),
-      description: t("components.kpis.kpi4.description"),
-    }}
-    kpi5={{
-      title: t("components.kpis.kpi5.title"),
-      description: t("components.kpis.kpi5.description"),
-    }}
+    kpis={t("components.kpis.kpis")}
+    ctaLabel={t("components.kpis.ctaLabel")}
   />
   <TechStack
     title={t("components.techStack.title")}
@@ -50,6 +31,6 @@ setDefaultNamespace("home");
   <About
     title={t("components.about.title")}
     texts={t("components.about.texts")}
+    cta={t("components.about.cta")}
   />
-  <ContactCTA cards={t("components.contactCtaCards")} />
 </MainLayout>

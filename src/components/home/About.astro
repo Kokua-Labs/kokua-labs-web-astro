@@ -3,12 +3,14 @@ import Title from "../shared/Title.astro";
 
 type AboutProps = {
   title: string;
+  cta: string;
   texts: string[];
 };
 
 import bgImage from "../../assets/png/waves.png";
+import LinkButton from "../shared/LinkButton.astro";
 
-const { title, texts } = Astro.props as AboutProps;
+const { title, cta, texts } = Astro.props as AboutProps;
 ---
 
 <section class="about-container">
@@ -20,10 +22,11 @@ const { title, texts } = Astro.props as AboutProps;
     <article class="about-container__text">
       {texts.map((text) => <p>{text}</p>)}
     </article>
+    <LinkButton to="contact" label={cta} />
   </div>
 </section>
 
-<style define:vars={{ bgImage }}>
+<style>
   @import "../../../styles/media-queries.css";
 
   .about-container {
@@ -37,7 +40,7 @@ const { title, texts } = Astro.props as AboutProps;
       background-color: var(--color-black);
       padding: var(--space-medium-2);
       background-repeat: no-repeat;
-      background-position: -25% 75%;
+      background-position: -20% 75%;
       @media (--vp-media-tablet) {
         background-position: -90% 25%;
       }
@@ -48,8 +51,8 @@ const { title, texts } = Astro.props as AboutProps;
     }
 
     &__text {
-      font-size: var(--space-medium);
-      margin-top: var(--space-large);
+      font-size: 16px;
+      margin: var(--space-large) 0;
       color: var(--color-white);
       p {
         margin-bottom: var(--space-medium-2);

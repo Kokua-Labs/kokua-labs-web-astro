@@ -11,26 +11,29 @@
     "kpis": {
       "title": "The power of kokua, with your business at the center",
       "subtitle": "kokua, the Hawaiian value of mutual aid and collaboration, is our mantra. We believe in the power of kokua to create technological solutions that are innovative and have an impact. We will be with you throughout the entire process of your business's digital transformation.",
-      "kpi1": {
-        "title": "Understand",
-        "description": "We work closely with you to understand your unique needs and goals."
-      },
-      "kpi2": {
-        "title": "Create",
-        "description": "We create customized software solutions tailored to your needs. Pixel-perfect control."
-      },
-      "kpi3": {
-        "title": "Collaborate",
-        "description": "We apply a collaborative approach, working closely with you to ensure that your vision becomes a reality."
-      },
-      "kpi4": {
-        "title": "Make an impact",
-        "description": "We make an impact in the digital world by embracing the latest technologies and programming languages. More speed and scalability."
-      },
-      "kpi5": {
-        "title": "Differentiate",
-        "description": "Every business is unique, so it cannot look like others. That's why we develop tailor-made solutions."
-      }
+      "ctaLabel": "Discover what we do",
+      "kpis": [
+        {
+          "title": "Understand",
+          "description": "We work closely with you to understand your unique needs and objectives."
+        },
+        {
+          "title": "Create",
+          "description": "We create custom software solutions tailored to your needs. We control every pixel."
+        },
+        {
+          "title": "Collaborate",
+          "description": "We take a collaborative approach, working closely with you to ensure your vision becomes a reality."
+        },
+        {
+          "title": "Impact",
+          "description": "We create impact in the digital world by leveraging the latest technologies and programming languages. Faster and more scalable."
+        },
+        {
+          "title": "Differentiate",
+          "description": "Every business is unique, and should not look like others. That's why we develop tailored solutions."
+        }
+      ]
     },
     "techStack": {
       "title": "We use the latest available technologies for the best ideas of the moment.",
@@ -42,19 +45,8 @@
         "We are a team of professionals who believe in the power of technology to transform businesses and people's lives.",
         "Since 2021, we have been growing thanks to our commitment to innovation, excellence, and customer satisfaction. We are driven by the desire to create software that empowers our clients to achieve their goals and have a positive impact on their businesses.",
         "At the heart of our agency is the concept of kokua. kokua is a Hawaiian word that means 'help' or 'service.' By embodying the spirit of kokua, we can create products that not only meet our clients' needs but also exceed their expectations."
-      ]
-    },
-    "contactCtaCards": [
-      {
-        "title": "Contact us",
-        "description": "Whenever it suits you. By clicking the button below, you will be redirected to our contact form where you can provide us with all the information.",
-        "cta": "Contact us 🤓"
-      },
-      {
-        "title": "We'll contact you 🥸",
-        "description": "Enter your email below. We'll take care of contacting you via email as soon as possible.",
-        "submit": "Send"
-      }
-    ]
+      ],
+      "cta": "Contact Us 🤓"
+    }
   }
 }

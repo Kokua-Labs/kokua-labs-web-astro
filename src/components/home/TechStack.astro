@@ -25,22 +25,22 @@ type TechStackProps = {
 const { title, subtitle } = Astro.props as TechStackProps;
 
 const stack = [
-  { image: NestLogo, alt: "Nest logo" },
-  { image: ReactLogo, alt: "React logo" },
-  { image: FigmatLogo, alt: "Figma logo" },
-  { image: FluttertLogo, alt: "Flutter logo" },
-  { image: NextLogo, alt: "Next logo" },
-  { image: RubyLogo, alt: "Ruby logo" },
-  { image: VercelLogo, alt: "Vercel logo" },
-  { image: VueLogo, alt: "Vue logo" },
-  { image: WordpressLogo, alt: "Wordpress logo" },
-  { image: HTMLLogo, alt: "Html logo" },
-  { image: CSSLogo, alt: "css logo" },
-  { image: RailsLogo, alt: "Rails logo" },
-  { image: DockerLogo, alt: "Docker logo" },
-  { image: MongoLogo, alt: "Mongo logo" },
-  { image: AstroLogo, alt: "Astro logo" },
-  { image: NuxtLogo, alt: "Nuxt logo" },
+  { image: NestLogo, alt: "Nest logo Kokua Labs Image" },
+  { image: ReactLogo, alt: "React logo Kokua Labs Image" },
+  { image: FigmatLogo, alt: "Figma logo Kokua Labs Image" },
+  { image: FluttertLogo, alt: "Flutter logo Kokua Labs Image" },
+  { image: NextLogo, alt: "Next logo Kokua Labs Image" },
+  { image: RubyLogo, alt: "Ruby logo Kokua Labs Image" },
+  { image: VercelLogo, alt: "Vercel logo Kokua Labs Image" },
+  { image: VueLogo, alt: "Vue logo Kokua Labs Image" },
+  { image: WordpressLogo, alt: "Wordpress logo Kokua Labs Image" },
+  { image: HTMLLogo, alt: "Html logo Kokua Labs Image" },
+  { image: CSSLogo, alt: "css logo Kokua Labs Image" },
+  { image: RailsLogo, alt: "Rails logo Kokua Labs Image" },
+  { image: DockerLogo, alt: "Docker logo Kokua Labs Image" },
+  { image: MongoLogo, alt: "Mongo logo Kokua Labs Image" },
+  { image: AstroLogo, alt: "Astro logo Kokua Labs Image" },
+  { image: NuxtLogo, alt: "Nuxt logo Kokua Labs Image" },
 ];
 ---
 
@@ -57,7 +57,7 @@ const stack = [
     {
       stack.map((tech) => {
         return (
-          <figure class="h-drop-shadow  tech-stack__grid-item">
+          <figure class="h-drop-shadow tech-stack__grid-item">
             <img
               width="100%"
               height="100%"
@@ -82,10 +82,12 @@ const stack = [
     margin-top: 86px;
 
     @media (--vp-media-desktop) {
-      margin-top: 156px;
       flex-direction: row;
+      justify-content: space-evenly;
       gap: var(--space-large);
+      margin-top: 156px;
     }
+
     &__title {
       @media (--vp-media-desktop) {
         width: 48%;
@@ -109,10 +111,12 @@ const stack = [
         width: 90px;
         height: 90px;
       }
+
       @media (--vp-media-desktop) {
         width: 100px;
         height: 100px;
       }
+
       &:hover {
         transform: scale(1.2);
       }

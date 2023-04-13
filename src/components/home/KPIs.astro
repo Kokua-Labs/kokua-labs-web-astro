@@ -1,79 +1,84 @@
 ---
-type BannerProps = {
-  title: string;
-  subtitle: string;
-  kpi1: Kpi;
-  kpi2: Kpi;
-  kpi3: Kpi;
-  kpi4: Kpi;
-  kpi5: Kpi;
-};
-
-import HandWritingImage from "../../assets/png/hand-writing.png";
-import UserProfileImage from "../../assets/png/user-profile.png";
-import HandsImage from "../../assets/png/phone-hands.png";
-import PlanetImage from "../../assets/png/planet.png";
-import NotesImage from "../../assets/png/notes.png";
+import image1 from "../../assets/png/user-profile.png";
+import image2 from "../../assets/png/hand-writing.png";
+import image3 from "../../assets/png/phone-hands.png";
+import image4 from "../../assets/png/notes.png";
+import image5 from "../../assets/png/planet.png";
 import LinkButton from "../shared/LinkButton.astro";
 import Title from "../shared/Title.astro";
+
+type KPIsProps = {
+  title: string;
+  subtitle: string;
+  ctaLabel: string;
+  kpis: Kpi[];
+};
 
 type Kpi = {
   title: string;
   description: string;
-  image?: string;
+  image: string;
 };
 
-const { title, subtitle, kpi1, kpi2, kpi3, kpi4, kpi5 } =
-  Astro.props as BannerProps;
-kpi1.image = UserProfileImage;
-kpi2.image = HandWritingImage;
-kpi3.image = HandsImage;
-kpi4.image = NotesImage;
-kpi5.image = PlanetImage;
+const { title, subtitle, kpis, ctaLabel } = Astro.props as KPIsProps;
 
-const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
+const images: string[] = [image1, image2, image3, image4, image5];
+
+const parsedKpis = kpis.map((kpi, i) => {
+  return {
+    ...kpi,
+    image: images[i],
+  };
+});
 ---
 
-<section class="banner-container">
-  {title && <Title title={title} subtitle={subtitle} />}
+<section class="kpis-container">
+  <Title title={title} subtitle={subtitle} />
 
-  <article class="banner-container__kpis">
+  <div class="kpis-container__kpis">
     {
-      kpis.map((kpi) => (
-        <div class="banner-container__kpi">
+      parsedKpis.map((kpi) => (
+        <article class="kpis-container__kpi">
           <figure>
-            <img src={kpi.image} alt="" />
+            <img
+              loading="lazy"
+              width="100%"
+              height="100%"
+              src={kpi.image}
+              alt={`${kpi.title}-kpi-image-kokua`}
+            />
           </figure>
           <h3 class="h-ryker-font">{kpi.title}</h3>
           <p>{kpi.description}</p>
-        </div>
+        </article>
       ))
     }
-  </article>
-  <article class="banner-container__cta">
-    <LinkButton to="/services" label="Conoce lo que hacemos" />
-  </article>
+  </div>
+  <div>
+    <LinkButton to="services" label={ctaLabel} />
+  </div>
 </section>
 
 <style>
   @import "../../../styles/media-queries.css";
 
-  .banner-container {
+  .kpis-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 86px;
+
     @media (--vp-media-desktop) {
       margin-top: 156px;
     }
+
     &__kpis {
-      text-align: center;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-evenly;
       gap: var(--space-large);
-      margin-bottom: var(--space-xl-large);
+      margin: var(--space-large-3) 0;
     }
     &__kpi {
       display: flex;
@@ -81,7 +86,6 @@ const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
       align-items: center;
       gap: var(--space-small-2);
       text-align: center;
-      padding: 0;
       font-size: 16px;
       flex: 1 1 100%;
       @media (--vp-media-tablet) {
@@ -89,7 +93,7 @@ const kpis = [kpi1, kpi2, kpi3, kpi4, kpi5];
         font-size: 18px;
       }
       @media (--vp-media-desktop) {
-        flex: 1 1 30%;
+        flex: 0 0 30%;
         font-size: 21px;
         padding: 0 var(--space-large);
       }
