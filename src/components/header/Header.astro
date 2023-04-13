@@ -24,7 +24,7 @@ const currentPagePath = Astro.url.pathname;
             <li
               class="nav-bar-container__nav-item"
               class:list={{
-                "h-neu-up": currentPagePath === to,
+                "h-neu-up": currentPagePath.includes(to),
               }}
             >
               <a class="nav-bar-container__nav-link" href={lang === "es" ? `/${to}` : `/${lang}/${to}`}>
