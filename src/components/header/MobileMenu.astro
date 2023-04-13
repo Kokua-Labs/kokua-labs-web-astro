@@ -20,7 +20,7 @@ const lang = i18next.language;
         .filter((el) => el.inHeader)
         .map((item) => (
           <li class="mobile-menu__item">
-            <a href={`$/${item.to}`}>{item.label}</a>
+            <a href={i18next.language === "es" ? `/${item.to}` : `/${i18next.language}/${item.to}`}>{item.label}</a>
           </li>
         ))
     }
