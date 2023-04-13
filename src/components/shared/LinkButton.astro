@@ -16,16 +16,24 @@ const toUrl = i18next.language === "es" ? to : `${i18next.language}/${to}`;
 </div>
 
 <style>
+  @import "../../../styles/media-queries.css";
+
   .custom-button {
     display: block;
     font-family: "bioticbold";
     background-color: var(--color-white);
     border-radius: var(--border-radius);
-    padding: var(--space-medium) var(--space-medium-2);
+    padding: var(--space-medium) var(--space-medium);
     color: var(--color-main);
     width: fit-content;
     text-align: center;
     border: 1px solid var(--color-main);
-    font-size: 21px;
+    font-size: 16px;
+    @media (--vp-media-yablet) {
+      font-size: 18px;
+    }
+    @media (--vp-media-desktop) {
+      font-size: 21px;
+    }
   }
 </style>

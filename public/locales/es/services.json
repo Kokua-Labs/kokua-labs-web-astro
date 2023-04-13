@@ -10,17 +10,17 @@
     "servicesList": {
       "items": [
         {
-          "title": "Desarrollo de webs",
+          "title": "Desarrollo de sitios web",
           "type": "web",
           "description": "Diseñamos y desarrollamos sitios web personalizados para ayudar a nuestros clientes a tener una presencia en línea efectiva. Desde sitios informativos hasta sitios de comercio electrónico, nos aseguramos de que su sitio sea atractivo, funcional y fácil de navegar para sus clientes."
         },
         {
-          "title": "Desarrollo de eCommerce",
+          "title": "Desarrollo de tiendas en línea",
           "type": "ecommerce",
           "description": "Creamos tiendas en línea personalizadas para ayudar a nuestros clientes a vender en línea. Nos aseguramos de que su tienda sea fácil de usar y atractiva para sus clientes, desde el diseño hasta la integración del pago."
         },
         {
-          "title": "Desarrollo de Aplicaciones Móviles",
+          "title": "Desarrollo de aplicaciones móviles",
           "type": "apps",
           "description": "Creamos aplicaciones móviles personalizadas para nuestros clientes, ya sea para Android o iOS. Desde aplicaciones para el sector empresarial hasta aplicaciones de entretenimiento, nuestro equipo de desarrolladores trabajará contigo para crear la aplicación que necesitas."
         },
@@ -30,12 +30,12 @@
           "description": "Mejoramos el posicionamiento de su sitio web en los motores de búsqueda para atraer más tráfico orgánico y aumentar su visibilidad en línea."
         },
         {
-          "title": "Diseño y mejora de experiencia de usuarios",
+          "title": "Diseño y mejora de experiencia de usuario",
           "type": "design",
           "description": "Ayudamos a mejorar la experiencia de usuario en su sitio web para que sus clientes se sientan cómodos y confiados en su marca. Desde la navegación hasta el diseño, nos aseguramos de que cada detalle sea intuitivo y atractivo."
         },
         {
-          "title": "Servicios de Legal y Protección de Datos",
+          "title": "Servicios legales y de protección de datos",
           "type": "legal",
           "description": "Ofrecemos servicios legales y de protección de datos para garantizar el cumplimiento de las normativas en materia de privacidad y seguridad de la información."
         }
@@ -45,6 +45,6 @@
         "description": "Ofrecemos soluciones digitales personalizadas para satisfacer las necesidades específicas de su negocio. Desde el desarrollo de aplicaciones móviles hasta la integración de sistemas, nos aseguramos de que nuestras soluciones digitales sean efectivas y eficientes para su negocio."
       }
     },
-    "contactCTALabel": "Contactanos 😊"
+    "contactCTALabel": "Contáctanos 😊"
   }
 }

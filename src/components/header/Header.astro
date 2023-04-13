@@ -28,7 +28,10 @@ const currentPagePath = Astro.url.pathname;
                 "h-neu-up": currentPagePath === to,
               }}
             >
-              <a class="nav-bar-container__nav-link" href={to}>
+              <a
+                class="nav-bar-container__nav-link"
+                href={lang === "es" ? to : `/${lang}/${to}`}
+              >
                 {label}
               </a>
             </li>

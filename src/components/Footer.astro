@@ -8,53 +8,58 @@ const lang = i18next.language;
 ---
 
 <footer class="footer h-content-wrapper">
-  <div class="footer__belt h-box-shadow">
-    <section class="footer__content">
-      <nav>
-        <ul>
-          {
-            navigationItems[lang]
-              .filter((el) => el.inFooter)
-              .map((el) => (
-                <li class="footer__link-wrapper">
-                  <a class="footer__link" href={el.to}>
-                    {el.label}
-                  </a>
-                </li>
-              ))
-          }
-        </ul>
-      </nav>
-      <article class="footer__right">
-        <a class="footer__link" href="mailto:hello@kokualabs.com"
-          >hello@kokualabs.com</a
-        >
-      </article>
-    </section>
+  <section class="footer__content">
+    <nav>
+      <ul>
+        {
+          navigationItems[lang]
+            .filter((el) => el.inFooter)
+            .map((el) => (
+              <li class="footer__link-wrapper">
+                <a class="footer__link" href={el.to}>
+                  {el.label}
+                </a>
+              </li>
+            ))
+        }
+      </ul>
+    </nav>
     <article class="footer__social">
-      <SocialLinks />
       <KokuaLabsLogo dark width="150px" />
+      <SocialLinks />
     </article>
-  </div>
+    <article class="footer__right">
+      <a class="footer__link" href="mailto:hello@kokualabs.com"
+        >hello@kokualabs.com</a
+      >
+    </article>
+  </section>
 </footer>
 
 <style>
   @import "../../styles/media-queries.css";
 
   .footer {
-    &__belt {
-      margin-top: 136px;
-      background: linear-gradient(-90deg, #00b4d8, #004cff);
-      border-radius: var(--border-radius) var(--border-radius) 0 0;
-    }
     &__content {
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 86px;
       justify-content: space-between;
-      padding: var(--space-large) var(--space-large) 0 !important;
-      width: 100%;
+
+      background: linear-gradient(-90deg, #00b4d8, #004cff);
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      padding: var(--space-large-2) var(--space-large);
       @media (--vp-media-tablet) {
-        padding: 0 var(--space-large-3);
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+      }
+      @media (--vp-media-desktop) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 156px;
       }
     }
     &__link-wrapper  {
@@ -73,19 +78,37 @@ const lang = i18next.language;
       }
     }
 
-    &__right  {
+    &__right {
       text-align: left;
+      display: none;
+      @media (--vp-media-tablet) {
+        display: block;
+      }
       @media (--vp-media-desktop) {
+        display: block;
         text-align: right;
       }
     }
     &__social {
+      order: 2;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      height: 100%;
       align-items: center;
-      gap: var(--space-medium);
-      padding-bottom: var(--space-medium);
+      margin: var(--space-large) auto 0;
+      gap: var(--space-small-2);
+      margin-top: ;
+      @media (--vp-media-tablet) {
+        order: 0;
+        margin: 0;
+        gap: var(--space-large);
+      }
+      @media (--vp-media-desktop) {
+        order: 0;
+        margin: 0;
+        gap: var(--space-large);
+      }
     }
   }
 </style>

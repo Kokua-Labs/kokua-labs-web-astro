@@ -20,7 +20,7 @@ const { title, name, email, description, terms, submit } =
   <div class="contact-form__title">
     <Title title={title} />
   </div>
-  <form id="form" action="">
+  <form id="form">
     <input id="name" required type="text" placeholder={name} />
     <input
       id="email"
@@ -159,12 +159,38 @@ const { title, name, email, description, terms, submit } =
 
 <script>
   const form = document.getElementById("form") as HTMLFormElement;
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+
     const name = form.elements.name.value;
     const email = form.elements.email.value;
     const topic = form.elements.topic.value;
-    const description = form.elements?.description.value;
+    const comment = form.elements?.description.value;
+
+    const formBody: { [key: string]: string } = {
+      first_name: name,
+      email,
+      last_name: "",
+      requested_service: topic,
+      comment,
+    };
+
+    sendForm(formBody);
   });
+
+  const sendForm = async (body: { [key: string]: string }) => {
+    console.log(form);
+    body.rid = "Kokua";
+
+    try {
+      await fetch("https://api.kokualabs.com/landing/forms", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      });
+    } catch (error) {}
+  };
 </script>

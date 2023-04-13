@@ -11,26 +11,29 @@
     "kpis": {
       "title": "El poder de kokua, en el centro de tu negocio",
       "subtitle": "kokua, el valor hawaiano de la ayuda mutua y la colaboración, es nuestro mantra. Creemos en el poder de kokua para crear soluciones tecnológicas innovadoras y que generen impacto. Estaremos contigo en todo el proceso de transformación digital de tu negocio.",
-      "kpi1": {
-        "title": "Comprender",
-        "description": "Trabajamos estrechamente contigo para comprender tus necesidades y objetivos únicos."
-      },
-      "kpi2": {
-        "title": "Crear",
-        "description": "Creamos soluciones de software personalizadas a tu medida. Controlamos cada píxel."
-      },
-      "kpi3": {
-        "title": "Colaborar",
-        "description": "Aplicamos un enfoque colaborativo, trabajando estrechamente contigo para asegurarnos de que tu visión se haga realidad."
-      },
-      "kpi4": {
-        "title": "Impactar",
-        "description": "Creamos impacto en el mundo digital apostando por las últimas tecnologías y lenguajes de programación. Mayor rapidez y escalabilidad."
-      },
-      "kpi5": {
-        "title": "Diferenciar",
-        "description": "Cada negocio es único, por eso no puede parecerse a los demás. Por eso desarrollamos soluciones a medida."
-      }
+      "ctaLabel": "Conoce lo que hacemos",
+      "kpis": [
+        {
+          "title": "Comprender",
+          "description": "Trabajamos estrechamente contigo para comprender tus necesidades y objetivos únicos."
+        },
+        {
+          "title": "Crear",
+          "description": "Creamos soluciones de software personalizadas a tu medida. Controlamos cada píxel."
+        },
+        {
+          "title": "Colaborar",
+          "description": "Aplicamos un enfoque colaborativo, trabajando estrechamente contigo para asegurarnos de que tu visión se haga realidad."
+        },
+        {
+          "title": "Impactar",
+          "description": "Creamos impacto en el mundo digital apostando por las últimas tecnologías y lenguajes de programación. Mayor rapidez y escalabilidad."
+        },
+        {
+          "title": "Diferenciar",
+          "description": "Cada negocio es único, por eso no puede parecerse a los demás. Por eso desarrollamos soluciones a medida."
+        }
+      ]
     },
     "techStack": {
       "title": "Usamos las últimas tecnologías disponibles para las mejores ideas del momento.",
@@ -42,19 +45,8 @@
         "Somos un equipo de profesionales que creemos en el poder de la tecnología para transformar los negocios y la vida de las personas.",
         "Desde 2021, seguimos creciendo gracias a nuestro compromiso con la innovación, la excelencia y la satisfacción de nuestros clientes. Nos impulsa el deseo de crear software que empodere a nuestros clientes para lograr sus objetivos y tener un impacto positivo en sus negocios.",
         "En el corazón de nuestra agencia se encuentra el concepto de kokua. kokua es una palabra hawaiana que significa 'ayuda' o 'servicio'. Al encarnar el espíritu de kokua, podemos crear productos que no solo satisfagan las necesidades de nuestros clientes, sino que también superen sus expectativas."
-      ]
-    },
-    "contactCtaCards": [
-      {
-        "title": "Contáctanos",
-        "description": "Cuando te vaya bien. Al hacer click en el botón de abajo, serás redirigido a nuestro formulario de contacto donde puedes proporcionarnos toda la información.",
-        "cta": "Contáctanos 🤓"
-      },
-      {
-        "title": "Nosotros te contactamos 🥸",
-        "description": "Ingresa tu correo electrónico a continuación. Nosotros nos encargaremos de contactarte por correo electrónico lo antes posible.",
-        "submit": "Enviar"
-      }
-    ]
+      ],
+      "cta": "Contactanos"
+    }
   }
 }

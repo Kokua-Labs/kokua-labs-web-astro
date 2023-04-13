@@ -1,16 +1,14 @@
 {
-  "title": "Contact - Kokua | Labs",
-  "description": "TODO",
-
+  "title": "Contact - kokua | labs",
+  "description": "Contact us for more information about our customized digital services and solutions. Fill out the form with your name, email, and a brief description of your needs and we will get in touch with you as soon as possible.",
   "content": {
-    "title": "Contact Us",
     "components": {
       "form": {
-        "title": "We want to be on your team!",
+        "title": "We Want to Join Your Team!",
         "name": "Name",
         "email": "Email",
         "description": "Description",
-        "terms": "By submitting this form, you agree that we may use your contact information to respond to your inquiry. Your information will be treated confidentially and will not be shared with third parties without your consent.",
+        "terms": "By submitting this form, you agree that we may use your contact information to respond to your inquiry. Your data will be treated confidentially and will not be shared with third parties without your consent.",
         "submit": "Submit"
       }
     }

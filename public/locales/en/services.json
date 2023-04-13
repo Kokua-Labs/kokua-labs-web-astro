@@ -12,27 +12,27 @@
         {
           "title": "Web Development",
           "type": "web",
-          "description": "We design and develop custom websites to help our clients have an effective online presence. From informational sites to eCommerce sites, we ensure your site is attractive, functional, and easy to navigate for your customers."
+          "description": "We design and develop custom websites to help our clients have an effective online presence. From informative sites to e-commerce sites, we ensure that your site is attractive, functional, and easy to navigate for your customers."
         },
         {
-          "title": "eCommerce Development",
+          "title": "E-commerce Development",
           "type": "ecommerce",
-          "description": "We create custom online stores to help our clients sell online. We ensure your store is easy to use and attractive to your customers, from design to payment integration."
+          "description": "We create custom online stores to help our clients sell online. We make sure that your store is user-friendly and attractive for your customers, from design to payment integration."
         },
         {
-          "title": "Mobile Application Development",
+          "title": "Mobile App Development",
           "type": "apps",
-          "description": "We create custom mobile applications for our clients, whether for Android or iOS. From business apps to entertainment apps, our team of developers will work with you to create the app you need."
+          "description": "We create custom mobile apps for our clients, whether for Android or iOS. From apps for the business sector to entertainment apps, our team of developers will work with you to create the app you need."
         },
         {
           "title": "SEO Positioning",
           "type": "seo",
-          "description": "We improve your website's positioning in search engines to attract more organic traffic and increase your online visibility."
+          "description": "We improve the positioning of your website on search engines to attract more organic traffic and increase your online visibility."
         },
         {
           "title": "User Experience Design and Improvement",
           "type": "design",
-          "description": "We help improve the user experience on your website so your customers feel comfortable and confident in your brand. From navigation to design, we ensure every detail is intuitive and attractive."
+          "description": "We help improve the user experience on your website so that your customers feel comfortable and confident in your brand. From navigation to design, we make sure every detail is intuitive and attractive."
         },
         {
           "title": "Legal and Data Protection Services",
@@ -41,8 +41,8 @@
         }
       ],
       "pro": {
-        "title": "Tailored Digital Solutions",
-        "description": "We offer customized digital solutions to meet the specific needs of your business. From mobile application development to system integration, we ensure our digital solutions are effective and efficient for your business."
+        "title": "Custom Digital Solutions",
+        "description": "We offer custom digital solutions to meet the specific needs of your business. From mobile app development to system integration, we ensure that our digital solutions are effective and efficient for your business."
       }
     },
     "contactCTALabel": "Contact us 😊"

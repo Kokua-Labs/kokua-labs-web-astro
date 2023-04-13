@@ -94,13 +94,13 @@ const { title, description, ctaLabel, companyName } =
 
   .home-hero-container {
     position: relative;
-    display: flex;
     padding: var(--space-xl-large) var(--space-medium-2) 0;
+    display: flex;
     height: 456px;
     margin-top: var(--space-medium);
     border-radius: var(--border-radius);
     background: linear-gradient(
-      -45deg,
+      -55deg,
       #2400ff,
       #0062ff,
       #00f0ff,
@@ -109,7 +109,7 @@ const { title, description, ctaLabel, companyName } =
       #00b4d8,
       #004cff
     );
-    background-size: 400% 400%;
+    background-size: 500% 500%;
     animation: gradient 20s ease infinite;
     color: var(--color-white);
     @media (--vp-media-tablet) {
@@ -140,7 +140,7 @@ const { title, description, ctaLabel, companyName } =
       font-size: 36px;
       z-index: 1;
       @media (--vp-media-tablet) {
-        font-size: 42px;
+        font-size: 52px;
       }
       @media (--vp-media-desktop) {
         font-size: 84px;
@@ -150,16 +150,15 @@ const { title, description, ctaLabel, companyName } =
       font-family: "rykerbold";
       font-size: 36px;
       @media (--vp-media-tablet) {
-        font-size: 42px;
+        font-size: 52px;
       }
       @media (--vp-media-desktop) {
         font-size: 84px;
       }
     }
     &__description {
-      font-family: "bioticregular";
-      margin-bottom: var(--space-medium-2);
       width: 80%;
+      margin-bottom: var(--space-medium-2);
       font-size: 14px;
       @media (--vp-media-tablet) {
         width: 70%;

@@ -7,8 +7,8 @@ export const contactTopis: {
       value: "web",
     },
     {
-      label: "Eccomerce",
-      value: "Eccomerce",
+      label: "E-commerce",
+      value: "e-commerce",
     },
     {
       label: "Apps",
