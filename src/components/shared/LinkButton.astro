@@ -8,7 +8,8 @@ type LinkButtonProps = {
 
 const { label, to } = Astro.props as LinkButtonProps;
 
-const toUrl = i18next.language === "es" ? to : `${i18next.language}/${to}`;
+const toUrl =
+  i18next.language === "es" ? `/${to}` : `/${i18next.language}/${to}`;
 ---
 
 <div class="h-drop-shadow">
