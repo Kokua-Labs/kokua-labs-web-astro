@@ -1,7 +1,7 @@
 {
   "name": "kokua-labs-web",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Bruno Martínez González",
   "license": "",
   "scripts": {

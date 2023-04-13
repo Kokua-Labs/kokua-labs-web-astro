@@ -6,8 +6,7 @@ import LanguageSelector from "./LanguageSelector.astro";
 import MobileMenu from "./MobileMenu.astro";
 
 const lang = i18next.language;
-const homePath =
-  i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
+const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 const currentPagePath = Astro.url.pathname;
 ---
 
@@ -28,10 +27,7 @@ const currentPagePath = Astro.url.pathname;
                 "h-neu-up": currentPagePath === to,
               }}
             >
-              <a
-                class="nav-bar-container__nav-link"
-                href={lang === "es" ? to : `/${lang}/${to}`}
-              >
+              <a class="nav-bar-container__nav-link" href={lang === "es" ? `/${to}` : `/${lang}/${to}`}>
                 {label}
               </a>
             </li>
@@ -39,9 +35,7 @@ const currentPagePath = Astro.url.pathname;
       }
       <LanguageSelector />
     </ul>
-    <div
-      class="nav-bar-container__mobile-menu nav-bar-container__mobile-menu--hide"
-    >
+    <div class="nav-bar-container__mobile-menu nav-bar-container__mobile-menu--hide">
       <MobileMenu />
     </div>
   </nav>
@@ -82,12 +76,8 @@ const currentPagePath = Astro.url.pathname;
 
 <script>
   /* Detects when user use a mobile device */
-  const navBar = document.querySelector(
-    ".nav-bar-container__nav-items"
-  ) as HTMLUListElement;
-  const mobileNavBar = document.querySelector(
-    ".nav-bar-container__mobile-menu"
-  ) as HTMLUListElement;
+  const navBar = document.querySelector(".nav-bar-container__nav-items") as HTMLUListElement;
+  const mobileNavBar = document.querySelector(".nav-bar-container__mobile-menu") as HTMLUListElement;
 
   const toggleMenuNavBar = (screenWidth: number): void => {
     if (screenWidth < 600) {
