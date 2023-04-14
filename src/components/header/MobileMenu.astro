@@ -20,7 +20,15 @@ const lang = i18next.language;
         .filter((el) => el.inHeader)
         .map((item) => (
           <li class="mobile-menu__item">
-            <a href={i18next.language === "es" ? `/${item.to}` : `/${i18next.language}/${item.to}`}>{item.label}</a>
+            <a
+              href={
+                i18next.language === "es"
+                  ? `/${item.to}`
+                  : `/${i18next.language}/${item.to}`
+              }
+            >
+              {item.label}
+            </a>
           </li>
         ))
     }
@@ -79,16 +87,30 @@ const lang = i18next.language;
 </style>
 
 <script>
-  const burgerButton = document.querySelector(".burger-button") as HTMLDivElement;
+  const burgerButton = document.querySelector(
+    ".burger-button"
+  ) as HTMLDivElement;
   const mobileMenu = document.querySelector(".mobile-menu") as HTMLUListElement;
-  const closeButton = document.querySelector(".close-button") as HTMLUListElement;
+  const closeButton = document.querySelector(
+    ".close-button"
+  ) as HTMLUListElement;
 
   burgerButton.addEventListener("click", () => {
-    mobileMenu.classList.remove("animate__animated--visible", "animate__rotateOutDownRight");
-    mobileMenu.classList.add("mobile-menu--visible", "animate__animated", "animate__rotateInDownRight");
+    mobileMenu.classList.remove(
+      "animate__animated--visible",
+      "animate__rotateOutDownRight"
+    );
+    mobileMenu.classList.add(
+      "mobile-menu--visible",
+      "animate__animated",
+      "animate__rotateInDownRight"
+    );
   });
 
   closeButton.addEventListener("click", () => {
-    mobileMenu.classList.add("animate__animated", "animate__rotateOutDownRight");
+    mobileMenu.classList.add(
+      "animate__animated",
+      "animate__rotateOutDownRight"
+    );
   });
 </script>

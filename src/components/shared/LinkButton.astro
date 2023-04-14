@@ -1,5 +1,5 @@
 ---
-import i18next from "i18next";
+import { routerResolver } from "../../utils/routerResolver";
 
 type LinkButtonProps = {
   label: string;
@@ -7,13 +7,10 @@ type LinkButtonProps = {
 };
 
 const { label, to } = Astro.props as LinkButtonProps;
-
-const toUrl =
-  i18next.language === "es" ? `/${to}` : `/${i18next.language}/${to}`;
 ---
 
 <div class="h-drop-shadow">
-  <a href={toUrl} class="custom-button">{label}</a>
+  <a href={routerResolver(to)} class="custom-button">{label}</a>
 </div>
 
 <style>

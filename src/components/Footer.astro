@@ -1,5 +1,6 @@
 ---
 import { navigationItems } from "../config/navigation";
+import { routerResolver } from "../utils/routerResolver";
 import i18next from "i18next";
 import SocialLinks from "./shared/SocialLinks.astro";
 import KokuaLabsLogo from "./shared/KokuaLabsLogo.astro";
@@ -16,7 +17,7 @@ const lang = i18next.language;
             .filter((el) => el.inFooter)
             .map((el) => (
               <li class="footer__link-wrapper">
-                <a class="footer__link" href={el.to}>
+                <a class="footer__link" href={routerResolver(el.to)}>
                   {el.label}
                 </a>
               </li>

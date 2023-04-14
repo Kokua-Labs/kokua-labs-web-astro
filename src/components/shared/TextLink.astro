@@ -1,5 +1,5 @@
 ---
-import i18next from "i18next";
+import { routerResolver } from "../../utils/routerResolver";
 
 type TextLinkPros = {
   label: string;
@@ -7,12 +7,9 @@ type TextLinkPros = {
 };
 
 const { label, to } = Astro.props as TextLinkPros;
-
-const toUrl =
-  i18next.language === "es" ? `/${to}` : `/${i18next.language}/${to}`;
 ---
 
-<a class="text-link" href={toUrl} target="_self">
+<a class="text-link" href={routerResolver(to)} target="_self">
   {label}
 </a>
 
