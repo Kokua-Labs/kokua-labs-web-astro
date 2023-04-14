@@ -4,15 +4,15 @@ import KokuaLabsLogo from "../shared/KokuaLabsLogo.astro";
 import { navigationItems } from "../../config/navigation";
 import LanguageSelector from "./LanguageSelector.astro";
 import MobileMenu from "./MobileMenu.astro";
+import { routerResolver } from "../../utils/routerResolver";
 
 const lang = i18next.language;
-const homePath = i18next.resolvedLanguage === "es" ? "/" : `/${i18next.resolvedLanguage}`;
 const currentPagePath = Astro.url.pathname;
 ---
 
 <header class="h-content-wrapper nav-bar-container">
   <nav class="nav-bar-container__nav">
-    <a href={homePath}>
+    <a href={routerResolver("")}>
       <KokuaLabsLogo width="140px" />
     </a>
 
@@ -27,7 +27,7 @@ const currentPagePath = Astro.url.pathname;
                 "h-neu-up": currentPagePath.includes(to),
               }}
             >
-              <a class="nav-bar-container__nav-link" href={lang === "es" ? `/${to}` : `/${lang}/${to}`}>
+              <a class="nav-bar-container__nav-link" href={routerResolver(to)}>
                 {label}
               </a>
             </li>
@@ -35,7 +35,9 @@ const currentPagePath = Astro.url.pathname;
       }
       <LanguageSelector />
     </ul>
-    <div class="nav-bar-container__mobile-menu nav-bar-container__mobile-menu--hide">
+    <div
+      class="nav-bar-container__mobile-menu nav-bar-container__mobile-menu--hide"
+    >
       <MobileMenu />
     </div>
   </nav>
@@ -76,8 +78,12 @@ const currentPagePath = Astro.url.pathname;
 
 <script>
   /* Detects when user use a mobile device */
-  const navBar = document.querySelector(".nav-bar-container__nav-items") as HTMLUListElement;
-  const mobileNavBar = document.querySelector(".nav-bar-container__mobile-menu") as HTMLUListElement;
+  const navBar = document.querySelector(
+    ".nav-bar-container__nav-items"
+  ) as HTMLUListElement;
+  const mobileNavBar = document.querySelector(
+    ".nav-bar-container__mobile-menu"
+  ) as HTMLUListElement;
 
   const toggleMenuNavBar = (screenWidth: number): void => {
     if (screenWidth < 600) {
