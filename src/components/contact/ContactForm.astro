@@ -12,8 +12,7 @@ type ContactFormType = {
   terms: string;
   submit: string;
 };
-const { title, name, email, description, terms, submit } =
-  Astro.props as ContactFormType;
+const { title, name, email, description, terms, submit } = Astro.props as ContactFormType;
 ---
 
 <article class="contact-form h-box-shadow">
@@ -22,13 +21,7 @@ const { title, name, email, description, terms, submit } =
   </div>
   <form id="form">
     <input id="name" required type="text" placeholder={name} />
-    <input
-      id="email"
-      required
-      type="email"
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-      placeholder={email}
-    />
+    <input id="email" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder={email} />
     <select id="topic" required name="categorias">
       {
         contactTopis[lang].map((el) => {
@@ -179,8 +172,7 @@ const { title, name, email, description, terms, submit } =
   });
 
   const sendForm = async (body: { [key: string]: string }) => {
-    console.log(form);
-    body.rid = "Kokua";
+    body.rid = "kokua";
 
     try {
       await fetch("https://api.kokualabs.com/landing/forms", {
@@ -191,6 +183,8 @@ const { title, name, email, description, terms, submit } =
         },
         body: JSON.stringify(body),
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 </script>

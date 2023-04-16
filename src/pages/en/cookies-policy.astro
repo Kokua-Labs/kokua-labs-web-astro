@@ -6,8 +6,8 @@ import Title from "../../components/shared/Title.astro";
 changeLanguage("en");
 
 type TextItem = {
-  sectionTitle: string;
-  description: string;
+    sectionTitle: string;
+    description: string;
 };
 setDefaultNamespace("cookies");
 const texts: TextItem[] = t("content.texts") as any;

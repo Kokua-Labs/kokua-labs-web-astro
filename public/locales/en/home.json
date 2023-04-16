@@ -1,51 +1,50 @@
 {
   "title": "kokua | Labs",
-  "description": "Web and mobile development agency, and custom digital solutions for businesses and individuals in Madrid.",
+  "description": "Web and mobile development agency, tailored digital solutions for businesses and individuals in Madrid.",
   "components": {
     "hero": {
-      "title": "If you have an idea, you need",
+      "title": "If you have a business, all you need is",
       "companyName": "kokua",
-      "ctaLabel": "Let's talk 🤓"
+      "ctaLabel": "Let's talk 😉"
     },
     "kpis": {
       "title": "The power of kokua, at the center of your business",
-      "subtitle": "Kokua, the Hawaiian value of mutual aid and collaboration, is our mantra. We believe in the power of kokua to create innovative technological solutions that generate impact. We will be with you throughout the entire process of digital transformation for your business.",
+      "subtitle": "kokua, the Hawaiian value of mutual aid and collaboration is our mantra. We believe that collaboration and teamwork are essential to the success of any project. That's why we work closely with our clients to understand their needs and goals, and develop customized solutions that fit their requirements.",
       "ctaLabel": "Discover what we do",
       "kpis": [
         {
           "title": "Understand",
-          "description": "We work closely with you to understand your unique needs and goals."
+          "description": "We know that every business is unique. That's why we work hard to understand your needs and goals."
         },
         {
           "title": "Create",
-          "description": "We create custom software solutions tailored to your needs. We control every pixel."
+          "description": "We are committed to creating technological solutions that allows you to compete in an ever-evolving market."
         },
         {
           "title": "Collaborate",
-          "description": "We take a collaborative approach, working closely with you to ensure that your vision becomes reality."
+          "description": "By working together, we can ensure that each stage of the project is carried out efficiently and effectively."
         },
         {
           "title": "Impact",
-          "description": "We create impact in the digital world by embracing the latest technologies and programming languages. Greater speed and scalability."
+          "description": "An effective technological solution can have a significant and measurable mark on your business."
         },
         {
           "title": "Differentiate",
-          "description": "Every business is unique, which is why it cannot look like others. That's why we develop custom solutions."
+          "description": "In an increasingly competitive market, the ability to differentiate oneself from the competition is crucial to the success of any company."
         }
       ]
     },
     "techStack": {
-      "title": "We use the latest available technologies for the best ideas of the moment.",
-      "subtitle": "We use the latest available technologies because each technology is adapted to a need. We apply the most optimal and effective digital solution to guarantee speed, scalability, fluidity, and impact. Total control, from pixel to pixel."
+      "title": "We use the latest available technologies for the digitalization of your business.",
+      "subtitle": "We use the technology that best suits your needs. We apply the most optimal and effective digital solution to guarantee speed, scalability, fluidity and impact. Total control, from pixel to pixel."
     },
     "about": {
-      "title": "About kokua",
+      "title": "About kokua labs",
       "texts": [
-        "We are a team of professionals who believe in the power of technology to transform businesses and people's lives.",
-        "Since 2021, we have been growing thanks to our commitment to innovation, excellence, and customer satisfaction. We are driven by the desire to create software that empowers our clients to achieve their goals and have a positive impact on their businesses.",
-        "At the heart of our agency is the concept of kokua. Kokua is a Hawaiian word that means 'help' or 'service.' By embodying the spirit of kokua, we can create products that not only meet our clients' needs but also exceed their expectations."
+        "kokua labs is composed of a team of professionals who believe in the power of technology for the digitalization of businesses. We create a real impact on your potential customers.",
+        "Since 2020, we have continued to grow thanks to our commitment to innovation, excellence and customer satisfaction. Our driving force is the desire to create software with the latest available technologies so that your business can grow, position and stand out from the competition."
       ],
-      "cta": "Contact us 🤓"
+      "cta": "Contact us 😉"
     }
   }
 }
