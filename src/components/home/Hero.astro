@@ -24,7 +24,7 @@ const { title, description, ctaLabel, companyName } =
       {title}
       <span class="home-hero-container__company-name">{companyName}</span>
     </h1>
-    <p class="home-hero-container__description">{description}</p>
+    <!-- <p class="home-hero-container__description">{description}</p> -->
     <LinkButton to="contact" label={ctaLabel} />
     <figure class="home-hero-container__user-image">
       <img
@@ -128,7 +128,7 @@ const { title, description, ctaLabel, companyName } =
         width: 480px;
       }
       @media (--vp-media-desktop) {
-        width: 680px;
+        width: 600px;
         margin: auto 0;
       }
     }
@@ -154,19 +154,6 @@ const { title, description, ctaLabel, companyName } =
       }
       @media (--vp-media-desktop) {
         font-size: 84px;
-      }
-    }
-    &__description {
-      width: 80%;
-      margin-bottom: var(--space-medium-2);
-      font-size: 14px;
-      @media (--vp-media-tablet) {
-        width: 70%;
-        font-size: 16px;
-      }
-      @media (--vp-media-desktop) {
-        width: 60%;
-        font-size: 18px;
       }
     }
     &__user-image {
