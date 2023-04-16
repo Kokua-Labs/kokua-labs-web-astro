@@ -46,14 +46,25 @@ const stack = [
 
 <section class="tech-stack">
   <article class="tech-stack__title">
-    <Title title={title} subtitle={subtitle} titleAlign="left" subtitleAlign="left" />
+    <Title
+      title={title}
+      subtitle={subtitle}
+      titleAlign="left"
+      subtitleAlign="left"
+    />
   </article>
   <article class="tech-stack__grid">
     {
       stack.map((tech) => {
         return (
           <figure class="tech-stack__grid-item">
-            <img width="100%" height="100%" loading="lazy" src={tech.image} alt={tech.alt} />
+            <img
+              width="100%"
+              height="100%"
+              loading="lazy"
+              src={tech.image}
+              alt={tech.alt}
+            />
           </figure>
         );
       })

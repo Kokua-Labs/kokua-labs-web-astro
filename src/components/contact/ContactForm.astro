@@ -12,7 +12,8 @@ type ContactFormType = {
   terms: string;
   submit: string;
 };
-const { title, name, email, description, terms, submit } = Astro.props as ContactFormType;
+const { title, name, email, description, terms, submit } =
+  Astro.props as ContactFormType;
 ---
 
 <article class="contact-form h-box-shadow">
@@ -21,7 +22,13 @@ const { title, name, email, description, terms, submit } = Astro.props as Contac
   </div>
   <form id="form">
     <input id="name" required type="text" placeholder={name} />
-    <input id="email" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder={email} />
+    <input
+      id="email"
+      required
+      type="email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      placeholder={email}
+    />
     <select id="topic" required name="categorias">
       {
         contactTopis[lang].map((el) => {
