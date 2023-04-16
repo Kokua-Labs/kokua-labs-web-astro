@@ -1,23 +1,23 @@
 {
-  "title": "Services - Kokua | Labs",
+  "title": "Services - kokua | Labs",
   "description": "Customized digital solutions for your business needs. Web development, eCommerce, mobile application development, SEO, user experience design and improvement, legal and data protection services. Boost your online visibility and comply with privacy and security regulations with our services.",
   "components": {
     "hero": {
       "title": "Tailored Development",
       "subtitle": "Pixel-perfect control",
-      "description": "At Kokua, we take care of the entire development process from start to finish, from storage to design, deployment, and legal matters. Our goal is to make the process as easy and efficient as possible for our clients, so they can focus on their business while we take care of the rest."
+      "description": "At kokua, we handle the entire development process from start to finish, including storage, design, deployment, and legal matters. Our goal is to make the process as easy and efficient as possible for our clients, so they can focus on their business while we take care of the rest."
     },
     "servicesList": {
       "items": [
         {
           "title": "Web Development",
           "type": "web",
-          "description": "We design and develop custom websites to help our clients have an effective online presence. From informative sites to e-commerce sites, we ensure that your site is attractive, functional, and easy to navigate for your customers."
+          "description": "We design and develop custom websites to help our clients establish an effective online presence. From informational sites to e-commerce sites, we ensure that your site is attractive, functional, and easy to navigate for your customers."
         },
         {
           "title": "E-commerce Development",
           "type": "ecommerce",
-          "description": "We create custom online stores to help our clients sell online. We make sure that your store is user-friendly and attractive for your customers, from design to payment integration."
+          "description": "We create custom online stores to help our clients sell online. We ensure that your store is user-friendly and attractive for your customers - from design to payment integration."
         },
         {
           "title": "Mobile App Development",
@@ -32,7 +32,7 @@
         {
           "title": "User Experience Design and Improvement",
           "type": "design",
-          "description": "We help improve the user experience on your website so that your customers feel comfortable and confident in your brand. From navigation to design, we make sure every detail is intuitive and attractive."
+          "description": "We help improve the user experience on your website so that your customers feel comfortable and confident in your brand. From navigation to design, we ensure that every detail is intuitive and attractive."
         },
         {
           "title": "Legal and Data Protection Services",

@@ -1,38 +1,38 @@
 {
-  "title": "Servicios - Kokua | Labs",
+  "title": "Servicios - kokua | Labs",
   "description": "Soluciones digitales personalizadas para las necesidades de tu negocio. Desarrollo web, eCommerce, aplicaciones móviles, SEO, diseño y mejora de experiencia de usuarios. Aumenta tu visibilidad en línea y cumple con las normativas de privacidad y seguridad con nuestros servicios.",
   "components": {
     "hero": {
       "title": "Desarrollo a medida",
-      "subtitle": "control de pixel a pixel",
-      "description": "En kokua nos encargamos de todo el proceso de desarrollo de principio a fin, desde el almacenaje hasta el diseño, los despliegues y el apartado legal. Nuestro objetivo es hacer que el proceso sea lo más fácil y eficiente posible para nuestros clientes, para que puedan centrarse en su negocio mientras nosotros nos encargamos del resto."
+      "subtitle": "Control de pixel a pixel",
+      "description": "En kokua nos encargamos de todo el proceso de desarrollo de principio a fin, desde el almacenaje hasta el diseño, los despliegues y el apartado legal. Nuestro objetivo es hacer que el proceso sea lo más fácil y eficiente posible para tu negocio."
     },
     "servicesList": {
       "items": [
         {
           "title": "Desarrollo de sitios web",
           "type": "web",
-          "description": "Diseñamos y desarrollamos sitios web personalizados para ayudar a nuestros clientes a tener una presencia en línea efectiva. Desde sitios informativos hasta sitios de comercio electrónico, nos aseguramos de que su sitio sea atractivo, funcional y fácil de navegar para sus clientes."
+          "description": "Sabemos que tu sitio web es una parte crucial de su presencia online. Por eso, trabajamos en estrecha colaboración contigo para crear sitios web que sean capaces de brindar una experiencia de usuario excepcional, aumentar la visibilidad en línea y mejorar los resultados de negocios."
         },
         {
-          "title": "Desarrollo de tiendas en línea",
+          "title": "Desarrollo de eCommerces",
           "type": "ecommerce",
-          "description": "Creamos tiendas en línea personalizadas para ayudar a nuestros clientes a vender en línea. Nos aseguramos de que su tienda sea fácil de usar y atractiva para sus clientes, desde el diseño hasta la integración del pago."
+          "description": "Nuestro equipo de desarrollo está comprometido en garantizar que cada tienda en línea que creamos cumpla con los estándares de calidad más altos. Nos esforzamos por garantizar que cada tienda en línea sea segura, rápida y confiable, además de estar optimizada para la mejor experiencia de usuario posible."
         },
         {
           "title": "Desarrollo de aplicaciones móviles",
           "type": "apps",
-          "description": "Creamos aplicaciones móviles personalizadas para nuestros clientes, ya sea para Android o iOS. Desde aplicaciones para el sector empresarial hasta aplicaciones de entretenimiento, nuestro equipo de desarrolladores trabajará contigo para crear la aplicación que necesitas."
+          "description": "Creamos aplicaciones móviles multiplataforma personalizadas para tu negocio, ya sea para Android o iOS. Nuestro equipo de desarrolladores trabajará contigo para crear el producto que necesitas."
         },
         {
           "title": "Posicionamiento SEO",
           "type": "seo",
-          "description": "Mejoramos el posicionamiento de su sitio web en los motores de búsqueda para atraer más tráfico orgánico y aumentar su visibilidad en línea."
+          "description": "Te ayudamos a mejorar el ranking de tu sitio web en los resultados de búsqueda. Nuestro objetivo es dar más visibilidad y tráfico a la página web tu negocio."
         },
         {
-          "title": "Diseño y mejora de experiencia de usuario",
+          "title": "Diseño y experiencia de usuario",
           "type": "design",
-          "description": "Ayudamos a mejorar la experiencia de usuario en su sitio web para que sus clientes se sientan cómodos y confiados en su marca. Desde la navegación hasta el diseño, nos aseguramos de que cada detalle sea intuitivo y atractivo."
+          "description": "Diseñamos y creamos la mejorar la experiencia de usuario para que tus clientes se sientan cómodos. Desde la navegación hasta el diseño, nos aseguramos de que cada detalle sea intuitivo y atractivo."
         },
         {
           "title": "Servicios legales y de protección de datos",
@@ -42,9 +42,9 @@
       ],
       "pro": {
         "title": "Soluciones digitales a medida",
-        "description": "Ofrecemos soluciones digitales personalizadas para satisfacer las necesidades específicas de su negocio. Desde el desarrollo de aplicaciones móviles hasta la integración de sistemas, nos aseguramos de que nuestras soluciones digitales sean efectivas y eficientes para su negocio."
+        "description": "Ofrecemos soluciones digitales personalizadas con las últimas tecnologías para satisfacer las necesidades de tu negocio. Desde el desarrollo de aplicaciones móviles hasta la integración de sistemas, nos aseguramos de que nuestras soluciones digitales sean efectivas y eficientes."
       }
     },
-    "contactCTALabel": "Contáctanos 😊"
+    "contactCTALabel": "Contáctanos 😉"
   }
 }

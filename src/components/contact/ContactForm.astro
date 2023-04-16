@@ -18,7 +18,7 @@ const { title, name, email, description, terms, submit } =
 
 <article class="contact-form h-box-shadow">
   <div class="contact-form__title">
-    <Title title={title} />
+    <Title titleAlign="left" title={title} />
   </div>
   <form id="form">
     <input id="name" required type="text" placeholder={name} />
@@ -179,8 +179,7 @@ const { title, name, email, description, terms, submit } =
   });
 
   const sendForm = async (body: { [key: string]: string }) => {
-    console.log(form);
-    body.rid = "Kokua";
+    body.rid = "kokua";
 
     try {
       await fetch("https://api.kokualabs.com/landing/forms", {
@@ -191,6 +190,8 @@ const { title, name, email, description, terms, submit } =
         },
         body: JSON.stringify(body),
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 </script>
