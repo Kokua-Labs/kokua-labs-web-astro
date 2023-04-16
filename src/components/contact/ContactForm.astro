@@ -7,12 +7,13 @@ const lang = i18n.language;
 type ContactFormType = {
   title: string;
   name: string;
+  surname: string;
   email: string;
   description: string;
   terms: string;
   submit: string;
 };
-const { title, name, email, description, terms, submit } =
+const { title, name, surname, email, description, terms, submit } =
   Astro.props as ContactFormType;
 ---
 
@@ -22,6 +23,7 @@ const { title, name, email, description, terms, submit } =
   </div>
   <form id="form">
     <input id="name" required type="text" placeholder={name} />
+    <input id="surname" type="text" placeholder={surname} />
     <input
       id="email"
       required
@@ -163,24 +165,24 @@ const { title, name, email, description, terms, submit } =
     e.preventDefault();
 
     const name = form.elements.name.value;
+    const surname = form.elements.surname.value;
     const email = form.elements.email.value;
     const topic = form.elements.topic.value;
     const comment = form.elements?.description.value;
 
     const formBody: { [key: string]: string } = {
       first_name: name,
+      last_name: surname || "",
       email,
-      last_name: "",
       requested_service: topic,
       comment,
+      rid: "Kokua",
     };
 
     sendForm(formBody);
   });
 
   const sendForm = async (body: { [key: string]: string }) => {
-    body.rid = "kokua";
-
     try {
       await fetch("https://api.kokualabs.com/landing/forms", {
         method: "POST",
@@ -192,6 +194,8 @@ const { title, name, email, description, terms, submit } =
       });
     } catch (error) {
       console.log(error);
+    } finally {
+      form.reset();
     }
   };
 </script>
