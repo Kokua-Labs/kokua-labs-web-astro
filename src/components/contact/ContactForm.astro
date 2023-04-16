@@ -189,6 +189,7 @@ const { title, name, surname, email, description, terms, submit } =
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://kokualabs.com"
         },
         body: JSON.stringify(body),
       });
