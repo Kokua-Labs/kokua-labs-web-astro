@@ -6,6 +6,7 @@
       "form": {
         "title": "¡Queremos estar en tu equipo!",
         "name": "Nombre",
+        "surname": "Apellido",
         "email": "Email",
         "description": "Danos más información",
         "terms": "Al enviar este formulario, aceptas que nosotros podamos utilizar tus datos de contacto para responder a tu solicitud. Tus datos serán tratados de forma confidencial y no serán compartidos con terceros sin tu consentimiento.",
