@@ -10,7 +10,8 @@ type CookiesText = {
 export const cookiesTexts: CookiesText = {
   en: {
     title: "About our 🍪",
-    description: "We use Cookies to facilitate navigation and provide a better web experience. ",
+    description:
+      "We use Cookies to facilitate navigation and provide a better web experience. ",
     knowMore: "Know more.",
     ctaLabel: "Accept",
   },
