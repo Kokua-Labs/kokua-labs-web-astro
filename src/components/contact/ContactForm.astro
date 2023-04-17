@@ -14,7 +14,8 @@ type ContactFormType = {
   terms: string;
   submit: string;
 };
-const { title, name, surname, email, description, terms, submit } = Astro.props as ContactFormType;
+const { title, name, surname, email, description, terms, submit } =
+  Astro.props as ContactFormType;
 ---
 
 <article class="contact-form h-box-shadow">
@@ -24,7 +25,13 @@ const { title, name, surname, email, description, terms, submit } = Astro.props 
   <form id="form">
     <input id="name" required type="text" placeholder={name} />
     <input id="surname" type="text" placeholder={surname} />
-    <input id="email" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder={email} />
+    <input
+      id="email"
+      required
+      type="email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      placeholder={email}
+    />
     <select id="topic" required name="categorias">
       {
         contactTopis[lang].map((el) => {
@@ -163,7 +170,9 @@ const { title, name, surname, email, description, terms, submit } = Astro.props 
 <script>
   const form = document.getElementById("form") as HTMLFormElement;
   const submitButton = document.getElementById("submit") as HTMLButtonElement;
-  const spinnnerContainer = document.getElementById("spinnnerContainer") as HTMLDivElement;
+  const spinnnerContainer = document.getElementById(
+    "spinnnerContainer"
+  ) as HTMLDivElement;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
