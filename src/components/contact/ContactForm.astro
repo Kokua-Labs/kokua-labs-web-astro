@@ -38,7 +38,7 @@ const { title, name, surname, email, description, terms, submit } =
         })
       }
     </select>
-    <textarea id="description" placeholder={description}></textarea>
+    <textarea id="description" placeholder={description} required></textarea>
     <p>
       <input required type="checkbox" id="terms" />
       <label for="terms">
@@ -176,7 +176,6 @@ const { title, name, surname, email, description, terms, submit } =
       email,
       requested_service: topic,
       comment,
-      rid: "Kokua",
     };
 
     sendForm(formBody);
@@ -188,12 +187,14 @@ const { title, name, surname, email, description, terms, submit } =
         method: "POST",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(body),
       });
+      window.location.href = window.location.pathname + "/success";
     } catch (error) {
-      console.log(error);
+      console.log(window);
+      window.location.href = window.location.pathname + "/error";
     } finally {
       form.reset();
     }

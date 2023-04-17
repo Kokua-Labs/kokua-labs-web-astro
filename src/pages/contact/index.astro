@@ -1,8 +1,8 @@
 ---
 import { changeLanguage, t, setDefaultNamespace } from "i18next";
-import MainLayout from "../layouts/MainLayout.astro";
-import ContactForm from "../components/contact/ContactForm.astro";
-import WavesImage from "../assets/png/waves-with-logo.png";
+import MainLayout from "../../layouts/MainLayout.astro";
+import ContactForm from "../../components/contact/ContactForm.astro";
+import WavesImage from "../../assets/png/waves-with-logo.png";
 
 changeLanguage("es");
 
@@ -19,7 +19,7 @@ setDefaultNamespace("contact");
 </MainLayout>
 
 <style>
-  @import "../../styles/media-queries.css";
+  @import "../../../styles/media-queries.css";
   .contact-content {
     display: flex;
     flex-direction: column-reverse;

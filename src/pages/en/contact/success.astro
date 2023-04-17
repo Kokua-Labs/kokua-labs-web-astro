@@ -1,0 +1,43 @@
+---
+import { changeLanguage, t, setDefaultNamespace } from "i18next";
+import MainLayout from "../../../layouts/MainLayout.astro";
+import SuccessImage from "../../../assets/png/success.png";
+import Title from "../../../components/shared/Title.astro";
+import LinkButton from "../../../components/shared/LinkButton.astro";
+
+changeLanguage("en");
+
+setDefaultNamespace("contact");
+---
+
+<MainLayout title={t("success.pageTitle")} noFollow>
+  <section class="success-container h-box-shadow">
+    <figure class="h-drop-shadow success-container__image">
+      <img src={SuccessImage} />
+    </figure>
+    <Title title={t("success.title")} subtitle={t("success.description")} />
+    <div class="success-container__cta">
+      <LinkButton label={t("success.cta")} dark to="" />
+    </div>
+  </section>
+</MainLayout>
+<style>
+  @import "../../../../styles/media-queries.css";
+
+  .success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-large-3);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--space-large-4);
+    &__image {
+      width: 250px;
+    }
+    &__cta {
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>

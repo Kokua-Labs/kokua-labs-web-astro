@@ -3,10 +3,10 @@
 export default {
   defaultLocale: "es",
   locales: ["es", "en"],
-  namespaces: ["home", "legal", "common", "cookies", "contact", "services"],
+  namespaces: ["home", "legal", "cookies", "contact", "services"],
   i18nextServer: {
     returnObjects: true,
-    debug: true,
+    debug: false,
     cache: false,
   },
 };

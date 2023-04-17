@@ -13,5 +13,17 @@
         "submit": "Submit"
       }
     }
+  },
+  "success": {
+    "pageTitle": "Form submitted - kokua | labs",
+    "title": "Form submitted successfully",
+    "description": "We will get in touch with you as soon as possible",
+    "cta": "Back"
+  },
+  "error": {
+    "pageTitle": "Error - kokua | labs",
+    "title": "Something went wrong",
+    "description": "Please try again or contact us at hello@kokualabs.com",
+    "cta": "Back"
   }
 }
