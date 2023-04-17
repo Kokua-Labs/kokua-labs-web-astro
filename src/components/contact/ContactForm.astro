@@ -2,6 +2,7 @@
 import Title from "../shared/Title.astro";
 import { contactTopis } from "../../config/contact-topics";
 import i18n from "i18next";
+import Spinner from "../shared/Spinner.astro";
 const lang = i18n.language;
 
 type ContactFormType = {
@@ -13,8 +14,7 @@ type ContactFormType = {
   terms: string;
   submit: string;
 };
-const { title, name, surname, email, description, terms, submit } =
-  Astro.props as ContactFormType;
+const { title, name, surname, email, description, terms, submit } = Astro.props as ContactFormType;
 ---
 
 <article class="contact-form h-box-shadow">
@@ -24,13 +24,7 @@ const { title, name, surname, email, description, terms, submit } =
   <form id="form">
     <input id="name" required type="text" placeholder={name} />
     <input id="surname" type="text" placeholder={surname} />
-    <input
-      id="email"
-      required
-      type="email"
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-      placeholder={email}
-    />
+    <input id="email" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder={email} />
     <select id="topic" required name="categorias">
       {
         contactTopis[lang].map((el) => {
@@ -46,7 +40,10 @@ const { title, name, surname, email, description, terms, submit } =
       </label>
     </p>
     <div class="contact-form__submit">
-      <button type="submit">{submit}</button>
+      <button id="submit" type="submit">{submit}</button>
+      <div id="spinnnerContainer" class="contact-form__spinner">
+        <Spinner />
+      </div>
     </div>
   </form>
 </article>
@@ -73,6 +70,9 @@ const { title, name, surname, email, description, terms, submit } =
       display: flex;
       justify-content: flex-end;
       margin-top: var(--space-large);
+    }
+    &__spinner {
+      display: none;
     }
   }
   input,
@@ -118,6 +118,7 @@ const { title, name, surname, email, description, terms, submit } =
     width: fit-content;
     text-align: center;
     font-size: 16px;
+    cursor: pointer;
 
     @media (--vp-media-desktop) {
       font-size: 21px;
@@ -161,6 +162,9 @@ const { title, name, surname, email, description, terms, submit } =
 
 <script>
   const form = document.getElementById("form") as HTMLFormElement;
+  const submitButton = document.getElementById("submit") as HTMLButtonElement;
+  const spinnnerContainer = document.getElementById("spinnnerContainer") as HTMLDivElement;
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -182,6 +186,8 @@ const { title, name, surname, email, description, terms, submit } =
   });
 
   const sendForm = async (body: { [key: string]: string }) => {
+    spinnnerContainer.style.display = "block";
+    submitButton.style.display = "none";
     try {
       await fetch("https://api.kokualabs.com/landing/forms", {
         method: "POST",
@@ -197,6 +203,8 @@ const { title, name, surname, email, description, terms, submit } =
       window.location.href = window.location.pathname + "/error";
     } finally {
       form.reset();
+      spinnnerContainer.style.display = "none";
+      submitButton.style.display = "block";
     }
   };
 </script>
