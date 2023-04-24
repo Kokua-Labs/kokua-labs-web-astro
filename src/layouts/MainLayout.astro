@@ -9,7 +9,6 @@ import Footer from "../components/Footer.astro";
 import i18next from "i18next";
 import GoogleAnalytics from "../components/shared/GoogleAnalytics.astro";
 import { HeadHrefLangs } from "astro-i18next/components";
-import CookiesConsent from "../components/CookiesConsent.astro";
 
 const { title, description, noFollow = false } = Astro.props as LayoutProps;
 ---
@@ -37,6 +36,9 @@ const { title, description, noFollow = false } = Astro.props as LayoutProps;
       property="og:image"
       content="https://www.kokualabs.com/images/icon.png"
     />
+    <script
+      src="https://cmp.osano.com/16CPMHTaP5vwf6E8/fa3a58af-584e-44c8-81e9-68e8c356ad13/osano.js"
+    ></script>
     <HeadHrefLangs />
     <link
       rel="stylesheet"
@@ -50,7 +52,6 @@ const { title, description, noFollow = false } = Astro.props as LayoutProps;
       <slot />
     </main>
     <Footer />
-    <CookiesConsent />
     <style is:global>
       @import "../../styles/main.css";
     </style>
