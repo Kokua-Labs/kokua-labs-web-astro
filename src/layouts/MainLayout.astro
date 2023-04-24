@@ -18,7 +18,8 @@ const { title, description, noFollow = false } = Astro.props as LayoutProps;
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <script src="https://cmp.osano.com/16CPMHTaP5vwf6E8/fa3a58af-584e-44c8-81e9-68e8c356ad13/osano.js"></script>
+    <script src="https://consent.cookiefirst.com/sites/kokualabs.com-1ff20a0e-e58c-4c75-8acc-caf5d58de6c8/consent.js"
+    ></script>
     <meta name="author" content="Bruno Martínez" />
     <meta name="description" content={description || ""} />
     <link rel="icon" type="mage/svg+xml" href="/favicon.svg" />
@@ -35,7 +36,6 @@ const { title, description, noFollow = false } = Astro.props as LayoutProps;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
-    <GoogleAnalytics />
     <Header />
     <main class="h-content-wrapper animate__animated animate__fadeIn">
       <slot />
